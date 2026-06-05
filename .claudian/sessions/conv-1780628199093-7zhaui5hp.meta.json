@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780628199093-7zhaui5hp",
+  "providerId": "opencode",
+  "title": "Generate conversation archive index from raw di...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780628199094,
+  "updatedAt": 1780628876030,
+  "lastResponseAt": 1780628876030,
+  "sessionId": "ses_16a3fa576ffeJFgu073X3ogWQM",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextTokens": 18502,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 18502,
+    "model": "opencode:deepseek-v4-pro",
+    "percentage": 9
+  }
+}

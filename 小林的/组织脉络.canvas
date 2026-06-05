@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"47644b5fd54660e4","type":"text","text":"可能？空间？尝试？","x":-148,"y":-99,"width":250,"height":60},
+		{"id":"7ea2be191d780d72","type":"text","text":"组织理念","x":541,"y":-107,"width":251,"height":60},
+		{"id":"a8d9881283445abb","type":"text","text":"讲述想法的来源与开始","x":113,"y":14,"width":250,"height":60},
+		{"id":"8e403688fa9aa264","type":"text","text":"组织的定义与理解，是什么组织","x":198,"y":-142,"width":250,"height":60},
+		{"id":"c37ea160b0bc0d25","type":"text","text":"引出核心内容","x":478,"y":-337,"width":250,"height":60},
+		{"id":"4100f620944a79be","type":"text","text":"组织创立的必要性和意义，原因。","x":541,"y":43,"width":250,"height":60},
+		{"id":"e5ab7948caffd445","type":"text","text":"出于什么样理想，出于什么样视角，注意到需要这样的组织","x":758,"y":-274,"width":250,"height":98},
+		{"id":"5e742930cccdf35a","type":"text","text":"具有经济运转能力，","x":541,"y":188,"width":250,"height":60},
+		{"id":"6e70eea0369c3f4e","x":790,"y":-481,"width":250,"height":60,"type":"text","text":"氛围、世界"},
+		{"id":"fe3822577b73d8ad","x":1148,"y":-182,"width":250,"height":60,"type":"text","text":"关于自我"},
+		{"id":"b85e4348e2b8351a","x":1093,"y":120,"width":250,"height":60,"type":"text","text":"关于不同个体之间的关系"},
+		{"id":"07e80eb640888efa","x":1205,"y":-60,"width":250,"height":60,"type":"text","text":"关于个体组成的的集体、组织、系统、社会"}
+	],
+	"edges":[
+		{"id":"62dc714989336972","fromNode":"47644b5fd54660e4","fromSide":"right","toNode":"8e403688fa9aa264","toSide":"left"},
+		{"id":"038c0974fcc5c64a","fromNode":"47644b5fd54660e4","fromSide":"right","toNode":"a8d9881283445abb","toSide":"left"},
+		{"id":"64ca9a57957e99c8","fromNode":"a8d9881283445abb","fromSide":"right","toNode":"7ea2be191d780d72","toSide":"left"},
+		{"id":"7e922057f2c196b2","fromNode":"8e403688fa9aa264","fromSide":"right","toNode":"7ea2be191d780d72","toSide":"left"},
+		{"id":"db5f5b2c72324339","fromNode":"c37ea160b0bc0d25","fromSide":"bottom","toNode":"7ea2be191d780d72","toSide":"top"},
+		{"id":"b960b476b5e6a901","fromNode":"4100f620944a79be","fromSide":"top","toNode":"7ea2be191d780d72","toSide":"bottom"},
+		{"id":"5bbcd95ee7873d5c","fromNode":"e5ab7948caffd445","fromSide":"bottom","toNode":"7ea2be191d780d72","toSide":"top"},
+		{"id":"fdf120d8e6c5eef4","fromNode":"7ea2be191d780d72","fromSide":"bottom","toNode":"4100f620944a79be","toSide":"top"},
+		{"id":"019c36ac6c4f3f9f","fromNode":"4100f620944a79be","fromSide":"bottom","toNode":"5e742930cccdf35a","toSide":"top"},
+		{"id":"10f5ef145a340166","fromNode":"6e70eea0369c3f4e","fromSide":"bottom","toNode":"e5ab7948caffd445","toSide":"top"}
+	]
+}

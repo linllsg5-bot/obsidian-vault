@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"0145cdf5a1c449b3","type":"text","text":"关于思考？","x":-336,"y":-222,"width":250,"height":60},
+		{"id":"55e2289e04c325a1","type":"text","text":"为什么是关于思考","x":-130,"y":33,"width":250,"height":60},
+		{"id":"f5dba0f468060eb9","type":"text","text":"思考是关于一个人的本体嘛？或者是一个主体的本体？","x":-100,"y":210,"width":250,"height":131},
+		{"id":"bd907ffea9deefe8","type":"text","text":"本体？","x":302,"y":22,"width":249,"height":60},
+		{"id":"814fc0087d6aed0f","type":"text","text":"一种区分","x":302,"y":-168,"width":250,"height":60},
+		{"id":"978635bba46c7064","type":"text","text":"一种观察视角","x":302,"y":-330,"width":250,"height":60},
+		{"id":"c589d6685a125dbc","type":"text","text":"演化的递进形式、思考惯性？模式？","x":715,"y":-167,"width":250,"height":60},
+		{"id":"7c7c51c70cf40da8","type":"text","text":"可能性","x":380,"y":-740,"width":250,"height":60},
+		{"id":"29ee74b45e59dfc6","type":"text","text":"阻碍、未完成，颓丧","x":-62,"y":-759,"width":250,"height":60},
+		{"id":"d5c6eb449285b0fd","type":"text","text":"为什么我现在，会这么郁郁寡欢？","x":-413,"y":-759,"width":250,"height":60},
+		{"id":"b5209180a765d9b8","type":"text","text":"能量的焉息","x":-76,"y":-1004,"width":250,"height":60},
+		{"id":"efe373931679d3c3","type":"text","text":"血的腥味","x":83,"y":-1279,"width":250,"height":60},
+		{"id":"9e3da39bc49890ec","type":"text","text":"水的流动","x":-348,"y":-1288,"width":250,"height":60},
+		{"id":"bcd25d042f0c2700","x":79,"y":-1555,"width":250,"height":60,"type":"text","text":"阳性"},
+		{"id":"1024bf44d09ce669","x":-444,"y":-1573,"width":250,"height":60,"type":"text","text":"阴性"}
+	],
+	"edges":[
+		{"id":"14b0522e1f113d37","fromNode":"0145cdf5a1c449b3","fromSide":"bottom","toNode":"55e2289e04c325a1","toSide":"top"},
+		{"id":"2e3d9eebb6ca2649","fromNode":"55e2289e04c325a1","fromSide":"bottom","toNode":"f5dba0f468060eb9","toSide":"top"},
+		{"id":"c0a028e439b4473d","fromNode":"f5dba0f468060eb9","fromSide":"right","toNode":"bd907ffea9deefe8","toSide":"left"},
+		{"id":"06d48fa9a82d448d","fromNode":"bd907ffea9deefe8","fromSide":"top","toNode":"814fc0087d6aed0f","toSide":"bottom"},
+		{"id":"9725cd9a5e769e20","fromNode":"814fc0087d6aed0f","fromSide":"top","toNode":"978635bba46c7064","toSide":"bottom"},
+		{"id":"bf5a47f7c37b6efc","fromNode":"978635bba46c7064","fromSide":"right","toNode":"c589d6685a125dbc","toSide":"left"},
+		{"id":"375bc074130462ad","fromNode":"814fc0087d6aed0f","fromSide":"right","toNode":"c589d6685a125dbc","toSide":"left"},
+		{"id":"249e77d1e8bf909d","fromNode":"bd907ffea9deefe8","fromSide":"right","toNode":"c589d6685a125dbc","toSide":"left"},
+		{"id":"c14a7ec5746a4651","fromNode":"0145cdf5a1c449b3","fromSide":"top","toNode":"7c7c51c70cf40da8","toSide":"left"},
+		{"id":"78f85ac29c5bfb5a","fromNode":"7c7c51c70cf40da8","fromSide":"right","toNode":"c589d6685a125dbc","toSide":"top"},
+		{"id":"d1d5e3d0bf702222","fromNode":"d5c6eb449285b0fd","fromSide":"right","toNode":"29ee74b45e59dfc6","toSide":"left"},
+		{"id":"8d07524c3329d907","fromNode":"29ee74b45e59dfc6","fromSide":"top","toNode":"b5209180a765d9b8","toSide":"bottom"},
+		{"id":"6897ce986d410876","fromNode":"b5209180a765d9b8","fromSide":"top","toNode":"9e3da39bc49890ec","toSide":"bottom"},
+		{"id":"2167b54ce9acf495","fromNode":"b5209180a765d9b8","fromSide":"top","toNode":"efe373931679d3c3","toSide":"bottom"},
+		{"id":"44aa7c562580a8a9","fromNode":"1024bf44d09ce669","fromSide":"bottom","toNode":"9e3da39bc49890ec","toSide":"top"},
+		{"id":"ea905dfd3da2e78a","fromNode":"bcd25d042f0c2700","fromSide":"bottom","toNode":"efe373931679d3c3","toSide":"top"}
+	]
+}

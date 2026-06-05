@@ -1,0 +1,121 @@
+.ocw-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 12px;
+  padding: 12px;
+}
+
+.ocw-toolbar,
+.ocw-status,
+.ocw-context,
+.ocw-composer {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+}
+
+.ocw-toolbar,
+.ocw-status,
+.ocw-context {
+  padding: 8px 10px;
+}
+
+.ocw-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ocw-toolbar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.ocw-toolbar button,
+.ocw-composer button {
+  border-radius: 4px;
+}
+
+.ocw-context {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ocw-context-title {
+  font-weight: 600;
+}
+
+.ocw-context-meta {
+  color: var(--text-muted);
+}
+
+.ocw-messages {
+  flex: 1;
+  overflow: auto;
+  display: grid;
+  gap: 8px;
+  padding-right: 2px;
+}
+
+.ocw-message {
+  padding: 10px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ocw-message[data-role="user"] {
+  background: var(--background-primary);
+}
+
+.ocw-message[data-role="assistant"] {
+  background: var(--background-secondary-alt);
+}
+
+.ocw-message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.ocw-composer {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.ocw-composer textarea {
+  width: 100%;
+  min-height: 92px;
+  resize: vertical;
+}
+
+.ocw-composer-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ocw-modes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ocw-mode-button.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}

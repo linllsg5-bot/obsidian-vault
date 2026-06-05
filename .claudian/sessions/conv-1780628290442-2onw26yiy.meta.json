@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780628290442-2onw26yiy",
+  "providerId": "opencode",
+  "title": "Process Obsidian conversation file per DIY inst...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780628290443,
+  "updatedAt": 1780628439126,
+  "lastResponseAt": 1780628439126,
+  "sessionId": "ses_16a48786cffe4gSrXnO6Kbw7m2",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 112896,
+    "contextTokens": 113054,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 158,
+    "model": "opencode:deepseek-v4-pro",
+    "percentage": 57
+  }
+}

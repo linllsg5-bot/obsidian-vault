@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"7b8952b152787c7e","x":-80,"y":-92,"width":250,"height":60,"type":"text","text":"数学"},
+		{"id":"48aa44f32df7f94e","x":-388,"y":-311,"width":250,"height":60,"type":"text","text":"黎曼猜想"},
+		{"id":"392914c2216d4685","x":310,"y":-194,"width":250,"height":60,"type":"text","text":"几何"},
+		{"id":"b47774a308a0f5c8","x":309,"y":78,"width":250,"height":60,"type":"text","text":"代数"},
+		{"id":"8ee042a021cb7d2d","x":-421,"y":24,"width":250,"height":60,"type":"text","text":"集合的限定"},
+		{"id":"5628aa27e8dad887","x":613,"y":-294,"width":250,"height":60,"type":"text","text":"微分流形"},
+		{"id":"6f43672e0a7a3c72","x":615,"y":-142,"width":250,"height":60,"type":"text","text":"拓扑"},
+		{"id":"890b3f2956facdad","x":632,"y":164,"width":250,"height":60,"type":"text","text":"同调代数"},
+		{"id":"1377b75926c3415d","x":639,"y":5,"width":250,"height":60,"type":"text","text":"线代"},
+		{"id":"d662f8e4bcdaca23","x":967,"y":-57,"width":250,"height":60,"type":"text","text":"实分析"},
+		{"id":"df026c7f22109160","x":981,"y":82,"width":250,"height":60,"type":"text","text":"复分析"},
+		{"id":"b04858742204084c","x":1255,"y":-6,"width":250,"height":60,"type":"text","text":"泛函"},
+		{"id":"8ce0f2ef58771727","x":939,"y":-241,"width":250,"height":60,"type":"text","text":"群论"},
+		{"id":"95dbb5bc3176fc89","x":583,"y":278,"width":250,"height":60,"type":"text","text":"抽象代数"}
+	],
+	"edges":[
+		{"id":"d6ae6af9eba17091","fromNode":"7b8952b152787c7e","fromSide":"right","toNode":"392914c2216d4685","toSide":"left"},
+		{"id":"cfab8298d0eaa729","fromNode":"7b8952b152787c7e","fromSide":"right","toNode":"b47774a308a0f5c8","toSide":"left"},
+		{"id":"3a6895a2d58d89a9","fromNode":"392914c2216d4685","fromSide":"right","toNode":"5628aa27e8dad887","toSide":"left"},
+		{"id":"f3aeff2a1120a9bb","fromNode":"392914c2216d4685","fromSide":"right","toNode":"6f43672e0a7a3c72","toSide":"left"},
+		{"id":"93dbfc0cae7493ff","fromNode":"b47774a308a0f5c8","fromSide":"right","toNode":"1377b75926c3415d","toSide":"left"},
+		{"id":"41ce7829b4190219","fromNode":"b47774a308a0f5c8","fromSide":"right","toNode":"890b3f2956facdad","toSide":"left"},
+		{"id":"3f199f1267c67fdb","fromNode":"b47774a308a0f5c8","fromSide":"right","toNode":"95dbb5bc3176fc89","toSide":"left"},
+		{"id":"13f2fadf5ef4303f","fromNode":"8ee042a021cb7d2d","fromSide":"right","toNode":"7b8952b152787c7e","toSide":"left"}
+	]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "conv-1779543603941-6syzyiqkc",
+  "providerId": "claude",
+  "title": "Create Obsidian AI knowledge base setup guide",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779543603941,
+  "updatedAt": 1780452871754,
+  "lastResponseAt": 1779726742638,
+  "sessionId": "7dd29fc8-690b-4939-b539-487c48cf85f4",
+  "providerState": {
+    "providerSessionId": "7dd29fc8-690b-4939-b539-487c48cf85f4"
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 6,
+    "cacheCreationInputTokens": 406852,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 1000000,
+    "contextTokens": 406858,
+    "percentage": 41,
+    "contextWindowIsAuthoritative": true
+  }
+}

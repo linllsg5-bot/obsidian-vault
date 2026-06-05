@@ -1,0 +1,26 @@
+{
+  "sessions": {
+    "activeSessionId": "session-mpdozj6c-83mdd7",
+    "sessions": [
+      {
+        "id": "session-mpdozj6c-83mdd7",
+        "title": "README",
+        "mode": "new-page",
+        "createdAt": "2026-05-20T06:39:57.396Z",
+        "updatedAt": "2026-05-27T07:20:15.257Z",
+        "lastContextTitle": "README",
+        "messageCount": 8
+      }
+    ]
+  },
+  "settings": {
+    "openClawBaseUrl": "http://127.0.0.1:8317",
+    "openClawChatPath": "/v1/chat/completions",
+    "openClawApiKey": "",
+    "openClawModel": "codex/gpt-5.5",
+    "defaultWriteBackMode": "replace-selection",
+    "resultFolder": "OpenClaw Results",
+    "sessionPrefix": "ocw",
+    "streamTimeoutMs": 120000
+  }
+}

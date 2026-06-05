@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780310909434-vndsanpud",
+  "providerId": "claude",
+  "title": "Evaluate investment in skills module",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780310909434,
+  "updatedAt": 1780505219212,
+  "lastResponseAt": 1780505219212,
+  "sessionId": "41af14e2-11d1-4f86-b7fb-639aaf696038",
+  "providerState": {
+    "providerSessionId": "41af14e2-11d1-4f86-b7fb-639aaf696038"
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 1894,
+    "cacheReadInputTokens": 326181,
+    "contextWindow": 1000000,
+    "contextTokens": 328077,
+    "percentage": 33,
+    "contextWindowIsAuthoritative": true
+  }
+}

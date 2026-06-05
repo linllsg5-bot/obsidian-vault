@@ -1,0 +1,23 @@
+{
+  "id": "conv-1779728371877-nymwgfyiy",
+  "providerId": "claude",
+  "title": "探索 AI 助手的主动性与想法",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779728371879,
+  "updatedAt": 1780452836873,
+  "lastResponseAt": 1779792349351,
+  "sessionId": "c458cbdd-cff4-4cdd-8836-7b8ea5f4a918",
+  "providerState": {
+    "providerSessionId": "c458cbdd-cff4-4cdd-8836-7b8ea5f4a918"
+  },
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 1119,
+    "cacheReadInputTokens": 80013,
+    "contextWindow": 1000000,
+    "contextTokens": 81133,
+    "percentage": 8,
+    "contextWindowIsAuthoritative": true
+  }
+}

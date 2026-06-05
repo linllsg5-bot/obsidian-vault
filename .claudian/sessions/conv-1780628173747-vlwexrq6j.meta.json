@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780628173747-vlwexrq6j",
+  "providerId": "opencode",
+  "title": "Trace belief lineage and create belief genealog...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780628173749,
+  "updatedAt": 1780628608406,
+  "lastResponseAt": 1780628608406,
+  "sessionId": "ses_16a4a3f42ffec3NregDqUN1a22",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 98944,
+    "contextTokens": 100150,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 1206,
+    "model": "opencode:deepseek-v4-pro",
+    "percentage": 50
+  }
+}

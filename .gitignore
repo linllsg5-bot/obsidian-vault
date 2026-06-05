@@ -1,0 +1,18 @@
+# 安全：API 密钥和配置（方便 vault 内查看，但不进 git）
+未命名 1.md
+
+# Obsidian 缓存与临时文件
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.trash/
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# 大文件 / 二进制（如有）
+*.exe
+*.dll
+*.zip
