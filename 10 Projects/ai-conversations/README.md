@@ -69,3 +69,4 @@ updated: 2026-05-29
 | 2026-05-31 | claudian | [[10 Projects/ai-conversations/2026-05-31-claudian-认识论与工具内核/index\|认识论与工具内核 — 哲学与思维工具史综合]] | 思想/技术 |
 | 2026-06-03 | claudian | [[10 Projects/ai-conversations/2026-06-03-claudian-认识论验证与数学隐喻/index\|认识论实验 make 与数学作为认知螺旋实验室]] | 思想/技术 |
 | 2026-06-04~05 | claudian+antigravity | [[10 Projects/ai-conversations/2026-06-04-claudian-antigravity-引擎验证与基础设施/index\|studying-spark Phase 0 引擎验证 + 基础设施搭建与崩塌]] | 思想/技术/基建 |
+| 2026-06-05 | claudian | [[10 Projects/ai-conversations/2026-06-05-claudian-学习的结构-主体中间世界/index\|学习的结构：主体/中间/世界 — 本体在中间层]] | 思想/架构 |

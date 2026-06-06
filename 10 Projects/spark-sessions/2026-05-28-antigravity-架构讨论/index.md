@@ -9,7 +9,7 @@ project: prototype-spark / spark 生态
 # 索引：Spark v2 架构讨论（2026-05-28）
 
 > 这不是摘要。这是一份保留了关键校正、设计哲学演化过程和未解决张力的结构化索引。
-> AI 下次进入 Spark 相关讨论时，**先读这个文件**。需要原始细节时去读 [[raw]]。
+> AI 下次进入 Spark 相关讨论时，**先读这个文件**。需要原始细节时去读 [[10 Projects/spark-sessions/2026-05-28-antigravity-架构讨论/raw]]。
 
 ---
 
@@ -111,7 +111,7 @@ project: prototype-spark / spark 生态
 
 ## See Also
 
-- [[raw]] — 本次对话原版
+- [[10 Projects/spark-sessions/2026-05-28-antigravity-架构讨论/raw]] — 本次对话原版
 - [[AI/当前主线]] — 项目状态
 - [[AI/执行协议]] — 本次新增的修改边界与署名规则
 - [[10 Projects/AI应用构思 - 原型刺激器闭环手感]] — MVP 手感笔记（v2 设计的直接输入）

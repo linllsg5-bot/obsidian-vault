@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780699902475-5v374j3y3",
+  "providerId": "opencode",
+  "title": "Locate missing study software chat session",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780699902475,
+  "updatedAt": 1780713251327,
+  "lastResponseAt": 1780713251327,
+  "sessionId": "ses_1653ea217ffejF65qSI2MZavcU",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 33280,
+    "contextTokens": 34097,
+    "contextWindow": 1000000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 817,
+    "model": "opencode:opencode-go/deepseek-v4-flash",
+    "percentage": 3
+  }
+}

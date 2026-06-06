@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780712415319-kr6r4j62u",
+  "providerId": "opencode",
+  "title": "你看看C:\\Users\\lnp\\Documents\\Obsidian Vault\\10 Projec...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780712415319,
+  "updatedAt": 1780712790013,
+  "lastResponseAt": 1780712726479,
+  "sessionId": "ses_16544d21affeTlFqSFt1x1MmRH",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 76672,
+    "contextTokens": 76773,
+    "contextWindow": 1000000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 101,
+    "model": "opencode:opencode-go/deepseek-v4-flash",
+    "percentage": 8
+  }
+}

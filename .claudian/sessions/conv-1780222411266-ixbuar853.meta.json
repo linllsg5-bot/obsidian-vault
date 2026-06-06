@@ -4,20 +4,20 @@
   "title": "Analyze enterprise AI agent strategies",
   "titleGenerationStatus": "success",
   "createdAt": 1780222411267,
-  "updatedAt": 1780628230634,
+  "updatedAt": 1780712277028,
   "lastResponseAt": 1780451095523,
   "sessionId": "2797d61d-ee5b-42ea-9647-020cd4beb688",
   "providerState": {
     "providerSessionId": "2797d61d-ee5b-42ea-9647-020cd4beb688"
   },
   "usage": {
-    "model": "opus[1m]",
+    "model": "sonnet[1m]",
     "inputTokens": 2,
     "cacheCreationInputTokens": 1737,
     "cacheReadInputTokens": 415823,
     "contextWindow": 1000000,
     "contextTokens": 417562,
     "percentage": 42,
-    "contextWindowIsAuthoritative": true
+    "contextWindowIsAuthoritative": false
   }
 }

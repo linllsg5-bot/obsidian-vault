@@ -4,8 +4,8 @@
   "title": "继续推进当前主线任务",
   "titleGenerationStatus": "success",
   "createdAt": 1780307537734,
-  "updatedAt": 1780628069920,
-  "lastResponseAt": 1780628069920,
+  "updatedAt": 1780706813924,
+  "lastResponseAt": 1780652433012,
   "sessionId": "660f2384-18d4-4021-85fd-fa31e5c7dabb",
   "providerState": {
     "providerSessionId": "660f2384-18d4-4021-85fd-fa31e5c7dabb",
@@ -2977,12 +2977,12 @@
   },
   "usage": {
     "model": "sonnet[1m]",
-    "inputTokens": 3,
-    "cacheCreationInputTokens": 289,
-    "cacheReadInputTokens": 167546,
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 1311,
+    "cacheReadInputTokens": 295441,
     "contextWindow": 1000000,
-    "contextTokens": 167838,
-    "percentage": 17,
-    "contextWindowIsAuthoritative": true
+    "contextTokens": 296754,
+    "percentage": 30,
+    "contextWindowIsAuthoritative": false
   }
 }

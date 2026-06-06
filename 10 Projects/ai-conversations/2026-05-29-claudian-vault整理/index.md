@@ -9,7 +9,7 @@ project: vault 整理 / Claudian 知识库体系
 # 索引：Vault 大整理 + 知识库体系成形（2026-05）
 
 > 这不是摘要。这是一份尾迹：保留了这次会话做了哪些结构决策、小林在哪些点上校正了方向、确立了哪些 vault 规则和它们的由来。
-> 下次 AI 进入 vault 操作前**先读这个**。规则的最终落地形态见 [[AI.md]]（本会话里它还叫 `CLAUDE.md`），决策**为什么**这么定在这里。需要逐字细节去读 [[raw]]。
+> 下次 AI 进入 vault 操作前**先读这个**。规则的最终落地形态见 [[AI.md]]（本会话里它还叫 `CLAUDE.md`），决策**为什么**这么定在这里。需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-29-claudian-vault整理/raw]]。
 
 > ⚠️ 命名漂移提醒：本次会话从头到尾操作的是 `CLAUDE.md`。后来它被重构成了 vault 根的 [[AI.md]] + `AI/` 协议目录（[[AI/加载路径]]、[[AI/身份基底]]、[[AI/对话姿态]] 等）。本 index 里凡说"写进 CLAUDE.md"，对照现在的形态就是 `AI.md` 那套。
 
@@ -147,7 +147,7 @@ project: vault 整理 / Claudian 知识库体系
 
 ## See Also
 
-- [[raw]] — 本次对话原版（约 7700 行）
+- [[10 Projects/ai-conversations/2026-05-29-claudian-vault整理/raw]] — 本次对话原版（约 7700 行）
 - [[AI.md]] — vault 规则与上下文（本会话里叫 CLAUDE.md 的那套规则的最终落地形态）
 - [[AI/加载路径]] — 每次会话的 BIOS 入口
 - [[AI/对话姿态]] — 对话姿态 4 条（本会话蒸馏出来的）

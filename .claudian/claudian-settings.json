@@ -13,7 +13,9 @@
   "persistentExternalContextPaths": [],
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
-  "customContextLimits": {},
+  "customContextLimits": {
+    "opencode:deepseek-v4-pro": 1000000
+  },
   "customModelAliases": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
@@ -58,12 +60,85 @@
       "environmentHash": "",
       "environmentVariables": "OPENCODE_ENABLE_EXA=1",
       "modelAliases": {},
-      "preferredThinkingByModel": {},
+      "preferredThinkingByModel": {
+        "opencode-go/deepseek-v4-pro": "max",
+        "opencode-go/mimo-v2.5-pro": "low",
+        "opencode-go/deepseek-v4-flash": "medium",
+        "opencode/nemotron-3-ultra-free": "low"
+      },
       "selectedMode": "claudian-yolo",
-      "thinkingOptionsByModel": {},
+      "thinkingOptionsByModel": {
+        "opencode-go/deepseek-v4-pro": [
+          {
+            "label": "Low",
+            "value": "low"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "High",
+            "value": "high"
+          },
+          {
+            "label": "Max",
+            "value": "max"
+          }
+        ],
+        "opencode-go/mimo-v2.5-pro": [
+          {
+            "label": "Low",
+            "value": "low"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "High",
+            "value": "high"
+          }
+        ],
+        "opencode-go/deepseek-v4-flash": [
+          {
+            "label": "Low",
+            "value": "low"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "High",
+            "value": "high"
+          },
+          {
+            "label": "Max",
+            "value": "max"
+          }
+        ],
+        "opencode/nemotron-3-ultra-free": [
+          {
+            "label": "Low",
+            "value": "low"
+          },
+          {
+            "label": "Medium",
+            "value": "medium"
+          },
+          {
+            "label": "High",
+            "value": "high"
+          }
+        ]
+      },
       "visibleModels": [
         "qwen3.7-plus",
-        "deepseek-v4-pro"
+        "opencode-go/deepseek-v4-pro",
+        "opencode-go/mimo-v2.5-pro",
+        "opencode-go/deepseek-v4-flash",
+        "opencode/nemotron-3-ultra-free"
       ]
     },
     "pi": {
@@ -82,16 +157,14 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "sonnet[1m]",
-    "opencode": "opencode:deepseek-v4-pro"
+    "opencode": "opencode:opencode-go/deepseek-v4-flash"
   },
   "savedProviderEffort": {
     "claude": "high",
-    "opencode": "default"
+    "opencode": "medium"
   },
   "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {
-    "opencode": "default"
-  },
+  "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
     "claude": "yolo",
     "opencode": "yolo"
