@@ -4,8 +4,8 @@
   "title": "继续推进项目吧",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713703497,
-  "updatedAt": 1780721971712,
-  "lastResponseAt": 1780721971712,
+  "updatedAt": 1780723112156,
+  "lastResponseAt": 1780723112156,
   "sessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2",
   "providerState": {
     "providerSessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2"
@@ -13,11 +13,11 @@
   "usage": {
     "model": "opus[1m]",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 941,
-    "cacheReadInputTokens": 237494,
+    "cacheCreationInputTokens": 1431,
+    "cacheReadInputTokens": 281824,
     "contextWindow": 1000000,
-    "contextTokens": 238437,
-    "percentage": 24,
+    "contextTokens": 283257,
+    "percentage": 28,
     "contextWindowIsAuthoritative": true
   }
 }
