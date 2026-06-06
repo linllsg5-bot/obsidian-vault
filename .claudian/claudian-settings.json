@@ -157,11 +157,11 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "sonnet[1m]",
-    "opencode": "opencode:opencode-go/deepseek-v4-flash"
+    "opencode": "opencode:opencode-go/deepseek-v4-pro"
   },
   "savedProviderEffort": {
     "claude": "high",
-    "opencode": "medium"
+    "opencode": "max"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},

@@ -1,0 +1,24 @@
+{
+  "id": "conv-1780713950454-5fspeadx5",
+  "providerId": "opencode",
+  "title": "Error: unknownAPI Error: Unable to connect to API ...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780713950454,
+  "updatedAt": 1780714198140,
+  "lastResponseAt": 1780714198140,
+  "sessionId": "ses_1652d6722ffexsmT68tEouJMDF",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "currentNote": "未命名 1.md",
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 80000,
+    "contextTokens": 80119,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": false,
+    "inputTokens": 119,
+    "model": "opencode:opencode-go/deepseek-v4-pro",
+    "percentage": 40
+  }
+}
