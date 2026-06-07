@@ -3,7 +3,7 @@ type: session-archive
 date: 2026-06-06
 participants: 小林, Claude Sonnet（网页端）
 runtime: claude.ai
-source_file: "[[6.6和claude sonnet的对话]]"
+source_file: "[[10 Projects/ai-conversations/2026-06-06-sonnet-幻觉与认知操作系统/raw]]"
 duration: ~04:00 — 07:30（深夜到清晨）
 tags: 幻觉, 认知操作系统, LLM工程, 数学猜想, 个人财务
 ---
