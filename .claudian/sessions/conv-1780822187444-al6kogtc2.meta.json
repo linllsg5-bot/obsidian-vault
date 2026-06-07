@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780822187444-al6kogtc2",
+  "providerId": "claude",
+  "title": "Plan approach to read user's past Claude conver...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780822187447,
+  "updatedAt": 1780822471767,
+  "lastResponseAt": 1780822471767,
+  "sessionId": "abf3c9e4-605c-46cb-9cd1-f43df54c331e",
+  "providerState": {
+    "providerSessionId": "abf3c9e4-605c-46cb-9cd1-f43df54c331e"
+  },
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 2748,
+    "cacheReadInputTokens": 101544,
+    "contextWindow": 1000000,
+    "contextTokens": 104293,
+    "percentage": 10,
+    "contextWindowIsAuthoritative": true
+  }
+}
