@@ -4,20 +4,20 @@
   "title": "Plan approach to read user's past Claude conver...",
   "titleGenerationStatus": "success",
   "createdAt": 1780822187447,
-  "updatedAt": 1780822471767,
-  "lastResponseAt": 1780822471767,
+  "updatedAt": 1780823149872,
+  "lastResponseAt": 1780823149872,
   "sessionId": "abf3c9e4-605c-46cb-9cd1-f43df54c331e",
   "providerState": {
     "providerSessionId": "abf3c9e4-605c-46cb-9cd1-f43df54c331e"
   },
   "usage": {
     "model": "sonnet[1m]",
-    "inputTokens": 1,
-    "cacheCreationInputTokens": 2748,
-    "cacheReadInputTokens": 101544,
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 1821,
+    "cacheReadInputTokens": 119652,
     "contextWindow": 1000000,
-    "contextTokens": 104293,
-    "percentage": 10,
+    "contextTokens": 121476,
+    "percentage": 12,
     "contextWindowIsAuthoritative": true
   }
 }
