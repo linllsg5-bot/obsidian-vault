@@ -4,20 +4,19 @@
   "title": "Discuss switching from Obsidian to pi agent",
   "titleGenerationStatus": "success",
   "createdAt": 1780824104438,
-  "updatedAt": 1780824336878,
-  "lastResponseAt": 1780824336878,
+  "updatedAt": 1780826830374,
+  "lastResponseAt": 1780826830374,
   "sessionId": "8099c571-0d96-4e4c-afe9-a5f8fb2e4bf4",
   "providerState": {
     "providerSessionId": "8099c571-0d96-4e4c-afe9-a5f8fb2e4bf4"
   },
-  "currentNote": "6.6和claude sonnet的对话.md",
   "usage": {
     "model": "sonnet[1m]",
     "inputTokens": 3,
-    "cacheCreationInputTokens": 37218,
-    "cacheReadInputTokens": 35343,
+    "cacheCreationInputTokens": 1705,
+    "cacheReadInputTokens": 72561,
     "contextWindow": 1000000,
-    "contextTokens": 72564,
+    "contextTokens": 74269,
     "percentage": 7,
     "contextWindowIsAuthoritative": true
   }
