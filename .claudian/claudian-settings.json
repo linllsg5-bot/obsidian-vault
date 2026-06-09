@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "opus[1m]",
+  "model": "sonnet[1m]",
   "thinkingBudget": "medium",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -35,7 +35,7 @@
       "enableOpus1M": true,
       "enableSonnet1M": true,
       "customModels": "",
-      "lastModel": "opus[1m]",
+      "lastModel": "sonnet[1m]",
       "environmentVariables": "",
       "environmentHash": ""
     },
@@ -156,7 +156,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "opus[1m]",
+    "claude": "sonnet[1m]",
     "opencode": "opencode:opencode-go/deepseek-v4-pro"
   },
   "savedProviderEffort": {
