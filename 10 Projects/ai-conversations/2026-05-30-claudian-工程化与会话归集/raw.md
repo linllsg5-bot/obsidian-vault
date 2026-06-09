@@ -1902,9 +1902,9 @@ Bashcurl -s "https://api-cc.freemodel.dev/v1/models" -H "Authori...
 
 ```json
 {
-  "apiKeyHelper": "echo 'fe_oa_f7d44881e4ae3c4bc74591dde843121872a83794effd9a51'",
+  "apiKeyHelper": "echo '[密钥已移除]'",
   "env": {
-    "ANTHROPIC_API_KEY": "fe_oa_f7d44881e4ae3c4bc74591dde843121872a83794effd9a51",
+    "ANTHROPIC_API_KEY": "[密钥已移除]",
     "ANTHROPIC_BASE_URL": "https://api-cc.freemodel.dev"
   },
   "theme": "auto",

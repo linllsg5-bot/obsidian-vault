@@ -1135,7 +1135,7 @@ Bashecho "=== start CCR ===" ccr restart 2>&1 | tail -6 || ccr s...
 
 Both upstreams answered through the router — so CCR's plumbing is correct — but each upstream threw a real credential/gating problem. Let me pin down the relay one before I report (the Gemini one is already clear):
 
-BashK="fe_oa_e878758e66adeaf525da384d1a5295de0088397cf49a330d" e...
+BashK="[密钥已移除]" e...
 
 All three relay tests fail identically — even a plain direct call without any proxy. So the relay isn't gating on User-Agent or system prompt; it fingerprints genuine Claude Code at a deeper level (likely the SDK's `x-stainless-*`/`x-app` headers + auth flow). The one test that matters is whether **real** `ccr code` traffic passes. Let me run that definitively:
 
@@ -1166,7 +1166,7 @@ Two housekeeping: the config file (`~/.claude-code-router/config.json`) holds yo
 
 **Give me the `AIzaSy` key and I finish + test the Gemini half.** Then your daily driver becomes `ccr code` (auto-starts the service): grunt work → free Gemini, real thinking → relay-Claude, settings.json never touched.
 
-AIzaSyAc4BrsklGfMwnkNjd92bDw_98Lsh2VSac
+[密钥已移除]
 
 还有token消耗很奇怪，得解决命中问题
 
@@ -1294,7 +1294,7 @@ Thought
 
 Key works. Two findings at once. First the Gemini key — verifying it does actual generation (not just listing models). Then syncing keys, fixing cache.
 
-BashKEY="AIzaSyAc4BrsklGfMwnkNjd92bDw_98Lsh2VSac" echo "=== Gemi...
+BashKEY="[密钥已移除]" echo "=== Gemi...
 
 Thought
 
@@ -1465,7 +1465,7 @@ Thought
 **密钥已经在项目里了。** `search.py` 现在认 `GEMINI_API_KEY` 环境变量，`fetch_material()`（取材料按钮）**自动走 Gemini 直接 API + Google Search 接地**，不走 relay、零成本。你跑 studying-spark 前先设：
 
 ```
-$env:GEMINI_API_KEY="AIzaSyAc4BrsklGfMwnkNjd92bDw_98Lsh2VSac"
+$env:GEMINI_API_KEY="[密钥已移除]"
 ```
 
 然后点"🧭 取点真材料"时它就不经过 relay 了。
@@ -1553,7 +1553,7 @@ Thought
 
 它们跑完我把三个 digest 收拢、跟你的偏离一/二逐条对撞——**哪条真原创、哪条已有人先到、残留 sliver 是什么**，写成一段能带走的结论。
 
-这会比防弹窗久一点（联网读材料、摘原文）。你这边先不用等，直接 `streamlit run app.py` + `$env:GEMINI_API_KEY="AIzaSyAc4BrsklGfMwnkNjd92bDw_98Lsh2VSac"` 试试那个 🧭 取材料按钮也行。跑完了我会叫你。
+这会比防弹窗久一点（联网读材料、摘原文）。你这边先不用等，直接 `streamlit run app.py` + `$env:GEMINI_API_KEY="[密钥已移除]"` 试试那个 🧭 取材料按钮也行。跑完了我会叫你。
 
 Thought
 
@@ -1727,7 +1727,7 @@ CCR (:3456)        ← 按模型分流
 
 ## 3. 软件转圈没回复——最可能的原因
 
-你跑 studying-spark 时如果设了 `$env:GEMINI_API_KEY="AIzaSyAc4BrsklGfMwnkNjd92bDw_98Lsh2VSac"`，`search.py` 的 `call_gemini` 会走 Google API 直连。但今天 Gemini 免费配额已经被我们用尽了两次（三个研究 agent + 多轮 WebSearch）。当配额超限时，Google 返回 429，`call_gemini` 抛 `RuntimeError`，界面显示"对话出错"然后...如果用户继续输入就一直转圈等回复。
+你跑 studying-spark 时如果设了 `$env:GEMINI_API_KEY="[密钥已移除]"`，`search.py` 的 `call_gemini` 会走 Google API 直连。但今天 Gemini 免费配额已经被我们用尽了两次（三个研究 agent + 多轮 WebSearch）。当配额超限时，Google 返回 429，`call_gemini` 抛 `RuntimeError`，界面显示"对话出错"然后...如果用户继续输入就一直转圈等回复。
 
 **解决方法（取决于你想先跑哪个功能）：**
 
@@ -2850,7 +2850,7 @@ AskUserQuestion
 
 The tool call errored out — let me just verify the cache fact directly instead of asking. This is read-only, settles the question empirically:
 
-BashK="fe_oa_da5eaf88a732acc23dee726be62c1259b2f8c1795711ebdc" e...
+BashK="[密钥已移除]" e...
 
 `None` 全部 —— 说明直连 curl 被中转站 gate 了（它只认真·Claude Code，裸 curl 拿不到 usage）。所以这个测法测不出来。但这反而印证了一件关键事：**中转站的缓存行为，只有真·Claude Code 发请求时才看得到——也就是你账单上那些数据。**
 
