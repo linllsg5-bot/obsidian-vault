@@ -4,20 +4,20 @@
   "title": "Discuss switching from Obsidian to pi agent",
   "titleGenerationStatus": "success",
   "createdAt": 1780824104438,
-  "updatedAt": 1780984160984,
-  "lastResponseAt": 1780984160984,
+  "updatedAt": 1780984618980,
+  "lastResponseAt": 1780984618980,
   "sessionId": "8099c571-0d96-4e4c-afe9-a5f8fb2e4bf4",
   "providerState": {
     "providerSessionId": "8099c571-0d96-4e4c-afe9-a5f8fb2e4bf4"
   },
   "usage": {
-    "model": "sonnet[1m]",
-    "inputTokens": 0,
-    "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 0,
+    "model": "opus[1m]",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 12043,
+    "cacheReadInputTokens": 183906,
     "contextWindow": 1000000,
-    "contextTokens": 0,
-    "percentage": 0,
+    "contextTokens": 195951,
+    "percentage": 20,
     "contextWindowIsAuthoritative": true
   }
 }
