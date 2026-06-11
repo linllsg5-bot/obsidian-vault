@@ -4,20 +4,20 @@
   "title": "Analyze AI cognitive runtime weights vs context",
   "titleGenerationStatus": "success",
   "createdAt": 1781146507292,
-  "updatedAt": 1781146605004,
-  "lastResponseAt": 1781146605004,
+  "updatedAt": 1781148053550,
+  "lastResponseAt": 1781148053550,
   "sessionId": "ses_14b651be0ffeJ6rL2q52q9CfiX",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },
   "usage": {
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 26368,
-    "contextTokens": 31110,
+    "cacheReadInputTokens": 71552,
+    "contextTokens": 72617,
     "contextWindow": 1000000,
     "contextWindowIsAuthoritative": true,
-    "inputTokens": 4742,
+    "inputTokens": 1065,
     "model": "opencode:opencode-go/deepseek-v4-pro",
-    "percentage": 3
+    "percentage": 7
   }
 }
