@@ -4,10 +4,20 @@
   "title": "Explain Flatland novella's philosophy",
   "titleGenerationStatus": "success",
   "createdAt": 1781536332759,
-  "updatedAt": 1781536968435,
-  "lastResponseAt": 1781536801921,
+  "updatedAt": 1781537957534,
+  "lastResponseAt": 1781537957534,
   "sessionId": "2edba93e-63a2-46bb-83ef-eb6f9e32f191",
   "providerState": {
     "providerSessionId": "2edba93e-63a2-46bb-83ef-eb6f9e32f191"
+  },
+  "usage": {
+    "model": "opus[1m]",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 83637,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 1000000,
+    "contextTokens": 83639,
+    "percentage": 8,
+    "contextWindowIsAuthoritative": true
   }
 }
