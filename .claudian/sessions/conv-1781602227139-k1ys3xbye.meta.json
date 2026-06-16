@@ -4,8 +4,8 @@
   "title": "Explain Flatland's philosophy and dimensional a...",
   "titleGenerationStatus": "success",
   "createdAt": 1781602227139,
-  "updatedAt": 1781603702378,
-  "lastResponseAt": 1781603702378,
+  "updatedAt": 1781607404607,
+  "lastResponseAt": 1781607404607,
   "sessionId": "ses_1303b5f98ffemCJKbJw7uh3hh8",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
@@ -13,10 +13,10 @@
   "usage": {
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 44032,
-    "contextTokens": 44061,
+    "contextTokens": 44380,
     "contextWindow": 1000000,
     "contextWindowIsAuthoritative": true,
-    "inputTokens": 29,
+    "inputTokens": 348,
     "model": "opencode:opencode-go/deepseek-v4-pro",
     "percentage": 4
   }
