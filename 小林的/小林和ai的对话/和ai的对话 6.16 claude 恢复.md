@@ -87,7 +87,8 @@ _[执行 Bash: check if notes persisted to disk]_
 
 _[执行 Bash: trace note->prompt pipeline]_
 
-> 📋 1. load_note_doc �����ʼ�: 371 ��...
+> 📋 1. load_note_doc �����ʼ�: 371 ��
+...
 
 **Claude**（claude-opus-4-8）：
 
