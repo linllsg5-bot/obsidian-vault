@@ -4,8 +4,8 @@
   "title": "继续推进项目吧",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713703497,
-  "updatedAt": 1781684336322,
-  "lastResponseAt": 1781683126904,
+  "updatedAt": 1781684640039,
+  "lastResponseAt": 1781684640039,
   "sessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2",
   "providerState": {
     "providerSessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2",
@@ -163,8 +163,6 @@
     "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
     "contextTokens": 0,
-    "percentage": 0,
-    "contextWindowIsAuthoritative": false
-  },
-  "resumeAtMessageId": "c16b6d1a-12c6-4bed-93c3-fe951a6b7683"
+    "percentage": 0
+  }
 }
