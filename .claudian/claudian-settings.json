@@ -1,180 +1,214 @@
-{
-  "userName": "",
-  "permissionMode": "yolo",
-  "model": "opus[1m]",
-  "thinkingBudget": "medium",
-  "effortLevel": "max",
-  "serviceTier": "default",
-  "enableAutoTitleGeneration": true,
-  "titleGenerationModel": "opus[1m]",
-  "excludedTags": [],
-  "mediaFolder": "",
-  "systemPrompt": "",
-  "persistentExternalContextPaths": [],
-  "sharedEnvironmentVariables": "",
-  "envSnippets": [],
-  "customContextLimits": {
-    "opencode:deepseek-v4-pro": 1000000
-  },
-  "customModelAliases": {},
-  "keyboardNavigation": {
-    "scrollUpKey": "w",
-    "scrollDownKey": "s",
-    "focusInputKey": "i"
-  },
-  "requireCommandOrControlEnterToSend": false,
-  "locale": "zh-CN",
-  "providerConfigs": {
-    "claude": {
-      "safeMode": "acceptEdits",
-      "cliPath": "",
-      "cliPathsByHost": {},
-      "loadUserSettings": true,
-      "enableChrome": true,
-      "enableBangBash": true,
-      "enableOpus1M": true,
-      "enableSonnet1M": true,
-      "customModels": "",
-      "lastModel": "opus[1m]",
-      "environmentVariables": "",
-      "environmentHash": ""
-    },
-    "codex": {
-      "enabled": true,
-      "safeMode": "workspace-write",
-      "cliPath": "",
-      "cliPathsByHost": {},
-      "customModels": "",
-      "reasoningSummary": "detailed",
-      "environmentVariables": "",
-      "environmentHash": "",
-      "installationMethodsByHost": {
-        "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
-      },
-      "wslDistroOverridesByHost": {}
-    },
-    "opencode": {
-      "cliPath": "",
-      "cliPathsByHost": {},
-      "enabled": true,
-      "environmentHash": "",
-      "environmentVariables": "OPENCODE_ENABLE_EXA=1",
-      "modelAliases": {},
-      "preferredThinkingByModel": {
-        "opencode-go/deepseek-v4-pro": "max",
-        "opencode-go/mimo-v2.5-pro": "low",
-        "opencode-go/deepseek-v4-flash": "medium",
-        "opencode/nemotron-3-ultra-free": "low"
-      },
-      "selectedMode": "claudian-yolo",
-      "thinkingOptionsByModel": {
-        "opencode-go/deepseek-v4-pro": [
-          {
-            "label": "Low",
-            "value": "low"
-          },
-          {
-            "label": "Medium",
-            "value": "medium"
-          },
-          {
-            "label": "High",
-            "value": "high"
-          },
-          {
-            "label": "Max",
-            "value": "max"
-          }
-        ],
-        "opencode-go/mimo-v2.5-pro": [
-          {
-            "label": "Low",
-            "value": "low"
-          },
-          {
-            "label": "Medium",
-            "value": "medium"
-          },
-          {
-            "label": "High",
-            "value": "high"
-          }
-        ],
-        "opencode-go/deepseek-v4-flash": [
-          {
-            "label": "Low",
-            "value": "low"
-          },
-          {
-            "label": "Medium",
-            "value": "medium"
-          },
-          {
-            "label": "High",
-            "value": "high"
-          },
-          {
-            "label": "Max",
-            "value": "max"
-          }
-        ],
-        "opencode/nemotron-3-ultra-free": [
-          {
-            "label": "Low",
-            "value": "low"
-          },
-          {
-            "label": "Medium",
-            "value": "medium"
-          },
-          {
-            "label": "High",
-            "value": "high"
-          }
-        ]
-      },
-      "visibleModels": [
-        "qwen3.7-plus",
-        "opencode-go/deepseek-v4-pro",
-        "opencode-go/mimo-v2.5-pro",
-        "opencode-go/deepseek-v4-flash",
-        "opencode/nemotron-3-ultra-free"
-      ]
-    },
-    "pi": {
-      "cliPath": "",
-      "cliPathsByHost": {},
-      "discoveredModels": [],
-      "enabled": false,
-      "environmentHash": "",
-      "environmentVariables": "",
-      "modelAliases": {},
-      "preferredThinkingByModel": {},
-      "toolMode": "all",
-      "visibleModels": []
-    }
-  },
-  "settingsProvider": "claude",
-  "savedProviderModel": {
-    "claude": "opus[1m]",
-    "opencode": "opencode:opencode-go/deepseek-v4-pro"
-  },
-  "savedProviderEffort": {
-    "claude": "max",
-    "opencode": "max"
-  },
-  "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {},
-  "savedProviderPermissionMode": {
-    "claude": "yolo",
-    "opencode": "yolo"
-  },
-  "lastCustomModel": "",
-  "maxTabs": 5,
-  "tabBarPosition": "input",
-  "enableAutoScroll": true,
-  "deferMathRenderingDuringStreaming": true,
-  "expandFileEditsByDefault": false,
-  "chatViewPlacement": "right-sidebar",
-  "hiddenProviderCommands": {}
+﻿{
+    "userName":  "",
+    "permissionMode":  "yolo",
+    "model":  "opus",
+    "thinkingBudget":  "medium",
+    "effortLevel":  "max",
+    "serviceTier":  "default",
+    "enableAutoTitleGeneration":  true,
+    "titleGenerationModel":  "opus",
+    "excludedTags":  [
+
+                     ],
+    "mediaFolder":  "",
+    "systemPrompt":  "",
+    "persistentExternalContextPaths":  [
+
+                                       ],
+    "sharedEnvironmentVariables":  "",
+    "envSnippets":  [
+
+                    ],
+    "customContextLimits":  {
+                                "opencode:deepseek-v4-pro":  1000000
+                            },
+    "customModelAliases":  {
+
+                           },
+    "keyboardNavigation":  {
+                               "scrollUpKey":  "w",
+                               "scrollDownKey":  "s",
+                               "focusInputKey":  "i"
+                           },
+    "requireCommandOrControlEnterToSend":  false,
+    "locale":  "zh-CN",
+    "providerConfigs":  {
+                            "claude":  {
+                                           "safeMode":  "acceptEdits",
+                                           "cliPath":  "",
+                                           "cliPathsByHost":  {
+
+                                                              },
+                                           "loadUserSettings":  true,
+                                           "enableChrome":  true,
+                                           "enableBangBash":  true,
+                                           "enableOpus1M":  false,
+                                           "enableSonnet1M":  false,
+                                           "customModels":  "",
+                                           "lastModel":  "opus",
+                                           "environmentVariables":  "",
+                                           "environmentHash":  ""
+                                       },
+                            "codex":  {
+                                          "enabled":  true,
+                                          "safeMode":  "workspace-write",
+                                          "cliPath":  "",
+                                          "cliPathsByHost":  {
+
+                                                             },
+                                          "customModels":  "",
+                                          "reasoningSummary":  "detailed",
+                                          "environmentVariables":  "",
+                                          "environmentHash":  "",
+                                          "installationMethodsByHost":  {
+                                                                            "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265":  "native-windows"
+                                                                        },
+                                          "wslDistroOverridesByHost":  {
+
+                                                                       }
+                                      },
+                            "opencode":  {
+                                             "cliPath":  "",
+                                             "cliPathsByHost":  {
+
+                                                                },
+                                             "enabled":  true,
+                                             "environmentHash":  "",
+                                             "environmentVariables":  "OPENCODE_ENABLE_EXA=1",
+                                             "modelAliases":  {
+
+                                                              },
+                                             "preferredThinkingByModel":  {
+                                                                              "opencode-go/deepseek-v4-pro":  "max",
+                                                                              "opencode-go/mimo-v2.5-pro":  "low",
+                                                                              "opencode-go/deepseek-v4-flash":  "medium",
+                                                                              "opencode/nemotron-3-ultra-free":  "low"
+                                                                          },
+                                             "selectedMode":  "claudian-yolo",
+                                             "thinkingOptionsByModel":  {
+                                                                            "opencode-go/deepseek-v4-pro":  [
+                                                                                                                {
+                                                                                                                    "label":  "Low",
+                                                                                                                    "value":  "low"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "label":  "Medium",
+                                                                                                                    "value":  "medium"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "label":  "High",
+                                                                                                                    "value":  "high"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "label":  "Max",
+                                                                                                                    "value":  "max"
+                                                                                                                }
+                                                                                                            ],
+                                                                            "opencode-go/mimo-v2.5-pro":  [
+                                                                                                              {
+                                                                                                                  "label":  "Low",
+                                                                                                                  "value":  "low"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "label":  "Medium",
+                                                                                                                  "value":  "medium"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                  "label":  "High",
+                                                                                                                  "value":  "high"
+                                                                                                              }
+                                                                                                          ],
+                                                                            "opencode-go/deepseek-v4-flash":  [
+                                                                                                                  {
+                                                                                                                      "label":  "Low",
+                                                                                                                      "value":  "low"
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "label":  "Medium",
+                                                                                                                      "value":  "medium"
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "label":  "High",
+                                                                                                                      "value":  "high"
+                                                                                                                  },
+                                                                                                                  {
+                                                                                                                      "label":  "Max",
+                                                                                                                      "value":  "max"
+                                                                                                                  }
+                                                                                                              ],
+                                                                            "opencode/nemotron-3-ultra-free":  [
+                                                                                                                   {
+                                                                                                                       "label":  "Low",
+                                                                                                                       "value":  "low"
+                                                                                                                   },
+                                                                                                                   {
+                                                                                                                       "label":  "Medium",
+                                                                                                                       "value":  "medium"
+                                                                                                                   },
+                                                                                                                   {
+                                                                                                                       "label":  "High",
+                                                                                                                       "value":  "high"
+                                                                                                                   }
+                                                                                                               ]
+                                                                        },
+                                             "visibleModels":  [
+                                                                   "qwen3.7-plus",
+                                                                   "opencode-go/deepseek-v4-pro",
+                                                                   "opencode-go/mimo-v2.5-pro",
+                                                                   "opencode-go/deepseek-v4-flash",
+                                                                   "opencode/nemotron-3-ultra-free"
+                                                               ]
+                                         },
+                            "pi":  {
+                                       "cliPath":  "",
+                                       "cliPathsByHost":  {
+
+                                                          },
+                                       "discoveredModels":  [
+
+                                                            ],
+                                       "enabled":  false,
+                                       "environmentHash":  "",
+                                       "environmentVariables":  "",
+                                       "modelAliases":  {
+
+                                                        },
+                                       "preferredThinkingByModel":  {
+
+                                                                    },
+                                       "toolMode":  "all",
+                                       "visibleModels":  [
+
+                                                         ]
+                                   }
+                        },
+    "settingsProvider":  "claude",
+    "savedProviderModel":  {
+                               "claude":  "opus",
+                               "opencode":  "opencode:opencode-go/deepseek-v4-pro"
+                           },
+    "savedProviderEffort":  {
+                                "claude":  "max",
+                                "opencode":  "max"
+                            },
+    "savedProviderServiceTier":  {
+
+                                 },
+    "savedProviderThinkingBudget":  {
+
+                                    },
+    "savedProviderPermissionMode":  {
+                                        "claude":  "yolo",
+                                        "opencode":  "yolo"
+                                    },
+    "lastCustomModel":  "",
+    "maxTabs":  5,
+    "tabBarPosition":  "input",
+    "enableAutoScroll":  true,
+    "deferMathRenderingDuringStreaming":  true,
+    "expandFileEditsByDefault":  false,
+    "chatViewPlacement":  "right-sidebar",
+    "hiddenProviderCommands":  {
+
+                               }
 }

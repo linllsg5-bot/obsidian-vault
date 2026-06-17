@@ -4,11 +4,11 @@
   "title": "继续推进项目吧",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713703497,
-  "updatedAt": 1781685510798,
-  "lastResponseAt": 1781684640039,
-  "sessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2",
+  "updatedAt": 1781687044025,
+  "lastResponseAt": 1781687044025,
+  "sessionId": "816394ca-5e51-4f8f-9dd4-c73d318a1173",
   "providerState": {
-    "providerSessionId": "6741ca38-dc2d-4381-855d-e0a5568667d2",
+    "providerSessionId": "816394ca-5e51-4f8f-9dd4-c73d318a1173",
     "subagentData": {
       "toolu_01JKJEV6c9AEMxiejA2PiBjd": {
         "id": "toolu_01JKJEV6c9AEMxiejA2PiBjd",
@@ -154,16 +154,19 @@
         "isExpanded": false,
         "result": "Failed to authenticate. API Error: 403 This service is restricted to the official Claude Code client.\nagentId: a7d9723e8442f7288 (use SendMessage with to: 'a7d9723e8442f7288' to continue this agent)\n<usage>subagent_tokens: 0\ntool_uses: 0\nduration_ms: 201</usage>"
       }
-    }
+    },
+    "previousProviderSessionIds": [
+      "6741ca38-dc2d-4381-855d-e0a5568667d2"
+    ]
   },
   "usage": {
     "model": "opus[1m]",
-    "inputTokens": 0,
-    "cacheCreationInputTokens": 0,
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 155390,
     "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
-    "contextTokens": 0,
-    "percentage": 0
-  },
-  "resumeAtMessageId": "c16b6d1a-12c6-4bed-93c3-fe951a6b7683"
+    "contextTokens": 155392,
+    "percentage": 16,
+    "contextWindowIsAuthoritative": true
+  }
 }

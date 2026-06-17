@@ -1,0 +1,13 @@
+{
+  "id": "conv-1781686909538-a9ye1nfoy",
+  "providerId": "claude",
+  "title": "后面你各种报错",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1781686909538,
+  "updatedAt": 1781687174533,
+  "lastResponseAt": 1781687144823,
+  "sessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb",
+  "providerState": {
+    "providerSessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb"
+  }
+}
