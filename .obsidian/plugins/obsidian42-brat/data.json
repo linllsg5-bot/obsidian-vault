@@ -1,6 +1,7 @@
 {
   "pluginList": [
-    "mtymek/opencode-obsidian"
+    "mtymek/opencode-obsidian",
+    "YishenTu/claudian"
   ],
   "pluginSubListFrozenVersion": [
     {
