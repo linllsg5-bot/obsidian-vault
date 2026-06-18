@@ -3007,8 +3007,10 @@ testing.md
 📤 **[工具结果]**
 ```
 ===谁在注入规则? 查 settings.json 的 hooks===
-hooks: "(��)"
-���������: ['env', 'permissions', 'apiKeyHelper']
+hooks: "(��)"
+
+���������: ['env', 'permissions', 'apiKeyHelper']
+
 
 ===全局 CLAUDE.md 有没有 @import 规则===
 (无全局 ~/.claude/CLAUDE.md)
@@ -3400,11 +3402,16 @@ fe_oa_…(len查看
 📤 **[工具结果]**
 ```
 ===config.json 顶层结构(看 proxy 到底从哪取 key)===
-Traceback (most recent call last):
-  File "<string>", line 3, in <module>
-    cfg=json.load(open('/c/Users/lnp/.claude-code-router/config.json',encoding='utf-8'))
-                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/lnp/.claude-code-router/config.json'
+Traceback (most recent call last):
+
+  File "<string>", line 3, in <module>
+
+    cfg=json.load(open('/c/Users/lnp/.claude-code-router/config.json',encoding='utf-8'))
+
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/lnp/.claude-code-router/config.json'
+
 
 ===proxy 默认上游 URL(代码里写死的)===
 https://cc.freemodel.dev/v1/messages
@@ -3459,11 +3466,16 @@ RELAY_BASE_URL: 未设(用默认 freemodel)
 
 ===最近的 .bak 里有没有 relay key(看结构,值隐去)===
 最新备份: config.json.bak.20260605-122405
-Traceback (most recent call last):
-  File "<string>", line 3, in <module>
-    cfg=json.load(open(r'/c/Users/lnp/.claude-code-router/config.json.bak.20260605-122405',encoding='utf-8'))
-                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/lnp/.claude-code-router/config.json.bak.20260605-122405'
+Traceback (most recent call last):
+
+  File "<string>", line 3, in <module>
+
+    cfg=json.load(open(r'/c/Users/lnp/.claude-code-router/config.json.bak.20260605-122405',encoding='utf-8'))
+
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/lnp/.claude-code-router/config.json.bak.20260605-122405'
+
 
 ===9801 进程还活着吗(还是说已经崩了)===
   TCP    127.0.0.1:9801         0.0.0.0:0              LISTENING       25228
@@ -3504,16 +3516,26 @@ FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/lnp/.claude-co
 📤 **[工具结果]**
 ```
 Exit code 1
-Traceback (most recent call last):
-  File "<stdin>", line 4, in <module>
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 298, in load
-    return loads(fp.read(),
-        cls=cls, object_hook=object_hook,
-        parse_float=parse_float, parse_int=parse_int,
-        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 341, in loads
-    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
-                          s, 0)
+Traceback (most recent call last):
+
+  File "<stdin>", line 4, in <module>
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 298, in load
+
+    return loads(fp.read(),
+
+        cls=cls, object_hook=object_hook,
+
+        parse_float=parse_float, parse_int=parse_int,
+
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 341, in loads
+
+    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+
+                          s, 0)
+
 json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
 ```
 
@@ -3544,21 +3566,36 @@ json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): lin
 📤 **[工具结果]**
 ```
 Exit code 1
-config.json �����: ['LOG', 'PORT', 'HOST', 'API_TIMEOUT_MS', 'Providers', 'Router']
-provider ����: 3
-  [relay] key=��54�ַ�/ǰ׺fe_oa_, base=https://cc.freemodel.dev
-  [gemini] key=��39�ַ�/ǰ׺AIzaSy, base=https://generativelanguage.googleapis.com/v1beta/models/
-  [opencode] key=��67�ַ�/ǰ׺sk-Gc9, base=https://opencode.ai/zen/go
-
-̽����: [relay] ǰ׺ fe_oa_��
-Traceback (most recent call last):
-  File "<stdin>", line 21, in <module>
-UnicodeEncodeError: 'gbk' codec can't encode character '\u2705' in position 2: illegal multibyte sequence
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "<stdin>", line 27, in <module>
+config.json �����: ['LOG', 'PORT', 'HOST', 'API_TIMEOUT_MS', 'Providers', 'Router']
+
+provider ����: 3
+
+  [relay] key=��54�ַ�/ǰ׺fe_oa_, base=https://cc.freemodel.dev
+
+  [gemini] key=��39�ַ�/ǰ׺AIzaSy, base=https://generativelanguage.googleapis.com/v1beta/models/
+
+  [opencode] key=��67�ַ�/ǰ׺sk-Gc9, base=https://opencode.ai/zen/go
+
+
+
+̽����: [relay] ǰ׺ fe_oa_��
+
+Traceback (most recent call last):
+
+  File "<stdin>", line 21, in <module>
+
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2705' in position 2: illegal multibyte sequence
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+
+Traceback (most recent call last):
+
+  File "<stdin>", line 27, in <module>
+
 UnicodeEncodeError: 'gbk' codec can't encode character '\u26a0' in position 2: illegal multibyte sequence
 ```
 
@@ -3599,9 +3636,12 @@ UnicodeEncodeError: 'gbk' codec can't encode character '\u26a0' in position 2: i
 
 📤 **[工具结果]**
 ```
-[relay] OK http 200 -- key VALID
-[gemini] skip (non-anthropic upstream), key prefix AIzaSy len 39
-[opencode] skip (non-anthropic upstream), key prefix sk-Gc9 len 67
+[relay] OK http 200 -- key VALID
+
+[gemini] skip (non-anthropic upstream), key prefix AIzaSy len 39
+
+[opencode] skip (non-anthropic upstream), key prefix sk-Gc9 len 67
+
 done
 ```
 
@@ -3695,7 +3735,8 @@ done
 
 📤 **[工具结果]**
 ```
-�ɹ�: ����ֹ PID Ϊ 25228 �Ľ��̡�
+�ɹ�: ����ֹ PID Ϊ 25228 �Ľ��̡�
+
 WARN proxy 5秒还没起来,需检查
 ```
 
@@ -4044,17 +4085,28 @@ Invalid API key · Fix external API key
 
 📤 **[工具结果]**
 ```
-[compile] search.py OK
-[compile] prompts.py OK
-
-[prompts] 定义的 PROMPT 常量:
-  CHAT_SYSTEM_PROMPT: 2596 字符
-  CONTACT_FINDER_PROMPT: 780 字符
-  LEAKAGE_JUDGE_PROMPT: 494 字符
-  MATERIAL_PROMPT: 491 字符
-  SEDIMENT_PROMPT: 336 字符
-
-[judge prompt] 存在, 占位符完整=True, 含JSON契约=True
+[compile] search.py OK
+
+[compile] prompts.py OK
+
+
+
+[prompts] 定义的 PROMPT 常量:
+
+  CHAT_SYSTEM_PROMPT: 2596 字符
+
+  CONTACT_FINDER_PROMPT: 780 字符
+
+  LEAKAGE_JUDGE_PROMPT: 494 字符
+
+  MATERIAL_PROMPT: 491 字符
+
+  SEDIMENT_PROMPT: 336 字符
+
+
+
+[judge prompt] 存在, 占位符完整=True, 含JSON契约=True
+
 [sediment prompt] 干净未被污染 (336字符)
 ```
 
@@ -4304,19 +4356,32 @@ Your questions have been answered: "Phase 1 代码集成已确认干净。下一
 
 📤 **[工具结果]**
 ```
-=== 跑一轮真实对话,观察 judge 是否触发 ===
-
-[1] 生成原始回应中...
-
-========== RAW(judge 前)==========
-直觉很准。“罕见”意味着没病的人基数极大。
-
-如果对没病的人有1%的误报，10万个没病的人里会砸出多少个假阳性？拿这个数，去跟那极少量的真阳性比一下。
-
-[2] 过 leakage judge...
-[judge] 异常，放行: Expecting ',' delimiter: line 4 column 19 (char 52)
-
-========== JUDGE 判定: PASS 放行 ==========
+=== 跑一轮真实对话,观察 judge 是否触发 ===
+
+
+
+[1] 生成原始回应中...
+
+
+
+========== RAW(judge 前)==========
+
+直觉很准。“罕见”意味着没病的人基数极大。
+
+
+
+如果对没病的人有1%的误报，10万个没病的人里会砸出多少个假阳性？拿这个数，去跟那极少量的真阳性比一下。
+
+
+
+[2] 过 leakage judge...
+
+[judge] 异常，放行: Expecting ',' delimiter: line 4 column 19 (char 52)
+
+
+
+========== JUDGE 判定: PASS 放行 ==========
+
 (原样输出,judge 认为没翻底牌/没 funneling)
 ```
 
@@ -4375,27 +4440,48 @@ Please run /login · API Error: 403 This service is restricted to the official C
 📤 **[工具结果]**
 ```
 Exit code 1
-[调 judge,抓原始返回]
-
-[call_claude] opencode 失败 (Opencode 连接失败：The read operation timed out)，尝试 Gemini...
-[call_claude] Gemini 失败 (Gemini API 报错 (403)：{
-  "error": {
-    "code": 403,
-    "message": "Your API key was reported as leaked. Please use another API key.",
-    "status": "PERMISSION_DENIED"
-  }
-}
-)
-Traceback (most recent call last):
-  File "<stdin>", line 9, in <module>
-  File "C:\Users\lnp\Documents\studying-spark\search.py", line 284, in call_claude
-    raise RuntimeError("所有路由都失败了：" + " | ".join(errors))
-RuntimeError: 所有路由都失败了：Opencode 连接失败：The read operation timed out | Gemini API 报错 (403)：{
-  "error": {
-    "code": 403,
-    "message": "Your API key was reported as leaked. Please use another API key.",
-    "status": "PERMISSION_DENIED"
-  }
+[调 judge,抓原始返回]
+
+
+
+[call_claude] opencode 失败 (Opencode 连接失败：The read operation timed out)，尝试 Gemini...
+
+[call_claude] Gemini 失败 (Gemini API 报错 (403)：{
+
+  "error": {
+
+    "code": 403,
+
+    "message": "Your API key was reported as leaked. Please use another API key.",
+
+    "status": "PERMISSION_DENIED"
+
+  }
+
+}
+
+)
+
+Traceback (most recent call last):
+
+  File "<stdin>", line 9, in <module>
+
+  File "C:\Users\lnp\Documents\studying-spark\search.py", line 284, in call_claude
+
+    raise RuntimeError("所有路由都失败了：" + " | ".join(errors))
+
+RuntimeError: 所有路由都失败了：Opencode 连接失败：The read operation timed out | Gemini API 报错 (403)：{
+
+  "error": {
+
+    "code": 403,
+
+    "message": "Your API key was reported as leaked. Please use another API key.",
+
+    "status": "PERMISSION_DENIED"
+
+  }
+
 }
 ```
 
@@ -4602,26 +4688,46 @@ The file C:\Users\lnp\Documents\studying-spark\search.py has been updated succes
 
 📤 **[工具结果]**
 ```
-[compile] search.py OK
-
-[标准JSON/FAIL]
-  parse_ok=True  判定=FAIL  fixed='修正后的话'
-  issues=['翻底牌了']
-
-[中文标点坏JSON/FAIL]
-  parse_ok=True  判定=FAIL  fixed='直觉很准。"罕见"意味着,基数极大'
-  issues=['（降级解析：JSON 不合法，仅取到 pass 判定）']
-
-[无JSON]
-  parse_ok=False  判定=PASS  fixed='原始回应文本'
-  issues=[]
-
-[标准JSON/PASS]
-  parse_ok=True  判定=PASS  fixed='原样'
-  issues=[]
-
-=== 关键验证 ===
-✓ 中文标点坏 JSON 现在能正确抠出 FAIL 判定(之前这里会假装 PASS)
+[compile] search.py OK
+
+
+
+[标准JSON/FAIL]
+
+  parse_ok=True  判定=FAIL  fixed='修正后的话'
+
+  issues=['翻底牌了']
+
+
+
+[中文标点坏JSON/FAIL]
+
+  parse_ok=True  判定=FAIL  fixed='直觉很准。"罕见"意味着,基数极大'
+
+  issues=['（降级解析：JSON 不合法，仅取到 pass 判定）']
+
+
+
+[无JSON]
+
+  parse_ok=False  判定=PASS  fixed='原始回应文本'
+
+  issues=[]
+
+
+
+[标准JSON/PASS]
+
+  parse_ok=True  判定=PASS  fixed='原样'
+
+  issues=[]
+
+
+
+=== 关键验证 ===
+
+✓ 中文标点坏 JSON 现在能正确抠出 FAIL 判定(之前这里会假装 PASS)
+
 ✓ 无 JSON 时诚实报告不可用
 ```
 
@@ -5276,8 +5382,10 @@ Exit code 1
 ✅ blob: cc6e66ed9b0c  大小: 701字节
 
 === 内容结构(BOM兼容,隐去key)===
-Traceback (most recent call last):
-  File "<stdin>", line 2, in <module>
+Traceback (most recent call last):
+
+  File "<stdin>", line 2, in <module>
+
 FileNotFoundError: [Errno 2] No such file or directory: '/tmp/recovered_data.json'
 ```
 
@@ -5940,9 +6048,12 @@ No response requested.
 
 📤 **[工具结果]**
 ```
-tabManagerState:
-  openTabs:
-    [4��] 
+tabManagerState:
+
+  openTabs:
+
+    [4��] 
+
   activeTabId = tab-1780715261959-cgc6v4j
 ```
 
@@ -6010,9 +6121,12 @@ Obsidian 关了吗?关了我就动手。
 ✅ 已写入 (581 字节)
 
 === 步骤2: 把 realclaudian 加回启用列表 ===
-Traceback (most recent call last):
-  File "<stdin>", line 11, in <module>
-UnicodeEncodeError: 'gbk' codec can't encode character '\u2705' in position 0: illegal multibyte sequence
+Traceback (most recent call last):
+
+  File "<stdin>", line 11, in <module>
+
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2705' in position 0: illegal multibyte sequence
+
 
 === 验证: 两样东西都到位了吗 ===
 data.json 存在: ✅
@@ -6056,9 +6170,12 @@ main.js 完好: ✅
 
 📤 **[工具结果]**
 ```
-[community-plugins.json] 合法 JSON, 15 个插件
-  realclaudian 在列表: True
-  opencode 相关: ['opencode-obsidian']
+[community-plugins.json] 合法 JSON, 15 个插件
+
+  realclaudian 在列表: True
+
+  opencode 相关: ['opencode-obsidian']
+
 [data.json] 合法 JSON, 顶层键: ['tabManagerState']
 ```
 
@@ -6138,13 +6255,18 @@ var __getOwnPropDesc = Object.getOwnPropertyDescrip
 /* nosourcemap */
 
 === 2. manifest 要求的最低 Obsidian 版本 ===
-����汾: 2.0.24
-��Ҫ Obsidian >= 1.7.2
-isDesktopOnly: True
+����汾: 2.0.24
+
+��Ҫ Obsidian >= 1.7.2
+
+isDesktopOnly: True
+
 
 === 3. 你的 Obsidian 版本 ===
-{'alwaysUpdateLinks': True, 'pdfExportSettings': {'includeName': True, 'pageSize': 'Letter', 'landscape': False, 'margin': '0', 'downscalePercent': 100}, 'readableLineLength': True}
-�� obsidian ��װĿ¼: False
+{'alwaysUpdateLinks': True, 'pdfExportSettings': {'includeName': True, 'pageSize': 'Letter', 'landscape': False, 'margin': '0', 'downscalePercent': 100}, 'readableLineLength': True}
+
+�� obsidian ��װĿ¼: False
+
 
 === 4. main.js 是否被 git 标记为损坏/有改动 ===
 ```
@@ -6335,7 +6457,9 @@ drwxr-xr-x 1 lnp 197613       0 Jun 18 00:20 ../
 ```
 === 搜所有带 BOM 且以 {"u 开头的 json (claudian 的真设置文件) ===
 ⚠ BOM: ./.claudian/claudian-settings.json
-      开头: {     "userName":  "",     "
+      开头: {
+     "userName":  "",
+     "
 ⚠ BOM: ./.claudian/sessions/conv-1780628173747-vlwexrq6j.meta.json
       开头: {   "id": "conv-1780628173747-
 ⚠ BOM: ./.claudian/sessions/conv-1780628199093-7zhaui5hp.meta.json
@@ -6417,8 +6541,10 @@ drwxr-xr-x 1 lnp 197613       0 Jun 17 17:06 ../
 已备份
 
 === 2. 验证去BOM后内容是合法JSON(先不写,只测) ===
-当前有BOM: True, 文件 15423 字节
-去BOM后是合法JSON, 顶层键数: 34
+当前有BOM: True, 文件 15423 字节
+
+去BOM后是合法JSON, 顶层键数: 34
+
 配置键: ['userName', 'permissionMode', 'model', 'thinkingBudget', 'effortLevel', 'serviceTier', 'enableAutoTitleGeneration', 'titleGenerationModel', 'excludedTags', 'mediaFolder', 'systemPrompt', 'persistentExternalContextPaths', 'sharedEnvironmentVariables', 'envSnippets', 'customContextLimits', 'customModelAliases', 'keyboardNavigation', 'requireCommandOrControlEnterToSend', 'locale', 'providerConfigs', 'settingsProvider', 'savedProviderModel', 'savedProviderEffort', 'savedProviderServiceTier', 'savedProviderThinkingBudget', 'savedProviderPermissionMode', 'lastCustomModel', 'maxTabs', 'tabBarPosition', 'enableAutoScroll', 'deferMathRenderingDuringStreaming', 'expandFileEditsByDefault', 'chatViewPlacement', 'hiddenProviderCommands']
 ```
 
@@ -6451,9 +6577,12 @@ drwxr-xr-x 1 lnp 197613       0 Jun 17 17:06 ../
 
 📤 **[工具结果]**
 ```
-BOM 已去除: True
-新文件大小: 15420 字节 (应比原来少3字节)
-标准 JSON.parse 能解析: True  ← claudian 现在能读了
+BOM 已去除: True
+
+新文件大小: 15420 字节 (应比原来少3字节)
+
+标准 JSON.parse 能解析: True  ← claudian 现在能读了
+
 
 === 顺手检查:sessions 里那6个 meta.json 也带BOM,要不要一起去? ===
 (claudian 加载设置时不读 sessions,但打开会话历史时可能会读,先告诉你)
@@ -6548,14 +6677,22 @@ claudian 这次应该能加载成功了。**重新打开 Obsidian,看 claudian �
 
 📤 **[工具结果]**
 ```
-去BOM成功: 5 个
-  - conv-1780628173747-vlwexrq6j.meta.json
-  - conv-1780628199093-7zhaui5hp.meta.json
-  - conv-1780628290442-2onw26yiy.meta.json
-  - conv-1780633191300-flbmkkl0m.meta.json
-  - conv-1780697170431-exfhf2fhb.meta.json
-本来就没BOM(跳过): 21 个
-失败: 1
+去BOM成功: 5 个
+
+  - conv-1780628173747-vlwexrq6j.meta.json
+
+  - conv-1780628199093-7zhaui5hp.meta.json
+
+  - conv-1780628290442-2onw26yiy.meta.json
+
+  - conv-1780633191300-flbmkkl0m.meta.json
+
+  - conv-1780697170431-exfhf2fhb.meta.json
+
+本来就没BOM(跳过): 21 个
+
+失败: 1
+
   - conv-1780713703497-ki9r0vrsa.meta.json Invalid control character at: line 4 column 25 (char 92)
 ```
 
@@ -6596,13 +6733,20 @@ conv-1780713703497-ki9r0vrsa.meta.json
 -rw-r--r-- 1 lnp 197613 144369 Jun 17 17:04 conv-1780713703497-ki9r0vrsa.meta.json.bak.20260617-1711
 
 === 看 line 4 附近坏在哪(隐去内容,只看结构)===
-L1: {
-L2:   "id": "conv-1780713703497-ki9r0vrsa",
-L3:   "providerId": "claude",
-L4:   "title": "缁х画鎺ㄨ繘椤圭洰鍚?,
-L5:   "titleGenerationStatus": "failed",
-L6:   "createdAt": 1780713703497,
-
+L1: {
+
+L2:   "id": "conv-1780713703497-ki9r0vrsa",
+
+L3:   "providerId": "claude",
+
+L4:   "title": "缁х画鎺ㄨ繘椤圭洰鍚?,
+
+L5:   "titleGenerationStatus": "failed",
+
+L6:   "createdAt": 1780713703497,
+
+
+
 总行数 173, 总字节 92034
 ```
 
@@ -6642,9 +6786,12 @@ L4: "title": "缁х画鎺ㄨ繘椤圭洰鍚?
 
 📤 **[工具结果]**
 ```
-bak 有BOM: False
-bak 是合法JSON: True
-title: '继续推进项目吧'
+bak 有BOM: False
+
+bak 是合法JSON: True
+
+title: '继续推进项目吧'
+
 消息数: 结构:['id', 'providerId', 'title', 'titleGenerationStatus', 'createdAt', 'updatedAt', 'lastResponseAt', 'sessionId']
 ```
 
@@ -6675,7 +6822,8 @@ title: '继续推进项目吧'
 📤 **[工具结果]**
 ```
 === 把坏文件留证(改名),用 bak 恢复 ===
-恢复后合法JSON, title: '继续推进项目吧' 大小: 144369 字节
+恢复后合法JSON, title: '继续推进项目吧' 大小: 144369 字节
+
 
 === 全部 session 现在都合法吗(最终扫一遍)===
 全部合法
