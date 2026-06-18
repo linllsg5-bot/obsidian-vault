@@ -4,8 +4,8 @@
   "title": "后面你各种报错",
   "titleGenerationStatus": "failed",
   "createdAt": 1781686909538,
-  "updatedAt": 1781820581598,
-  "lastResponseAt": 1781820581598,
+  "updatedAt": 1781821150219,
+  "lastResponseAt": 1781821150219,
   "sessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb",
   "providerState": {
     "providerSessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb"
@@ -13,10 +13,10 @@
   "usage": {
     "model": "sonnet[1m]",
     "inputTokens": 3,
-    "cacheCreationInputTokens": 808,
-    "cacheReadInputTokens": 148677,
+    "cacheCreationInputTokens": 154253,
+    "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
-    "contextTokens": 149488,
+    "contextTokens": 154256,
     "percentage": 15,
     "contextWindowIsAuthoritative": true
   }
