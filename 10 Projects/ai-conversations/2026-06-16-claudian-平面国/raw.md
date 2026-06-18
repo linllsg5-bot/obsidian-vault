@@ -1,3 +1,10 @@
+---
+type: raw-conversation
+date: 2026-06-16
+source: terminal-export (opencode/claudian)
+participants: 小林, claudian
+---
+
 # raw — 2026-06-16-claudian-平面国
 
 > 全量原文导出，未做摘要。source: `2edba93e-63a2-46bb-83ef-eb6f9e32f191.jsonl` (253KB，44条)

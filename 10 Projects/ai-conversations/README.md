@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-06-07
+updated: 2026-06-19
 ---
 
 # AI 对话归档区
@@ -67,4 +67,12 @@ updated: 2026-06-07
 | 2026-06-04~05 | claudian+antigravity | [[10 Projects/ai-conversations/2026-06-04-claudian-antigravity-引擎验证与基础设施/index\|studying-spark Phase 0 引擎验证 + 基础设施搭建与崩塌]] | 思想/技术/基建 | ✓ |
 | 2026-06-05 | claudian | [[10 Projects/ai-conversations/2026-06-05-claudian-学习的结构-主体中间世界/index\|学习的结构：主体/中间/世界 — 本体在中间层]] | 思想/架构 | ✓ |
 | 2026-06-06 | sonnet | [[10 Projects/ai-conversations/2026-06-06-sonnet-幻觉与认知操作系统/index\|幻觉是存在扩张的机制·个人认知操作系统浮出]] | 思想/认识论 | ✓ |
-| 2026-06-06 | claudian | [[10 Projects/ai-conversations/2026-06-06-claudian-链接引擎与翻框/index\|studying-spark 链接引擎确立 · v4 翻框]] | 思想/架构 | — |
+| 2026-06-06 | claudian | [[10 Projects/ai-conversations/2026-06-06-claudian-链接引擎与翻框/index\|studying-spark 链接引擎确立 · v4 翻框]] | 思想/架构 | ⚠ raw 缺失 |
+| 2026-06-07 | claudian | [[10 Projects/ai-conversations/2026-06-07-claudian-昨天对话非常重要/index\|昨天对话非常重要 — 哲学深推 → 对话标注三层体系自反式建造]] | 思想/元层 | ✓ |
+| 2026-06-07 | cli | [[10 Projects/ai-conversations/2026-06-07-cli-github-obsidian-vault/index\|GitHub + Obsidian Vault CLI 配置]] | 操作 | ✓ |
+| 2026-06-09 | claudian | [[10 Projects/ai-conversations/2026-06-09-claudian-pi-agent还是obsidian/index\|pi agent 还是 Obsidian — 从工具选择到"墙得是真外部"]] | 思想/决策 | ✓ |
+| 2026-06-16 | claudian | [[10 Projects/ai-conversations/2026-06-16-claudian-平面国/index\|平面国 — 维度、形式与知觉的哲学讨论]] | 思想 | ✓ |
+| 2026-06-17 | claudian | [[10 Projects/ai-conversations/2026-06-17-claudian-Phase1全程/index\|studying-spark Phase 1 全程 — leakage judge + 反 funneling 代码落地]] | 技术/工程 | ✓ |
+| 2026-06-18 | claude | [[10 Projects/ai-conversations/2026-06-18-claude-code-基础设施修复与架构主线/index\|基础设施修复 + 主体延伸架构主线]] | 思想/工程 | ✓ |
+| 2026-06-18 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index\|Phase 1 leakage judge 闭环验证 + 归档系统全量对账]] | 技术/归档 | ✓ |
+| 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
