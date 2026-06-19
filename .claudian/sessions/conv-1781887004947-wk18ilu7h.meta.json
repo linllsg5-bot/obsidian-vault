@@ -1,0 +1,24 @@
+{
+  "id": "conv-1781887004947-wk18ilu7h",
+  "providerId": "opencode",
+  "title": "● API Error: 402 The socket connection was closed ...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1781887004948,
+  "updatedAt": 1781887056749,
+  "lastResponseAt": 1781887056749,
+  "sessionId": "ses_11f42021cffeJDsZ8eWK5c9lVm",
+  "providerState": {
+    "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "currentNote": "未命名 1.md",
+  "usage": {
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 31488,
+    "contextTokens": 31798,
+    "contextWindow": 1000000,
+    "contextWindowIsAuthoritative": true,
+    "inputTokens": 310,
+    "model": "opencode:opencode-go/deepseek-v4-pro",
+    "percentage": 3
+  }
+}
