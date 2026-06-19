@@ -4,8 +4,8 @@
   "title": "后面你各种报错",
   "titleGenerationStatus": "failed",
   "createdAt": 1781686909538,
-  "updatedAt": 1781890417308,
-  "lastResponseAt": 1781890417308,
+  "updatedAt": 1781891356867,
+  "lastResponseAt": 1781891356867,
   "sessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb",
   "providerState": {
     "providerSessionId": "ed8873e7-8e2c-4d19-ae89-409ad2e181cb",
@@ -579,11 +579,11 @@
   "usage": {
     "model": "opus[1m]",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 1063,
-    "cacheReadInputTokens": 269967,
+    "cacheCreationInputTokens": 23855,
+    "cacheReadInputTokens": 235772,
     "contextWindow": 1000000,
-    "contextTokens": 271032,
-    "percentage": 27,
+    "contextTokens": 259629,
+    "percentage": 26,
     "contextWindowIsAuthoritative": true
   }
 }
