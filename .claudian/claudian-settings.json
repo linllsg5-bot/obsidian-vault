@@ -166,7 +166,7 @@
     "codex": "xhigh"
   },
   "savedProviderServiceTier": {
-    "codex": "fast"
+    "codex": "default"
   },
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
