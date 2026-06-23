@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-06-22
+updated: 2026-06-24
 ---
 
 # AI 对话归档区
@@ -87,4 +87,5 @@ updated: 2026-06-22
 | 2026-06-17 | claudian | [[10 Projects/ai-conversations/2026-06-17-claudian-Phase1全程/index\|studying-spark Phase 1 全程 — leakage judge + 反 funneling 代码落地]] | 技术/工程 | ✓ |
 | 2026-06-18 | claude | [[10 Projects/ai-conversations/2026-06-18-claude-code-基础设施修复与架构主线/index\|基础设施修复 + 主体延伸架构主线]] | 思想/工程 | ✓ |
 | 2026-06-18 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index\|Phase 1 leakage judge 闭环验证 + 归档系统全量对账]] | 技术/归档 | ✓ |
+| 2026-06-22~23 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index-续-0622-0623\|续场 — 架构设计多轮探讨：双牵引·节律展开·全局地图（API断）]] | 思想/架构 | ✓ |
 | 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
