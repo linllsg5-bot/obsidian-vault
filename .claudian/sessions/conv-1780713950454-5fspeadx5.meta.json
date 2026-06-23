@@ -4,20 +4,20 @@
   "title": "Error: unknownAPI Error: Unable to connect to API ...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713950454,
-  "updatedAt": 1782238113577,
-  "lastResponseAt": 1782238113577,
-  "sessionId": "ses_10a6f6adaffebLkl6NGhhgDjUt",
+  "updatedAt": 1782241747247,
+  "lastResponseAt": 1782241747247,
+  "sessionId": "ses_10a1e3587ffeS2B6OYCiNw4i8U",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },
   "usage": {
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 0,
-    "contextTokens": 0,
+    "cacheReadInputTokens": 60160,
+    "contextTokens": 63929,
     "contextWindow": 1000000,
     "contextWindowIsAuthoritative": true,
-    "inputTokens": 0,
+    "inputTokens": 3769,
     "model": "opencode:opencode-go/deepseek-v4-pro",
-    "percentage": 0
+    "percentage": 6
   }
 }
