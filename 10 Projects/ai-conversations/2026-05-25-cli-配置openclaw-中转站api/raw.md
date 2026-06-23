@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-24
+source: terminal 导出 (opencode, jsonl)
+---
+
 # raw — 2026-05-25-cli-配置openclaw-中转站api
 
 > 全量原文导出，未做摘要。source: `d0afadd9-7839-4d90-845a-3b2806efeee9.jsonl` (424KB，84条)

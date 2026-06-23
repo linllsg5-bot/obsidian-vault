@@ -39,13 +39,13 @@ tags: vault审视, 认知操作系统, cognos, 数据模型, 归档机制校正
 
 ### 代码（cognos/ 项目，~Documents/cognos/）
 
-| 文件 | 内容 |
-|------|------|
-| `models.py` | `Attempt` / `Reading` / `Stuck` / `Course` 数据类，`Negation` 枚举（确定否定/致死熄灭/循环确认） |
-| `store.py` | `Store` 类：append-only JSONL，一行一事件，记尝试/记读/记卡点/记程，重放/全部/最近/未读 |
-| `reader.py` | `ManualReader` / `AIReader`，`_FRAMEWORK_PROMPT` 含三命题+三种否定+移位判断 |
-| `rhythm.py` | CLI 循环：「发」→「读」→「带着」→「看」 |
-| `__init__.py` | 包初始化 |
+| 文件            | 内容                                                                           |
+| ------------- | ---------------------------------------------------------------------------- |
+| `models.py`   | `Attempt` / `Reading` / `Stuck` / `Course` 数据类，`Negation` 枚举（确定否定/致死熄灭/循环确认） |
+| `store.py`    | `Store` 类：append-only JSONL，一行一事件，记尝试/记读/记卡点/记程，重放/全部/最近/未读                  |
+| `reader.py`   | `ManualReader` / `AIReader`，`_FRAMEWORK_PROMPT` 含三命题+三种否定+移位判断               |
+| `rhythm.py`   | CLI 循环：「发」→「读」→「带着」→「看」                                                      |
+| `__init__.py` | 包初始化                                                                         |
 
 ### 设计决策
 

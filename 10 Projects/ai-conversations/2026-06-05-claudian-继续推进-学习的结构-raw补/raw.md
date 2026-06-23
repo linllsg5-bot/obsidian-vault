@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-06-05
+source: claudian terminal 导出
+---
+
 # raw — 2026-06-05-claudian-继续推进-学习的结构-raw补
 
 > 全量原文导出，未做摘要。source: `660f2384-18d4-4021-85fd-fa31e5c7dabb.jsonl` (7011KB，1099条)

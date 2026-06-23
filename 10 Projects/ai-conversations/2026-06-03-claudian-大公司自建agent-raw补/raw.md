@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-31
+source: terminal 导出 (Claudian jsonl)
+---
+
 # raw — 2026-06-03-claudian-大公司自建agent-raw补
 
 > 全量原文导出，未做摘要。source: `2797d61d-ee5b-42ea-9647-020cd4beb688.jsonl` (2179KB，510条)

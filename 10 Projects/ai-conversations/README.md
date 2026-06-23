@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-06-19
+updated: 2026-06-22
 ---
 
 # AI 对话归档区
@@ -57,14 +57,26 @@ updated: 2026-06-19
 
 | 日期 | 来源 | 主题 | 类型 | 标注 |
 |------|------|------|------|------|
+| 2026-05-24 | cli | [[10 Projects/ai-conversations/2026-05-24-cli-量化项目-codex-antigravity/index\|量化项目评估 — AI 勘探项目缺口与真实量化世界全景]] | 技术/评估 | ✓ |
+| 2026-05-24 | cli | [[10 Projects/ai-conversations/2026-05-24-cli-是否接入openclaw/index\|OpenClaw 接入试探 — 创业方向探索与等待种子]] | 技术/决策 | ✓ |
+| 2026-05-25 | cli | [[10 Projects/ai-conversations/2026-05-25-cli-配置openclaw-中转站api/index\|OpenClaw 中转站配置 — API 密钥安全与 fallback 路由]] | 技术/操作 | ✓ |
+| 2026-05-26 | claudian | [[10 Projects/ai-conversations/2026-05-26-claudian-你有什么疑问/index\|Claudian 开机自检 — 触发词→工作流、双向链接、9 处改动落地]] | 操作/配置 | ✓ |
+| 2026-05-26 | claudian | [[10 Projects/ai-conversations/2026-05-26-claudian-karpathy-llm-wiki/index\|Karpathy LLM 101n → vault 知识库大归集 — 70/80 目录、CLAUDE.md 重写]] | 思想/技术/操作 | ✓ |
+| 2026-05-26 | cli | [[10 Projects/ai-conversations/2026-05-26-cli-困惑与想法-openclaw架构/index\|另一AI的"蒸馏自己"分析 → Claude Code 尖锐拆解 → 文件考古身份错位]] | 思想 | ✓ |
 | 2026-05-28 | antigravity | [[10 Projects/spark-sessions/2026-05-28-antigravity-架构讨论/index\|prototype-spark v2 架构讨论]] | 思想/架构 | ✓ |
 | 2026-05-29 | claudian | [[10 Projects/ai-conversations/2026-05-29-claudian-蒸馏自己/index\|蒸馏自己 → AI 内核]] | 思想 | ✓ |
 | 2026-05-29 | claudian | [[10 Projects/ai-conversations/2026-05-29-claudian-vault整理/index\|Vault 大整理]] | 操作 | ✓ |
 | 2026-05-29 | claude | [[10 Projects/ai-conversations/2026-05-29-claude-engineering-learning/index\|Claude Code 配置、工程认知与 Spark 哲学张力]] | 思想/技术 | ✓ |
 | 2026-05-30 | claudian | [[10 Projects/ai-conversations/2026-05-30-claudian-工程化与会话归集/index\|OpenClaw、哲学与 ECC 框架的融合探索与工程落地]] | 思想/技术/操作 | ✓ |
+| 2026-05-30 | claudian | [[10 Projects/ai-conversations/2026-05-30-claudian-antigravity会话归集-raw补/index\|四套 AI 协议融合归位 — 一核·两帽·一路由·三源·一呼吸形态推演]] | 思想/操作 | ✓ |
 | 2026-05-31 | claudian | [[10 Projects/ai-conversations/2026-05-31-claudian-认识论与工具内核/index\|认识论与工具内核 — 哲学与思维工具史综合]] | 思想/技术 | ✓ |
+| 2026-06-03 | claudian | [[10 Projects/ai-conversations/2026-06-03-claudian-大公司自建agent-raw补/index\|大公司自建 agent → 认识论深探 → 24 弧线螺旋]] | 思想 | ✓ |
+| 2026-06-03 | claudian | [[10 Projects/ai-conversations/2026-06-03-claudian-studying-spark-能跑的版本/index\|studying-spark 双重照亮原型重写 — 尝试/自由/幻觉本体论转折]] | 技术/思想 | ✓ |
 | 2026-06-03 | claudian | [[10 Projects/ai-conversations/2026-06-03-claudian-认识论验证与数学隐喻/index\|认识论实验 make 与数学作为认知螺旋实验室]] | 思想/技术 | ✓ |
+| 2026-06-04 | claudian | [[10 Projects/ai-conversations/2026-06-04-claudian-skills投入-raw补/index\|Skills 投入暂缓 — 中转延迟诊断 + 知识图谱安装 + 边界守卫编码]] | 操作/基建 | ✓ |
+| 2026-06-04 | cli | [[10 Projects/ai-conversations/2026-06-04-cli-本地代理-智能路由方案/index\|本地代理智能路由方案 — Gemini 三入口风险论证 + CLIProxyAPI]] | 技术/操作 | ✓ |
 | 2026-06-04~05 | claudian+antigravity | [[10 Projects/ai-conversations/2026-06-04-claudian-antigravity-引擎验证与基础设施/index\|studying-spark Phase 0 引擎验证 + 基础设施搭建与崩塌]] | 思想/技术/基建 | ✓ |
+| 2026-06-05 | claudian | [[10 Projects/ai-conversations/2026-06-05-claudian-继续推进-学习的结构-raw补/index\|继续推进·学习的结构 — 认识研究推进 + studying-spark v4 重架构 + 基础设施地狱]] | 思想/技术/工程 | ✓ |
 | 2026-06-05 | claudian | [[10 Projects/ai-conversations/2026-06-05-claudian-学习的结构-主体中间世界/index\|学习的结构：主体/中间/世界 — 本体在中间层]] | 思想/架构 | ✓ |
 | 2026-06-06 | sonnet | [[10 Projects/ai-conversations/2026-06-06-sonnet-幻觉与认知操作系统/index\|幻觉是存在扩张的机制·个人认知操作系统浮出]] | 思想/认识论 | ✓ |
 | 2026-06-06 | claudian | [[10 Projects/ai-conversations/2026-06-06-claudian-链接引擎与翻框/index\|studying-spark 链接引擎确立 · v4 翻框]] | 思想/架构 | ⚠ raw 缺失 |

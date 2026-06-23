@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-26
+source: terminal 导出
+---
+
 # raw — 2026-05-26-claudian-你有什么疑问
 
 > 全量原文导出，未做摘要。source: `c458cbdd-cff4-4cdd-8836-7b8ea5f4a918.jsonl` (326KB，90条)

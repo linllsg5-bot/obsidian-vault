@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-26
+source: terminal 导出
+---
+
 # raw — 2026-05-26-cli-困惑与想法-openclaw架构
 
 > 全量原文导出，未做摘要。source: `40ca2d2a-b2aa-4ce1-8b92-99910443a56e.jsonl` (204KB，61条)

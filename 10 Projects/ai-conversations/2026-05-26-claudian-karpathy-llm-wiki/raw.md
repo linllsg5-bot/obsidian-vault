@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-26
+source: terminal 导出
+---
+
 # raw — 2026-05-26-claudian-karpathy-llm-wiki
 
 > 全量原文导出，未做摘要。source: `7dd29fc8-690b-4939-b539-487c48cf85f4.jsonl` (2320KB，486条)

@@ -924,7 +924,8 @@ drwxr-xr-x 1 lnp 197613    0 May 29 05:49 sessions/
 
 ## AI  `2026-05-28T21:53:40.533Z`
 
-Failed to authenticate. API Error: 403 (�/� X� ����9y�䥴ضJ���fCh"��G���Qb*��@(�+e��z��l��r��Ph`�)%�`�&j��~� <��¢j�f
+Failed to authenticate. API Error: 403 (�/� X� ����9
+y�䥴ضJ���fCh"��G���Qb*��@(�+e��z��l��r��Ph`�)%�`�&j��~� <��¢j�f
 
 ---
 
@@ -948,7 +949,8 @@ API Error: 503 No available accounts: no available accounts. This is a server-si
 
 ## AI  `2026-05-28T22:13:05.564Z`
 
-Failed to authenticate. API Error: 403 (�/� X� ����9y�䥴ضJ���fCh"��G���Qb*��@(�+e��z��l��r��Ph`�)%�`�&j��~� <��¢j�f
+Failed to authenticate. API Error: 403 (�/� X� ����9
+y�䥴ضJ���fCh"��G���Qb*��@(�+e��z��l��r��Ph`�)%�`�&j��~� <��¢j�f
 
 ---
 

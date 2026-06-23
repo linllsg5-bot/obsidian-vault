@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-24
+source: terminal 导出
+---
+
 # raw — 2026-05-24-cli-是否接入openclaw
 
 > 全量原文导出，未做摘要。source: `f7c56b11-6a84-4348-b591-6f936cc02c05.jsonl` (109KB，53条)

@@ -1,3 +1,9 @@
+---
+type: raw-conversation
+date: 2026-05-24
+source: terminal 导出 (opencode, jsonl)
+---
+
 # raw — 2026-05-24-cli-量化项目-codex-antigravity
 
 > 全量原文导出，未做摘要。source: `b43b4da5-0fcc-43fe-9f74-3181982f46ad.jsonl` (364KB，96条)
