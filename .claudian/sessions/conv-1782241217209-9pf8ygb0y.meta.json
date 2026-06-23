@@ -4,8 +4,8 @@
   "title": "读 AI/当前主线",
   "titleGenerationStatus": "failed",
   "createdAt": 1782241217211,
-  "updatedAt": 1782242062302,
-  "lastResponseAt": 1782242062302,
+  "updatedAt": 1782243152599,
+  "lastResponseAt": 1782243152599,
   "sessionId": "019ef5da-d230-7581-af9b-dd37527d0f73",
   "providerState": {
     "threadId": "019ef5da-d230-7581-af9b-dd37527d0f73",
@@ -13,13 +13,13 @@
     "transcriptRootPath": "C:\\Users\\lnp\\.codex\\sessions"
   },
   "usage": {
-    "inputTokens": 143210,
+    "inputTokens": 161856,
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 142208,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 143210,
-    "percentage": 55,
+    "contextTokens": 161856,
+    "percentage": 63,
     "model": "gpt-5.5"
   }
 }
