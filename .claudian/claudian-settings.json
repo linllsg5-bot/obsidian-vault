@@ -157,24 +157,29 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "opus[1m]",
-    "opencode": "opencode:opencode-go/deepseek-v4-pro"
+    "opencode": "opencode:opencode-go/deepseek-v4-pro",
+    "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
     "claude": "max",
-    "opencode": "max"
+    "opencode": "max",
+    "codex": "xhigh"
   },
-  "savedProviderServiceTier": {},
+  "savedProviderServiceTier": {
+    "codex": "default"
+  },
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
     "claude": "yolo",
-    "opencode": "yolo"
+    "opencode": "yolo",
+    "codex": "yolo"
   },
   "lastCustomModel": "claude-opus-4-8[1m]",
   "maxTabs": 5,
-  "tabBarPosition": "input",
   "enableAutoScroll": true,
   "deferMathRenderingDuringStreaming": true,
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
-  "hiddenProviderCommands": {}
+  "hiddenProviderCommands": {},
+  "tabBarPosition": "input"
 }
