@@ -4,8 +4,8 @@
   "title": "读 AI/当前主线",
   "titleGenerationStatus": "failed",
   "createdAt": 1782242716055,
-  "updatedAt": 1782288864181,
-  "lastResponseAt": 1782288864181,
+  "updatedAt": 1782290287272,
+  "lastResponseAt": 1782290287272,
   "sessionId": "4c0c786e-38f7-4f68-a73c-fcf5d08d6055",
   "providerState": {
     "providerSessionId": "4c0c786e-38f7-4f68-a73c-fcf5d08d6055"
@@ -13,11 +13,11 @@
   "usage": {
     "model": "opus",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 145780,
+    "cacheCreationInputTokens": 149773,
     "cacheReadInputTokens": 0,
     "contextWindow": 200000,
-    "contextTokens": 145782,
-    "percentage": 73,
+    "contextTokens": 149775,
+    "percentage": 75,
     "contextWindowIsAuthoritative": true
   }
 }
