@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "opus",
+  "model": "sonnet",
   "thinkingBudget": "medium",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -35,7 +35,7 @@
       "enableOpus1M": false,
       "enableSonnet1M": false,
       "customModels": "",
-      "lastModel": "opus",
+      "lastModel": "sonnet",
       "environmentVariables": "ANTHROPIC_API_KEY=fe_oa_890dc8be27a86c7c91dacfb4868b1a2b04187f862267c2cc",
       "environmentHash": ""
     },
@@ -156,7 +156,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "opus",
+    "claude": "sonnet",
     "opencode": "opencode:opencode-go/deepseek-v4-pro",
     "codex": "gpt-5.5"
   },
