@@ -27,7 +27,7 @@
   "providerConfigs": {
     "claude": {
       "safeMode": "acceptEdits",
-      "cliPath": "",
+      "cliPath": "C:\\Users\\lnp\\AppData\\Roaming\\npm\\claude.cmd",
       "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": true,
