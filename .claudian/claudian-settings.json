@@ -62,7 +62,7 @@
       "modelAliases": {},
       "preferredThinkingByModel": {
         "opencode-go/deepseek-v4-pro": "max",
-        "opencode-go/mimo-v2.5-pro": "low",
+        "opencode-go/mimo-v2.5-pro": "high",
         "opencode-go/deepseek-v4-flash": "medium",
         "opencode/nemotron-3-ultra-free": "low"
       },
@@ -157,12 +157,12 @@
   "settingsProvider": "claude",
   "savedProviderModel": {
     "claude": "sonnet[1m]",
-    "opencode": "opencode:opencode-go/deepseek-v4-pro",
+    "opencode": "opencode:opencode-go/mimo-v2.5-pro",
     "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
     "claude": "max",
-    "opencode": "max",
+    "opencode": "high",
     "codex": "xhigh"
   },
   "savedProviderServiceTier": {
