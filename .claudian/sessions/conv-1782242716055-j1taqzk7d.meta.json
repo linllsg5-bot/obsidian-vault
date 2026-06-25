@@ -4,19 +4,19 @@
   "title": "读 AI/当前主线",
   "titleGenerationStatus": "failed",
   "createdAt": 1782242716055,
-  "updatedAt": 1782326433324,
-  "lastResponseAt": 1782326433324,
+  "updatedAt": 1782416827988,
+  "lastResponseAt": 1782416827988,
   "sessionId": "4c0c786e-38f7-4f68-a73c-fcf5d08d6055",
   "providerState": {
     "providerSessionId": "4c0c786e-38f7-4f68-a73c-fcf5d08d6055"
   },
   "usage": {
     "model": "sonnet[1m]",
-    "inputTokens": 3,
-    "cacheCreationInputTokens": 186439,
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
-    "contextTokens": 186442,
-    "percentage": 19
+    "contextTokens": 0,
+    "percentage": 0
   }
 }
