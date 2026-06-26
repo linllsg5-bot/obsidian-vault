@@ -1,0 +1,25 @@
+{
+  "id": "conv-1782501714069-pydmiu6k9",
+  "providerId": "codex",
+  "title": "我想开始我最重要的事情",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1782501714069,
+  "updatedAt": 1782502305307,
+  "lastResponseAt": 1782502305307,
+  "sessionId": "019f0561-a9fc-78d2-b1cb-47c42104768e",
+  "providerState": {
+    "threadId": "019f0561-a9fc-78d2-b1cb-47c42104768e",
+    "sessionFilePath": "C:\\Users\\lnp\\.codex\\sessions\\2026\\06\\27\\rollout-2026-06-27T03-21-59-019f0561-a9fc-78d2-b1cb-47c42104768e.jsonl",
+    "transcriptRootPath": "C:\\Users\\lnp\\.codex\\sessions"
+  },
+  "usage": {
+    "inputTokens": 46828,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 45952,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 46828,
+    "percentage": 18,
+    "model": "gpt-5.5"
+  }
+}
