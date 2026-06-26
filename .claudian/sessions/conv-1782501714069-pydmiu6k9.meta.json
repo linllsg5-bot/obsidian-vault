@@ -4,8 +4,8 @@
   "title": "我想开始我最重要的事情",
   "titleGenerationStatus": "failed",
   "createdAt": 1782501714069,
-  "updatedAt": 1782505859851,
-  "lastResponseAt": 1782505859851,
+  "updatedAt": 1782506784523,
+  "lastResponseAt": 1782506784523,
   "sessionId": "019f0561-a9fc-78d2-b1cb-47c42104768e",
   "providerState": {
     "threadId": "019f0561-a9fc-78d2-b1cb-47c42104768e",
@@ -13,13 +13,13 @@
     "transcriptRootPath": "C:\\Users\\lnp\\.codex\\sessions"
   },
   "usage": {
-    "inputTokens": 57921,
+    "inputTokens": 62028,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 55680,
+    "cacheReadInputTokens": 51584,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 57921,
-    "percentage": 22,
+    "contextTokens": 62028,
+    "percentage": 24,
     "model": "gpt-5.5"
   }
 }
