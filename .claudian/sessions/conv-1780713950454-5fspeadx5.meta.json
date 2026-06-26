@@ -4,7 +4,7 @@
   "title": "Error: unknownAPI Error: Unable to connect to API ...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713950454,
-  "updatedAt": 1782278740312,
+  "updatedAt": 1782489943276,
   "lastResponseAt": 1782278740312,
   "sessionId": "ses_10a1e3587ffeS2B6OYCiNw4i8U",
   "providerState": {
@@ -14,10 +14,10 @@
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 89216,
     "contextTokens": 92102,
-    "contextWindow": 1000000,
-    "contextWindowIsAuthoritative": true,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": false,
     "inputTokens": 2886,
-    "model": "opencode:opencode-go/deepseek-v4-pro",
-    "percentage": 9
+    "model": "opencode:opencode-go/mimo-v2.5-pro",
+    "percentage": 46
   }
 }

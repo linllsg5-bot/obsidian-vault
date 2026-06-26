@@ -4,7 +4,7 @@
   "title": "读 AI/当前主线",
   "titleGenerationStatus": "failed",
   "createdAt": 1782242716055,
-  "updatedAt": 1782416827988,
+  "updatedAt": 1782489937704,
   "lastResponseAt": 1782416827988,
   "sessionId": "4c0c786e-38f7-4f68-a73c-fcf5d08d6055",
   "providerState": {
@@ -17,6 +17,7 @@
     "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
     "contextTokens": 0,
-    "percentage": 0
+    "percentage": 0,
+    "contextWindowIsAuthoritative": false
   }
 }
