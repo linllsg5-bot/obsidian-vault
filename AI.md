@@ -1,20 +1,22 @@
 # Vault 规则与上下文
 
-## ⚡ 启动加载
+> 本文件是 vault 特异桥接层，补充 `AI/` 跨 runtime 协议没有覆盖的本地规则。
+> 它不是启动加载清单；启动加载清单只以 [[AI/加载路径.md]] 为准。
 
-**每次会话开始，先读 [[AI/加载路径.md]]**——它规定接下来读什么。
+## 角色分工
 
-本文件（CLAUDE.md）仍然有效，但它是 vault 特异的桥接层；`AI/` 目录是**跨 runtime 通用的协议层**（任何 AI 都从那里启动）。
+| 文件 | 职责 |
+|---|---|
+| [[AI/加载路径.md]] | AI 启动 BIOS；唯一维护核 / 壳 / 引用层加载规则 |
+| [[AGENTS.md]] | Codex / agent runtime 自动入口；只导向加载路径 |
+| [[CLAUDE.md]] | Claude Code / Claudian 自动入口；只导向加载路径 |
+| 本文件 `AI.md` | vault 特异规则：领地划分、知识库 ingest/query/lint、OpenClaw bridge |
+| [[10 Projects/_状态板.md]] | 项目连续性入口；项目状态和下一步以它为准 |
+| [[HOME.md]] | 人类打开 vault 时的导航入口 |
 
-加载顺序：
-1. [[AI/加载路径.md]] — BIOS 入口
-2. [[AI/身份基底.md]] — 五条核心原则
-3. [[AI/用户档案.md]] — 这次面对的是谁（跟下方"我是谁"重叠，以 AI 协议层为准）
-4. [[AI/当前主线.md]] — 本周方向感
-5. 按需：[[AI/认识论.md]] / [[AI/对话姿态.md]] / [[AI/执行协议.md]]
+**不要在本文件维护核文件清单。** 核层文件只以 [[AI/加载路径.md]] 为准。
 
 ---
-
 ## 我是谁
 小林。创作者 + 学习者。主要在这个 vault 里写小说、记日记、整理思考。
 现在 vault 同时承担一个 AI 消化的知识库（70/80 体系，见后半部分）。
@@ -31,7 +33,9 @@ vault 根/
 │   ├── output/            # query 归档、AI 综合报告
 │   └── （主题目录自然生长）
 ├── HOME.md                # 全库导航入口
-├── CLAUDE.md              # 本文件
+├── AGENTS.md              # Codex / agent 自动入口
+├── CLAUDE.md              # Claude / Claudian 自动入口
+├── AI.md                  # 本文件，vault 桥接规则
 └── 小林的/                # 我的人格延伸区，AI 只读不写
     ├── 20 Long Threads/   # 长期思维主线（成熟，不随意改动）
     ├── 30 Creative/       # 创意写作：幻生蝶梦、六姐妹、散篇小说、诗
@@ -41,37 +45,16 @@ vault 根/
     └── Trash/             # 不直接删，移这里
 ```
 
-## 核心创作项目
-**《幻生蝶梦》**（主要长篇）：`小林的/30 Creative/幻生蝶梦·总篇.md`
-- 主角：周然（作家）、白夏凞（笔下女主）、清子/陈芊芊（十年情侣）、裴智英/失吹樱（高中前后辈）
-- 风格：超现实、感官密集、城市意象、百合
+## 导航入口
 
-**六姐妹**：`小林的/30 Creative/六姐妹.md`
-- 大姐/二姐/三妹/四姐/老五/小六
-- 主题：爱恨、依恋、精神弑母、关系张力
+本文件不维护核心创作项目或进行中项目的状态副本，避免与项目入口漂移。
 
-**散篇**：雪（由纪宫麻）、焦黄(凯蒂灵儿)、墨青白百合（语莹敏慧）等
+- 全库导航：[[HOME]]
+- 项目状态与下一步：[[10 Projects/_状态板]]
+- AI 启动协议：[[AI/加载路径]]
+- 知识库索引：[[80 知识库/index]]
 
-## 进行中的项目
-
-**主线代码项目**：
-- **prototype-spark**（原型刺激器）—— `C:\Users\lnp\Documents\prototype-spark\`
-  - 写作者用的"被触发后"创作伙伴：贴片段 → AI 跨媒介搜灵感 → 讨论 → 沉积 → 衍生写作（枝桠）
-  - 状态：MVP 已跑通。v2 “以文档为中心的块级侧翼”重构方案由 **antigravity** 推进设计与对齐中 (2026-05-28)
-  - 路线笔记：[[10 Projects/AI应用构思 - 原型刺激器路线.md]]
-  - 调研：[[10 Projects/AI应用构思 - 原型刺激器调研.md]]
-
-**待定的下一步**：
-- **扩大版尝试帮助工具**（暂名）—— prototype-spark 的概念外推：从"帮写作者尝试" → "帮人从模糊走向可尝试"。学习软件 / 项目软件可能是同一架构的不同 instance
-- 决策点：先做第二个 instance（学习软件），还是先抽象出共享结构
-
-**已废弃**：
-- ~~huansheng-tracker~~（`C:\Users\lnp\Documents\huansheng-tracker\`，角色关系追踪器）—— 形状判定不对，停止迭代。代码留着作为参考
-
-**AI 协作架构**：
-- **OpenClaw**（`~/.openclaw/`，WSL Ubuntu-24.04）—— 主用 agent daemon，多 channel + 长期记忆 + 多 agent 协作。已沉淀大量架构文档（COGNITIVE_ARCHITECTURE_V3、COMPANIONSHIP_PROTOCOL 等，在 `~/.openclaw/workspace/`）
-- **Claudian**（本 vault）—— Obsidian 里的 Claude Code，vault 操作 + 思考伙伴
-- **桥接**：见下方"OpenClaw ↔ Vault Bridge"段
+---
 
 ## 操作约定
 - **新创作内容** → `小林的/30 Creative/`
