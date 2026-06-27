@@ -5,14 +5,14 @@
 
 ## 角色分工
 
-| 文件 | 职责 |
-|---|---|
-| [[AI/加载路径.md]] | AI 启动 BIOS；唯一维护核 / 壳 / 引用层加载规则 |
-| [[AGENTS.md]] | Codex / agent runtime 自动入口；只导向加载路径 |
-| [[CLAUDE.md]] | Claude Code / Claudian 自动入口；只导向加载路径 |
-| 本文件 `AI.md` | vault 特异规则：领地划分、知识库 ingest/query/lint、OpenClaw bridge |
-| [[10 Projects/_状态板.md]] | 项目连续性入口；项目状态和下一步以它为准 |
-| [[HOME.md]] | 人类打开 vault 时的导航入口 |
+| 文件                      | 职责                                                    |
+| ----------------------- | ----------------------------------------------------- |
+| [[AI/加载路径.md]]          | AI 启动 BIOS；唯一维护核 / 壳 / 引用层加载规则                        |
+| [[AGENTS.md]]           | Codex / agent runtime 自动入口；只导向加载路径                    |
+| [[CLAUDE.md]]           | Claude Code / Claudian 自动入口；只导向加载路径                   |
+| 本文件 `AI.md`             | vault 特异规则：领地划分、知识库 ingest/query/lint、OpenClaw bridge |
+| [[10 Projects/_状态板.md]] | 项目连续性入口；项目状态和下一步以它为准                                  |
+| [[HOME.md]]             | 人类打开 vault 时的导航入口                                     |
 
 **不要在本文件维护核文件清单。** 核层文件只以 [[AI/加载路径.md]] 为准。
 
