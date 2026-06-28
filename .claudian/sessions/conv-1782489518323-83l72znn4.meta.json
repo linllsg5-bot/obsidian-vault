@@ -4,19 +4,20 @@
   "title": "你看看最近的几次会话，继续推进吧",
   "titleGenerationStatus": "failed",
   "createdAt": 1782489518326,
-  "updatedAt": 1782607069279,
-  "lastResponseAt": 1782607069279,
+  "updatedAt": 1782615659313,
+  "lastResponseAt": 1782615659313,
   "sessionId": "4db1d0cd-81af-4ddd-9586-e57357326af1",
   "providerState": {
     "providerSessionId": "4db1d0cd-81af-4ddd-9586-e57357326af1"
   },
   "usage": {
     "model": "sonnet[1m]",
-    "inputTokens": 0,
-    "cacheCreationInputTokens": 0,
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 26697,
     "cacheReadInputTokens": 0,
     "contextWindow": 1000000,
-    "contextTokens": 0,
-    "percentage": 0
+    "contextTokens": 26700,
+    "percentage": 3,
+    "contextWindowIsAuthoritative": true
   }
 }
