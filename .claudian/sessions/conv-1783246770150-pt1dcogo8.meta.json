@@ -1,0 +1,24 @@
+{
+  "id": "conv-1783246770150-pt1dcogo8",
+  "providerId": "codex",
+  "title": "继续推进要做的",
+  "createdAt": 1783246770151,
+  "updatedAt": 1783247559527,
+  "lastResponseAt": 1783247559527,
+  "sessionId": "019f31ca-53b8-71e0-96d5-ca8394518e6b",
+  "providerState": {
+    "threadId": "019f31ca-53b8-71e0-96d5-ca8394518e6b",
+    "sessionFilePath": "C:\\Users\\lnp\\.codex\\sessions\\2026\\07\\05\\rollout-2026-07-05T18-19-36-019f31ca-53b8-71e0-96d5-ca8394518e6b.jsonl",
+    "transcriptRootPath": "C:\\Users\\lnp\\.codex\\sessions"
+  },
+  "usage": {
+    "inputTokens": 73149,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 4480,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 73149,
+    "percentage": 28,
+    "model": "gpt-5.5"
+  }
+}
