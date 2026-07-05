@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-06-24
+updated: 2026-07-05
 ---
 
 # AI 对话归档区
@@ -90,3 +90,4 @@ updated: 2026-06-24
 | 2026-06-22~23 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index-续-0622-0623\|续场 — 架构设计多轮探讨：双牵引·节律展开·全局地图（API断）]] | 思想/架构 | ✓ |
 | 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
 | 2026-06-24 | antigravity | [[10 Projects/ai-conversations/2026-06-24-antigravity-让一切的尝试真正尝试/index\|让一切的尝试真正尝试 — 尝试生命周期与四种伪完成·护送而非处理]] | 思想/架构 | ✓ |
+| 2026-07-05 | claude+codex | [[10 Projects/ai-conversations/2026-07-05-claude-codex-前空间张力与维度置悬/index\|前空间张力与维度置悬 — 幻觉/可能/自由的前空间开口]] | 思想/认识论 | ✓ |
