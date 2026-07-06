@@ -3,8 +3,8 @@
   "providerId": "claude",
   "title": "现在我不知道怎么和你说我面临着一个怎样的难题，你可以阅读我的obsidian，看看最近的几次会话记录...",
   "createdAt": 1783337158296,
-  "updatedAt": 1783339237537,
-  "lastResponseAt": 1783339237537,
+  "updatedAt": 1783339964329,
+  "lastResponseAt": 1783339964329,
   "sessionId": "3439825b-9474-42a3-920e-5767a541ee75",
   "providerState": {
     "providerSessionId": "3439825b-9474-42a3-920e-5767a541ee75"
@@ -12,11 +12,11 @@
   "usage": {
     "model": "sonnet[1m]",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 379,
-    "cacheReadInputTokens": 119918,
+    "cacheCreationInputTokens": 1870,
+    "cacheReadInputTokens": 112173,
     "contextWindow": 1000000,
-    "contextTokens": 120299,
-    "percentage": 12,
+    "contextTokens": 114045,
+    "percentage": 11,
     "contextWindowIsAuthoritative": true
   }
 }
