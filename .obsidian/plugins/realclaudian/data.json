@@ -2,26 +2,15 @@
   "tabManagerState": {
     "openTabs": [
       {
-        "tabId": "tab-1782241359051-4gvumba",
-        "conversationId": "conv-1782241217209-9pf8ygb0y"
-      },
-      {
-        "tabId": "tab-1782489371878-d1pos4q",
-        "conversationId": "conv-1782489518323-83l72znn4"
-      },
-      {
-        "tabId": "tab-1782501305627-auzru9f",
+        "tabId": "tab-1783331302855-yryg3ks",
         "conversationId": "conv-1782501714069-pydmiu6k9"
       },
       {
-        "tabId": "tab-1782607031916-4ba5wjl",
-        "conversationId": "conv-1780713950454-5fspeadx5"
-      },
-      {
-        "tabId": "tab-1783246749479-3vjnmuz",
-        "conversationId": "conv-1783246770150-pt1dcogo8"
+        "draftModel": "opencode:opencode-go/mimo-v2.5-pro",
+        "tabId": "tab-1783331328704-v36tkt1",
+        "conversationId": null
       }
     ],
-    "activeTabId": "tab-1783246749479-3vjnmuz"
+    "activeTabId": "tab-1783331328704-v36tkt1"
   }
 }

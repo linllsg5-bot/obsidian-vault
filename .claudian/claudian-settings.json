@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "sonnet[1m]",
   "thinkingBudget": "medium",
-  "effortLevel": "max",
+  "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": false,
   "titleGenerationModel": "",
@@ -161,7 +161,7 @@
     "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
-    "claude": "max",
+    "claude": "high",
     "opencode": "high",
     "codex": "xhigh"
   },
