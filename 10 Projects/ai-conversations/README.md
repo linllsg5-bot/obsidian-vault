@@ -91,3 +91,4 @@ updated: 2026-07-05
 | 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
 | 2026-06-24 | antigravity | [[10 Projects/ai-conversations/2026-06-24-antigravity-让一切的尝试真正尝试/index\|让一切的尝试真正尝试 — 尝试生命周期与四种伪完成·护送而非处理]] | 思想/架构 | ✓ |
 | 2026-07-05 | claude+codex | [[10 Projects/ai-conversations/2026-07-05-claude-codex-前空间张力与维度置悬/index\|前空间张力与维度置悬 — 幻觉/可能/自由的前空间开口]] | 思想/认识论 | ✓ |
+| 2026-07-05 | codex | [[10 Projects/ai-conversations/2026-07-05-codex-会话归档补正与sandbox诊断/index\|会话归档补正与 sandbox 诊断 — raw 漏源校正 + Windows sandbox 配置修复]] | 归档/基建 | ✓ |
