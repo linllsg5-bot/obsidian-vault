@@ -90,5 +90,7 @@ updated: 2026-07-05
 | 2026-06-22~23 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index-续-0622-0623\|续场 — 架构设计多轮探讨：双牵引·节律展开·全局地图（API断）]] | 思想/架构 | ✓ |
 | 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
 | 2026-06-24 | antigravity | [[10 Projects/ai-conversations/2026-06-24-antigravity-让一切的尝试真正尝试/index\|让一切的尝试真正尝试 — 尝试生命周期与四种伪完成·护送而非处理]] | 思想/架构 | ✓ |
+| 2026-06-27 | codex | [[10 Projects/ai-conversations/2026-06-27-codex-vault体检与框架辨析/index\|Codex vault 体检与框架辨析 — 入口收束、学习问题校正与读尾迹朝向]] | 思想/归档 | ✓ |
 | 2026-07-05 | claude+codex | [[10 Projects/ai-conversations/2026-07-05-claude-codex-前空间张力与维度置悬/index\|前空间张力与维度置悬 — 幻觉/可能/自由的前空间开口]] | 思想/认识论 | ✓ |
 | 2026-07-05 | codex | [[10 Projects/ai-conversations/2026-07-05-codex-会话归档补正与sandbox诊断/index\|会话归档补正与 sandbox 诊断 — raw 漏源校正 + Windows sandbox 配置修复]] | 归档/基建 | ✓ |
+| 2026-07-06 | web | [[10 Projects/ai-conversations/2026-07-06-web-编程学习与AI开发/index\|编程八股文与尝试空间生成论的深层对话]] | 思想/认识论 | ✓ |
