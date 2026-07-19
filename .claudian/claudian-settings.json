@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "sonnet[1m]",
+  "model": "sonnet",
   "thinkingBudget": "medium",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -32,10 +32,8 @@
       "loadUserSettings": true,
       "enableChrome": true,
       "enableBangBash": true,
-      "enableOpus1M": true,
-      "enableSonnet1M": true,
       "customModels": "",
-      "lastModel": "sonnet[1m]",
+      "lastModel": "sonnet",
       "environmentVariables": "",
       "environmentHash": ""
     },
@@ -51,7 +49,9 @@
       "installationMethodsByHost": {
         "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
       },
-      "wslDistroOverridesByHost": {}
+      "wslDistroOverridesByHost": {},
+      "modelAliases": {},
+      "visibleModels": null
     },
     "opencode": {
       "cliPath": "",
@@ -156,7 +156,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "sonnet[1m]",
+    "claude": "sonnet",
     "opencode": "opencode:opencode-go/mimo-v2.5-pro",
     "codex": "gpt-5.5"
   },
