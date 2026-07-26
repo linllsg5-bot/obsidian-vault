@@ -3,12 +3,21 @@
   "providerId": "claude",
   "title": "看下最近的几次会话，继续",
   "createdAt": 1785060520751,
-  "updatedAt": 1785061169906,
-  "lastResponseAt": 1785061160488,
+  "updatedAt": 1785062152801,
+  "lastResponseAt": 1785062152801,
   "sessionId": "666753cb-5d11-414d-a34f-00a8bcdbf048",
   "selectedModel": "sonnet",
   "providerState": {
     "providerSessionId": "666753cb-5d11-414d-a34f-00a8bcdbf048"
   },
-  "resumeAtMessageId": "6ada7714-bf55-4b98-b0ed-73e7bbd46aab"
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 27730,
+    "cacheReadInputTokens": 64703,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 92435,
+    "percentage": 46
+  }
 }
