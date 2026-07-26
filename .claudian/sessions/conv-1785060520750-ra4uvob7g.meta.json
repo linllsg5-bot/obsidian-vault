@@ -1,0 +1,14 @@
+{
+  "id": "conv-1785060520750-ra4uvob7g",
+  "providerId": "claude",
+  "title": "看下最近的几次会话，继续",
+  "createdAt": 1785060520751,
+  "updatedAt": 1785061169906,
+  "lastResponseAt": 1785061160488,
+  "sessionId": "666753cb-5d11-414d-a34f-00a8bcdbf048",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "666753cb-5d11-414d-a34f-00a8bcdbf048"
+  },
+  "resumeAtMessageId": "6ada7714-bf55-4b98-b0ed-73e7bbd46aab"
+}

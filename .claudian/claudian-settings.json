@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "sonnet",
   "thinkingBudget": "medium",
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "serviceTier": "default",
   "enableAutoTitleGeneration": false,
   "titleGenerationModel": "",
@@ -219,7 +219,7 @@
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
-      "catalogTimestamp": 1785054712883,
+      "catalogTimestamp": 1785060643150,
       "catalogFingerprint": "1:82adc174cd1a51fa6a5fbbb2419985b3ac735bc934e913ac96fb1825cca59c7a",
       "installationMethodsByHost": {
         "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
@@ -346,7 +346,7 @@
     "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
-    "claude": "high",
+    "claude": "xhigh",
     "opencode": "high",
     "codex": "xhigh"
   },
