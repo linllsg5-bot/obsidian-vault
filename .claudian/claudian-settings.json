@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "sonnet",
   "thinkingBudget": "medium",
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "serviceTier": "default",
   "enableAutoTitleGeneration": false,
   "titleGenerationModel": "",
@@ -34,6 +34,8 @@
       "enableBangBash": true,
       "customModels": "",
       "lastModel": "sonnet",
+      "modelEnvironmentType": "",
+      "titleModelEnvironmentType": "",
       "environmentVariables": "",
       "environmentHash": ""
     },
@@ -43,15 +45,186 @@
       "cliPath": "",
       "cliPathsByHost": {},
       "customModels": "",
+      "discoveredModels": [
+        {
+          "model": "gpt-5.5",
+          "displayName": "GPT-5.5",
+          "description": "Frontier model for complex coding, research, and real-world work.",
+          "supportedReasoningEfforts": [
+            {
+              "value": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "value": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "value": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "value": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            }
+          ],
+          "defaultReasoningEffort": "medium",
+          "serviceTiers": [
+            {
+              "id": "priority",
+              "name": "Fast",
+              "description": "1.5x speed, increased usage"
+            }
+          ],
+          "defaultServiceTier": null,
+          "inputModalities": [
+            "text",
+            "image"
+          ],
+          "isDefault": true
+        },
+        {
+          "model": "gpt-5.4",
+          "displayName": "gpt-5.4",
+          "description": "Strong model for everyday coding.",
+          "supportedReasoningEfforts": [
+            {
+              "value": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "value": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "value": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "value": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            }
+          ],
+          "defaultReasoningEffort": "medium",
+          "serviceTiers": [
+            {
+              "id": "priority",
+              "name": "Fast",
+              "description": "1.5x speed, increased usage"
+            }
+          ],
+          "defaultServiceTier": null,
+          "inputModalities": [
+            "text",
+            "image"
+          ],
+          "isDefault": false
+        },
+        {
+          "model": "gpt-5.4-mini",
+          "displayName": "GPT-5.4-Mini",
+          "description": "Small, fast, and cost-efficient model for simpler coding tasks.",
+          "supportedReasoningEfforts": [
+            {
+              "value": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "value": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "value": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "value": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            }
+          ],
+          "defaultReasoningEffort": "medium",
+          "serviceTiers": [],
+          "defaultServiceTier": null,
+          "inputModalities": [
+            "text",
+            "image"
+          ],
+          "isDefault": false
+        },
+        {
+          "model": "gpt-5.3-codex",
+          "displayName": "gpt-5.3-codex",
+          "description": "Coding-optimized model.",
+          "supportedReasoningEfforts": [
+            {
+              "value": "low",
+              "description": "Fast responses with lighter reasoning"
+            },
+            {
+              "value": "medium",
+              "description": "Balances speed and reasoning depth for everyday tasks"
+            },
+            {
+              "value": "high",
+              "description": "Greater reasoning depth for complex problems"
+            },
+            {
+              "value": "xhigh",
+              "description": "Extra high reasoning depth for complex problems"
+            }
+          ],
+          "defaultReasoningEffort": "medium",
+          "serviceTiers": [],
+          "defaultServiceTier": null,
+          "inputModalities": [
+            "text",
+            "image"
+          ],
+          "isDefault": false
+        },
+        {
+          "model": "gpt-5.2",
+          "displayName": "gpt-5.2",
+          "description": "Optimized for professional work and long-running agents.",
+          "supportedReasoningEfforts": [
+            {
+              "value": "low",
+              "description": "Balances speed with some reasoning; useful for straightforward queries and short explanations"
+            },
+            {
+              "value": "medium",
+              "description": "Provides a solid balance of reasoning depth and latency for general-purpose tasks"
+            },
+            {
+              "value": "high",
+              "description": "Maximizes reasoning depth for complex or ambiguous problems"
+            },
+            {
+              "value": "xhigh",
+              "description": "Extra high reasoning for complex problems"
+            }
+          ],
+          "defaultReasoningEffort": "medium",
+          "serviceTiers": [],
+          "defaultServiceTier": null,
+          "inputModalities": [
+            "text",
+            "image"
+          ],
+          "isDefault": false
+        }
+      ],
+      "modelAliases": {},
+      "visibleModels": null,
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
+      "catalogTimestamp": 1785054712883,
+      "catalogFingerprint": "1:82adc174cd1a51fa6a5fbbb2419985b3ac735bc934e913ac96fb1825cca59c7a",
       "installationMethodsByHost": {
         "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
       },
-      "wslDistroOverridesByHost": {},
-      "modelAliases": {},
-      "visibleModels": null
+      "wslDistroOverridesByHost": {}
     },
     "opencode": {
       "cliPath": "",
@@ -152,6 +325,18 @@
       "preferredThinkingByModel": {},
       "toolMode": "all",
       "visibleModels": []
+    },
+    "grok": {
+      "catalogsByHost": {},
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "",
+      "modelAliases": {},
+      "planBasePermissionMode": "normal",
+      "preferredReasoningByModel": {},
+      "visibleModels": null
     }
   },
   "settingsProvider": "claude",
@@ -161,7 +346,7 @@
     "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
-    "claude": "high",
+    "claude": "xhigh",
     "opencode": "high",
     "codex": "xhigh"
   },
@@ -174,6 +359,7 @@
     "opencode": "yolo",
     "codex": "yolo"
   },
+  "pendingProviderSessionInvalidations": {},
   "lastCustomModel": "claude-opus-4-8[1m]",
   "maxTabs": 5,
   "enableAutoScroll": true,
