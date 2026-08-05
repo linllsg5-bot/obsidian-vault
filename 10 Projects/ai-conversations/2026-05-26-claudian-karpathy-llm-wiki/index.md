@@ -2,7 +2,7 @@
 session: 2026-05-26
 participants: 小林, Claude (Claudian 插件, Opus 4.7 / Sonnet 4.6)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-26-claudian-karpathy-llm-wiki/raw]]"
 ---
 
 # 索引：70/80体系从零到第一批ingest跑通——Claudian知识库的起点

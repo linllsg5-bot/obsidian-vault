@@ -6,10 +6,11 @@
         "conversationId": "conv-1782501714069-pydmiu6k9"
       },
       {
-        "tabId": "tab-1785060391057-b4x1pwp",
-        "conversationId": "conv-1785060520750-ra4uvob7g"
+        "draftModel": "gpt-5.5",
+        "tabId": "tab-1785902087138-yk44as4",
+        "conversationId": null
       }
     ],
-    "activeTabId": "tab-1785060391057-b4x1pwp"
+    "activeTabId": "tab-1785902087138-yk44as4"
   }
 }

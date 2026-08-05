@@ -218,16 +218,16 @@
       ],
       "modelAliases": {},
       "visibleModels": null,
+      "enableUltraEffort": false,
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
-      "catalogTimestamp": 1785062850723,
-      "catalogFingerprint": "1:82adc174cd1a51fa6a5fbbb2419985b3ac735bc934e913ac96fb1825cca59c7a",
+      "catalogTimestamp": 1785902070568,
+      "catalogFingerprint": "2:8ecb80bc0e5694218f05b6385fb7a63bec6e34d923449be3c2da077912a280da",
       "installationMethodsByHost": {
         "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
       },
-      "wslDistroOverridesByHost": {},
-      "enableUltraEffort": false
+      "wslDistroOverridesByHost": {}
     },
     "opencode": {
       "cliPath": "",

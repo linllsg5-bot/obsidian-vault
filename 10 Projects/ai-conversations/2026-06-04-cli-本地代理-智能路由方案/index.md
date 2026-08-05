@@ -2,13 +2,13 @@
 session: 2026-06-04
 participants: 小林, Claude (Claude Code CLI, Sonnet 4.6)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-04-cli-本地代理-智能路由方案/raw]]"
 ---
 
 # 索引：CLIProxyAPI 网关 + Gemini 智能路由 — 配置尝试与交棒
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-06-04-cli-本地代理-智能路由方案/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 

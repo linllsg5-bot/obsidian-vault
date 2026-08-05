@@ -2,7 +2,7 @@
 session: 2026-06-07
 participants: 小林, Claude（CLI / Claude Code）
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-07-cli-github-obsidian-vault/raw]]"
 duration: ~1h04min（13:22 → 14:26）
 tags: vault审视, 认知操作系统, cognos, 数据模型, 归档机制校正
 ---
@@ -80,13 +80,13 @@ tags: vault审视, 认知操作系统, cognos, 数据模型, 归档机制校正
 1. **cognos 修复优先**：加 `PYTHONIOENCODING=utf-8` 或 stdout encoding 适配后，跑通 rhythm.py 闭环验证（发→看→带着→check JSONL）
 2. **「漂移」判断待小林裁决**——在收到确认或否定前，不要把此判断当既定事实继续推
 3. **消化版的「两层」问题**：如果小林确认判断成立，需处理归档机制的选择性（如何让「处境层」也被纳入而非绕开）
-4. **cognos 代码见** [[raw]] 中的工具调用结果（Write 内容）
+4. **cognos 代码见** [[10 Projects/ai-conversations/2026-06-07-cli-github-obsidian-vault/raw]] 中的工具调用结果（Write 内容）
 
 ---
 
 ## See Also
 
-- [[raw]] — 原始会话（terminal 导出）
+- [[10 Projects/ai-conversations/2026-06-07-cli-github-obsidian-vault/raw]] — 原始会话（terminal 导出）
 - [[10 Projects/ai-conversations/2026-06-06-sonnet-幻觉与认知操作系统/index]] — 前日 Sonnet 对话（6.6 原始全文所在）
 - [[尝试场-2026-06-07]] — 次日 9 agent 并行产出综合场文档
 - [[AI/认识论-核心]] — 三命题（尝试先于空间/认知=把握的尝试/元概念螺旋生长）

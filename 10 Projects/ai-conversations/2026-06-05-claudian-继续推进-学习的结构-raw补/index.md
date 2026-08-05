@@ -2,7 +2,7 @@
 session: 2026-06-05
 participants: 小林, AI:claudian (Claude Opus 4.8 via Claudian), AI:opencode (deepseek-v4-pro)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-05-claudian-继续推进-学习的结构-raw补/raw]]"
 ---
 
 # 索引：从接血亲到架构自疑——四天三线并行，卡点为原子落地

@@ -2,13 +2,13 @@
 session: 2026-05-25
 participants: 小林, AI (opencode / Claude)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-25-cli-配置openclaw-中转站api/raw]]"
 ---
 
 # 索引：OpenClaw 中转站 API 配置——从猜 schema 到发现「已经配好了只是挂了」
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-25-cli-配置openclaw-中转站api/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 - OpenClaw 真实 config schema（`models` 是数组、需要 `"api": "openai-completions"` 字段）
@@ -33,4 +33,4 @@ type: session-index
 
 ## See Also
 - [[标注]]
-- [[raw]]
+- [[10 Projects/ai-conversations/2026-05-25-cli-配置openclaw-中转站api/raw]]

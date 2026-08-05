@@ -2,7 +2,7 @@
 session: 2026-06-01
 participants: 小林, claude, antigravity
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-01-claude-继续推进当前主线任务/raw]]"
 source: agent
 ---
 
@@ -15,7 +15,7 @@ source: agent
 ### 1. 超大日志去噪净化
 - **原始体积**：`660f2384-18d4-4021-85fd-fa31e5c7dabb.jsonl`，体积达 7.01MB。
 - **病根剖析**：文件内部包裹了上千条 `toolUseResult`（文件树递归扫描、中间检索快照）与大量的 `file-history-snapshot`。过往脚本因匹配逻辑死板，导致读出 0 消息。
-- **清洗落地**：现已去除工具层与队列层的代码喧哗，完整提炼出 **395 条干净、高密度的对话回合**（共计 513KB 文本，见 [[raw]]）。
+- **清洗落地**：现已去除工具层与队列层的代码喧哗，完整提炼出 **395 条干净、高密度的对话回合**（共计 513KB 文本，见 [[10 Projects/ai-conversations/2026-06-01-claude-继续推进当前主线任务/raw]]）。
 
 ### 2. 核心主线对齐
 - 本场会话深入探索并确立了 06-01《AI/当前主线》与《认识研究》的核心开拓方向。

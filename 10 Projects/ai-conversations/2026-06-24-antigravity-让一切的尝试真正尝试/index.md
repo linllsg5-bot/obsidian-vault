@@ -2,7 +2,7 @@
 session: 2026-06-24
 participants: 小林, antigravity
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-24-antigravity-让一切的尝试真正尝试/raw]]"
 ---
 
 # 索引：让一切的尝试真正地尝试了，而不是被忽略或避开（全量无损版）

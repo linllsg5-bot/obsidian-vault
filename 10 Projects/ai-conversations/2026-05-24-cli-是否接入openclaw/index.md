@@ -2,13 +2,13 @@
 session: 2026-05-24
 participants: 小林, Claude (Claude Code CLI)
 type: session-index
-原版: "[[raw]]"
+原版: "[[raw 1]]"
 ---
 
 # 索引：OpenClaw 接入试探 → 创业方向探索 → 等待种子
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[raw 1]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 

@@ -2,7 +2,7 @@
 session: 2026-06-26
 participants: 小林, claude, codex, antigravity
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-26-claude-codex-系统断连排查与当前主线/raw]]"
 source: agent
 ---
 
@@ -18,7 +18,7 @@ source: agent
 
 ### 2. 接手对话归档作业
 - 全面检索了 `.claude/projects/`、`opencode.db` 及 `.codex/sessions/` 的跨平台数据记录。
-- 提取并沉积了 06-25~26 有关《AI/当前主线》与系统断连的最新会话原文（见 [[raw]]），弥补了本地缺失的记录真空。
+- 提取并沉积了 06-25~26 有关《AI/当前主线》与系统断连的最新会话原文（见 [[10 Projects/ai-conversations/2026-06-26-claude-codex-系统断连排查与当前主线/raw]]），弥补了本地缺失的记录真空。
 
 ---
 

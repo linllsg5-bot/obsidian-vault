@@ -2,13 +2,13 @@
 session: 2026-05-26
 participants: 小林, Claudian (Claude via Obsidian 插件)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-26-claudian-你有什么疑问/raw]]"
 ---
 
 # 索引：Claudian开机自检 → 触发词改工作流 → 双向链接机制 → 执行落地
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-26-claudian-你有什么疑问/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 

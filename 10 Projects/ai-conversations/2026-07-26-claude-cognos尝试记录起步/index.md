@@ -3,7 +3,7 @@ session: 2026-07-26
 participants: 小林, claude (claude code cli)
 type: session-index
 project: cognos · 系统重构/认知架构尝试
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-07-26-claude-cognos尝试记录起步/raw]]"
 标注: "[[标注]]"
 source: agent
 ---
@@ -53,7 +53,7 @@ source: agent
 3. **cognos 路径**：`C:\Users\lnp\Documents\cognos\`，CLI 入口 `rhythm.py`，轨迹在 `轨迹/默认.jsonl`。
 
 ## See Also
-- [[raw]]
+- [[10 Projects/ai-conversations/2026-07-26-claude-cognos尝试记录起步/raw]]
 - [[标注]]
 - [[10 Projects/_状态板]]
 - [[AI/当前主线]]

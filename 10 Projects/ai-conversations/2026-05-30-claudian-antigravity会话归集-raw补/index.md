@@ -2,13 +2,13 @@
 session: 2026-05-30
 participants: 小林, Claude (Claude Code via Claudian, Sonnet/Opus 4.6)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-30-claudian-antigravity会话归集-raw补/raw]]"
 ---
 
 # 索引：四套 AI 协议的融合归位 — 一核·两帽·一路由·三源·一呼吸
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-30-claudian-antigravity会话归集-raw补/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 
@@ -92,7 +92,7 @@ type: session-index
 3. **执行"认领活源"**——在加载路径里钉死 `AI/` 是唯一活协议源。
 4. **ECC 挂载句写入执行协议**——"代码子模式且在代码仓内 → 加载 ECC"。
 5. **80 镜像消化**——OpenClaw 协议的 80 镜像瘦身。
-6. **归档本场对话本身**——raw 已就位（[[raw]]），本 index 即归档。
+6. **归档本场对话本身**——raw 已就位（[[10 Projects/ai-conversations/2026-05-30-claudian-antigravity会话归集-raw补/raw]]），本 index 即归档。
 
 ### 别重犯的错
 - **不要提议大一统融合**——用户的核心哲学之一就是"架构是尝试的尾迹，不是前提"。

@@ -3,7 +3,7 @@ session: 2026-06-04
 participants: 小林, Claudian (Claude Code CLI, Opus 4.8)
 type: session-index
 project: skills · knowledge-graph · 基础设施
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-04-claudian-skills投入-raw补/raw]]"
 ---
 
 # 索引：skills 投入判断暂缓 + knowledge-graph 接入与三层边界核验

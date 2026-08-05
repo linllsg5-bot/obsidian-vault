@@ -2,13 +2,13 @@
 session: 2026-05-26
 participants: 小林, Claude (Claude Code CLI)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-26-cli-困惑与想法-openclaw架构/raw]]"
 ---
 
 # 索引：另一AI的"蒸馏自己"分析 → Claude Code尖锐拆解 → 文件考古发现身份错位
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-26-cli-困惑与想法-openclaw架构/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 

@@ -3,7 +3,7 @@ session: 2026-06-03
 participants: 小林, Claudian (Claude Code CLI, Opus 4.8)
 type: session-index
 project: studying-spark · prototype-spark v2 · 基础设施
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-03-claudian-studying-spark-能跑的版本/raw]]"
 ---
 
 # 索引：studying-spark 双重照亮原型落地 + 触碰工具边界

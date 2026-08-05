@@ -2,13 +2,13 @@
 session: 2026-05-24
 participants: 小林, AI (opencode / Claude)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-05-24-cli-量化项目-codex-antigravity/raw]]"
 ---
 
 # 索引：从 crypto-quant 规则驱动到幻方式 ML stat arb——差距评估与路径规划
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw]] 或 [[标注]]。
+> 需要逐字细节去读 [[10 Projects/ai-conversations/2026-05-24-cli-量化项目-codex-antigravity/raw]] 或 [[标注]]。
 
 ## 一、这次对话产出了什么
 - crypto-quant 项目的 ground truth 评估：研究型回测脚手架，非生产级平台
@@ -29,4 +29,4 @@ type: session-index
 
 ## See Also
 - [[标注]]
-- [[raw]]
+- [[10 Projects/ai-conversations/2026-05-24-cli-量化项目-codex-antigravity/raw]]

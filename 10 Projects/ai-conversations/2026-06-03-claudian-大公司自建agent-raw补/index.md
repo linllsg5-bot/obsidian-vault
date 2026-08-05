@@ -2,7 +2,7 @@
 session: 2026-05-31
 participants: 小林, Claude (Opus, Claudian 插件)
 type: session-index
-原版: "[[raw]]"
+原版: "[[10 Projects/ai-conversations/2026-06-03-claudian-大公司自建agent-raw补/raw]]"
 ---
 
 # 索引：大公司自建agent → 认识论深探，"跟不上"的根源被一层层逼出来
