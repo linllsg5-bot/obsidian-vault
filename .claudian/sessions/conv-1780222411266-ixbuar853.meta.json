@@ -6,9 +6,11 @@
   "createdAt": 1780222411267,
   "updatedAt": 1780712277028,
   "lastResponseAt": 1780451095523,
-  "sessionId": "2797d61d-ee5b-42ea-9647-020cd4beb688",
+  "sessionId": null,
   "providerState": {
-    "providerSessionId": "2797d61d-ee5b-42ea-9647-020cd4beb688"
+    "previousProviderSessionIds": [
+      "2797d61d-ee5b-42ea-9647-020cd4beb688"
+    ]
   },
   "usage": {
     "model": "sonnet[1m]",

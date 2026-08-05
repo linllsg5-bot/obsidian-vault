@@ -6,8 +6,10 @@
   "createdAt": 1779527511939,
   "updatedAt": 1780173117117,
   "lastResponseAt": 1779527538467,
-  "sessionId": "cb71ba49-bc2f-4b1c-bb9d-89d406177197",
+  "sessionId": null,
   "providerState": {
-    "providerSessionId": "cb71ba49-bc2f-4b1c-bb9d-89d406177197"
+    "previousProviderSessionIds": [
+      "cb71ba49-bc2f-4b1c-bb9d-89d406177197"
+    ]
   }
 }

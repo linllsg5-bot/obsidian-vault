@@ -6,6 +6,7 @@
   "effortLevel": "max",
   "serviceTier": "default",
   "enableAutoTitleGeneration": false,
+  "titleGenerationLocale": "",
   "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
@@ -26,6 +27,7 @@
   "locale": "zh-CN",
   "providerConfigs": {
     "claude": {
+      "enabled": true,
       "safeMode": "acceptEdits",
       "cliPath": "C:\\Users\\lnp\\AppData\\Roaming\\npm\\claude.cmd",
       "cliPathsByHost": {},
@@ -34,10 +36,10 @@
       "enableBangBash": true,
       "customModels": "",
       "lastModel": "sonnet",
-      "modelEnvironmentType": "",
+      "modelEnvironmentType": "sonnet",
       "titleModelEnvironmentType": "",
       "environmentVariables": "",
-      "environmentHash": ""
+      "environmentHash": "runtime-input:v1:e3ac5a1959e293bd9dbe833eb2631d49e7ef25f2c0c750948c630500aa1b1087"
     },
     "codex": {
       "enabled": true,
@@ -224,7 +226,8 @@
       "installationMethodsByHost": {
         "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
       },
-      "wslDistroOverridesByHost": {}
+      "wslDistroOverridesByHost": {},
+      "enableUltraEffort": false
     },
     "opencode": {
       "cliPath": "",
