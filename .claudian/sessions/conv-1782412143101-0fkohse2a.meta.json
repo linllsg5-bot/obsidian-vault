@@ -4,10 +4,15 @@
   "title": "安装 Codex CLI",
   "titleGenerationStatus": "failed",
   "createdAt": 1782412143102,
-  "updatedAt": 1783331329817,
-  "lastResponseAt": 1782417042746,
+  "lastActivityAt": 1782417042746,
   "sessionId": "ses_0fff50a52ffepawb7eFIjd5Tjk",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+  },
+  "modelRecoverySource": {
+    "sessionId": "ses_0fff50a52ffepawb7eFIjd5Tjk",
+    "providerState": {
+      "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
+    }
   }
 }

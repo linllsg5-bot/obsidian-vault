@@ -4,13 +4,20 @@
   "title": "Verify Claude agent runtime capability",
   "titleGenerationStatus": "success",
   "createdAt": 1779530391201,
-  "updatedAt": 1780173130520,
-  "lastResponseAt": 1779532513246,
+  "lastActivityAt": 1779532513246,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "a0ba7714-91de-4245-8c0e-b6ca2aba43e6"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "a0ba7714-91de-4245-8c0e-b6ca2aba43e6"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

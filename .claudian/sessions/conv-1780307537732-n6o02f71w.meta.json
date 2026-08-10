@@ -4,14 +4,22 @@
   "title": "继续推进当前主线任务",
   "titleGenerationStatus": "success",
   "createdAt": 1780307537734,
-  "updatedAt": 1780714890980,
-  "lastResponseAt": 1780652433012,
+  "lastActivityAt": 1780652433012,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "660f2384-18d4-4021-85fd-fa31e5c7dabb",
       "340d3ce5-c010-4e66-a3e1-8c5831e862b3"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "660f2384-18d4-4021-85fd-fa31e5c7dabb",
+        "340d3ce5-c010-4e66-a3e1-8c5831e862b3"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

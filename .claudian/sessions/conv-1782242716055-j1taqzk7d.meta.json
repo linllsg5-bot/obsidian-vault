@@ -4,13 +4,20 @@
   "title": "读 AI/当前主线",
   "titleGenerationStatus": "failed",
   "createdAt": 1782242716055,
-  "updatedAt": 1782489937704,
-  "lastResponseAt": 1782416827988,
+  "lastActivityAt": 1782416827988,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "4c0c786e-38f7-4f68-a73c-fcf5d08d6055"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "4c0c786e-38f7-4f68-a73c-fcf5d08d6055"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

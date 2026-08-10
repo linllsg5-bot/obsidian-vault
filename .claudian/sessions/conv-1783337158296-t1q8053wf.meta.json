@@ -3,8 +3,7 @@
   "providerId": "claude",
   "title": "现在我不知道怎么和你说我面临着一个怎样的难题，你可以阅读我的obsidian，看看最近的几次会话记录...",
   "createdAt": 1783337158296,
-  "updatedAt": 1785060746394,
-  "lastResponseAt": 1785060230262,
+  "lastActivityAt": 1785060230262,
   "sessionId": null,
   "selectedModel": "sonnet",
   "providerState": {

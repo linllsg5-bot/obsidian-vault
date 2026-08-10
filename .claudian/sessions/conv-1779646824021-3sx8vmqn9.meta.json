@@ -4,13 +4,20 @@
   "title": "Explore self-distillation concept",
   "titleGenerationStatus": "success",
   "createdAt": 1779646824025,
-  "updatedAt": 1780452855252,
-  "lastResponseAt": 1780004225216,
+  "lastActivityAt": 1780004225216,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "4a9d88e4-1aac-4fb9-8677-42d41cd3a198"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "4a9d88e4-1aac-4fb9-8677-42d41cd3a198"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

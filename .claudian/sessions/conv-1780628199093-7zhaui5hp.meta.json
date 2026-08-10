@@ -4,9 +4,9 @@
   "title": "Generate conversation archive index from raw di...",
   "titleGenerationStatus": "success",
   "createdAt": 1780628199094,
-  "updatedAt": 1780628876030,
-  "lastResponseAt": 1780628876030,
+  "lastActivityAt": 1780628876030,
   "sessionId": "ses_16a3fa576ffeJFgu073X3ogWQM",
+  "selectedModel": "opencode:opencode/big-pickle",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },

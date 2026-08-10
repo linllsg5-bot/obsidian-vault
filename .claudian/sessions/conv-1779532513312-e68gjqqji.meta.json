@@ -4,13 +4,20 @@
   "title": "Organize Obsidian Vault with folder structure plan",
   "titleGenerationStatus": "success",
   "createdAt": 1779532513312,
-  "updatedAt": 1780226736047,
-  "lastResponseAt": 1780004332102,
+  "lastActivityAt": 1780004332102,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "5a48cf2e-13e6-4fa1-9e76-756886b9c15f"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "5a48cf2e-13e6-4fa1-9e76-756886b9c15f"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

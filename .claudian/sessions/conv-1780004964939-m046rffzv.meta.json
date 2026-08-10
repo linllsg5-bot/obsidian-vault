@@ -4,13 +4,20 @@
   "title": "融合 openclaw 与 ECC 框架架构设计",
   "titleGenerationStatus": "success",
   "createdAt": 1780004964941,
-  "updatedAt": 1780456266501,
-  "lastResponseAt": 1780155168513,
+  "lastActivityAt": 1780155168513,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "383fab68-0cb6-4bb0-bd62-826b46879886"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "383fab68-0cb6-4bb0-bd62-826b46879886"
+      ]
+    }
   },
   "usage": {
     "model": "opus[1m]",

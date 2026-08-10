@@ -4,9 +4,9 @@
   "title": "你看看，下面是我要做的学习软件项目，你看看相关文件，study spark。相关的。有什么想法吗？下...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780633191300,
-  "updatedAt": 1780633264017,
-  "lastResponseAt": 1780633264017,
+  "lastActivityAt": 1780633264017,
   "sessionId": "ses_169fdaf06ffeosM8o8Semmkn6o",
+  "selectedModel": "opencode:opencode/big-pickle",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },

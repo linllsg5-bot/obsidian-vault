@@ -4,9 +4,9 @@
   "title": "你看看最近的几次会话，继续推进吧",
   "titleGenerationStatus": "failed",
   "createdAt": 1782489518326,
-  "updatedAt": 1783331314961,
-  "lastResponseAt": 1782615659313,
+  "lastActivityAt": 1782615659313,
   "sessionId": null,
+  "selectedModel": "claude-code/claude-sonnet-4-6",
   "providerState": {
     "previousProviderSessionIds": [
       "4db1d0cd-81af-4ddd-9586-e57357326af1"

@@ -4,12 +4,19 @@
   "title": "5月23日 17:11",
   "titleGenerationStatus": "pending",
   "createdAt": 1779527511939,
-  "updatedAt": 1780173117117,
-  "lastResponseAt": 1779527538467,
+  "lastActivityAt": 1779527538467,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "cb71ba49-bc2f-4b1c-bb9d-89d406177197"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "cb71ba49-bc2f-4b1c-bb9d-89d406177197"
+      ]
+    }
   }
 }

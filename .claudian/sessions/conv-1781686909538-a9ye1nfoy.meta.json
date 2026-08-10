@@ -4,13 +4,20 @@
   "title": "后面你各种报错",
   "titleGenerationStatus": "failed",
   "createdAt": 1781686909538,
-  "updatedAt": 1782607027220,
-  "lastResponseAt": 1782241054167,
+  "lastActivityAt": 1782241054167,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "ed8873e7-8e2c-4d19-ae89-409ad2e181cb"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "ed8873e7-8e2c-4d19-ae89-409ad2e181cb"
+      ]
+    }
   },
   "usage": {
     "model": "sonnet[1m]",

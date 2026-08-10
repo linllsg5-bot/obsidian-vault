@@ -4,13 +4,20 @@
   "title": "Build studying-spark Streamlit prototype",
   "titleGenerationStatus": "success",
   "createdAt": 1780156255457,
-  "updatedAt": 1780616688382,
-  "lastResponseAt": 1780221587618,
+  "lastActivityAt": 1780221587618,
   "sessionId": null,
   "providerState": {
     "previousProviderSessionIds": [
       "f7e75a92-c7c7-41e3-adf8-6362e77de777"
     ]
+  },
+  "modelRecoverySource": {
+    "sessionId": null,
+    "providerState": {
+      "previousProviderSessionIds": [
+        "f7e75a92-c7c7-41e3-adf8-6362e77de777"
+      ]
+    }
   },
   "usage": {
     "model": "opus[1m]",

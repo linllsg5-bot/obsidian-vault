@@ -4,9 +4,9 @@
   "title": "Error: unknownAPI Error: Unable to connect to API ...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780713950454,
-  "updatedAt": 1783331307021,
-  "lastResponseAt": 1782278740312,
+  "lastActivityAt": 1782278740312,
   "sessionId": "ses_10a1e3587ffeS2B6OYCiNw4i8U",
+  "selectedModel": "opencode:opencode-go/deepseek-v4-pro",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },

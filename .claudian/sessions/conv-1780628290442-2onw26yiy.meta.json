@@ -4,9 +4,9 @@
   "title": "Process Obsidian conversation file per DIY inst...",
   "titleGenerationStatus": "success",
   "createdAt": 1780628290443,
-  "updatedAt": 1780633101833,
-  "lastResponseAt": 1780628439126,
+  "lastActivityAt": 1780628439126,
   "sessionId": "ses_16a48786cffe4gSrXnO6Kbw7m2",
+  "selectedModel": "opencode:opencode/big-pickle",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
   },
