@@ -1,7 +1,7 @@
 ---
 type: how-to / token-saving
 audience: 小林
-updated: 2026-06-07
+updated: 2026-08-13
 ---
 
 # DIY:在网页版 AI 消化会话(省 token)
@@ -25,15 +25,16 @@ updated: 2026-06-07
 
 ---
 
-## 三层归档流程
+## 首次归档流程
 
 1. 把对话原文存进 `10 Projects/ai-conversations/<日期>-<来源>-<主题>/raw.md`
 2. 在网页版 AI 里做**标注**（清洗+认知标记），产物存成 `标注.md`（见下方模板）
-3. 在网页版 AI 里做 **index**（尾迹摘要），产物存成 `index.md`（见 index 模板）
+3. 在网页版 AI 里做 **index**（当前入口，不是最终摘要），产物存成 `index.md`（见 index 模板）
 4. 更新 `10 Projects/ai-conversations/README.md` 的"已归档"表格加一行
 
-> 三层规范的**唯一活源** → [[.claude/skills/对话标注/SKILL]]  
+> 发生/认识/当前入口规范的**唯一活源** → [[.agents/skills/对话标注/SKILL]]  
 > raw 太长粘不下 → 分 2-3 段粘,最后一段再附模板。或用支持长上下文的网页版(Gemini / Claude)。
+> 若是**重新标注/重读已有会话**，不要让网页版直接覆盖旧文件：交给能看 Vault 的 agent，按活源建立版本化标注与 `认识史.md`。
 
 ---
 
@@ -70,6 +71,10 @@ date: <日期>
 participants: 小林, <AI名>
 source: web 导出
 raw: "[[raw]]"
+source_role: annotation
+interpretation_version: 1
+based_on: "[[raw]]"
+schema_context: none
 标记图例: 〔林〕〔AI〕· 〔实〕〔幻〕〔校正〕〔弃〕〔开口〕〔割裂〕〔?〕
 ---
 
@@ -99,12 +104,16 @@ raw: "[[raw]]"
 - 沉积 = 尾迹，不是总结。不要逐段复述"我们聊了什么"。
 - 只保留：① 我的关键校正点（原话引用） ② 未解决的张力/卡点 ③ 已确认决策及理由 ④ 给下次 AI 的操作指引
 - 如实记录，不美化、不拔高。
+- AI 的完整方案默认是候选；“可以继续/其他还好”不能让整份方案升格为已确认。
+- 如果原文缺回合或当前结构无法充分表达，明确记录缺口，不根据 AI 的复述补写我的原话，也不强塞进 other/unknown。
 
 输出格式：
 ---
 session: <日期>
 participants: 小林, <AI名>
 type: session-index
+source_role: current-entry
+interpretation_version: 1
 ---
 
 # 索引：<一句话主题>
@@ -122,5 +131,5 @@ type: session-index
 ## 注意
 
 - 网页版 AI 不懂你的 wiki-link 体系,See Also 段让它留空,你自己补或叫 Claudian 补。
-- 标注/index 回来后**通读一遍**——网页版 AI 可能漏掉你觉得重要的校正,手动补。
+- 标注/index 回来后**通读一遍**——网页版 AI 可能漏掉你觉得重要的校正。若改动会改变说话人、认知地位或整体切法，不直接覆盖，交给 agent 建认识版本。
 - 不想让 AI 读的对话,别进归档区,放 `小林的/40 Journal/`(Pre-AI 区)。
