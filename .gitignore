@@ -1,5 +1,11 @@
 # 安全：API 密钥和配置（方便 vault 内查看，但不进 git）
 未命名 1.md
+*.private.md
+*.secret.md
+**/raw.private.md
+.env
+.env.*
+!.env.example
 
 # Obsidian 缓存与临时文件
 .obsidian/workspace.json
