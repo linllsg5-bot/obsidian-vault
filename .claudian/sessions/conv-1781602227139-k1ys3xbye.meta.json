@@ -6,14 +6,9 @@
   "createdAt": 1781602227139,
   "lastActivityAt": 1781608479513,
   "sessionId": "ses_1303b5f98ffemCJKbJw7uh3hh8",
+  "selectedModel": "opencode:opencode-go/deepseek-v4-pro",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
-  },
-  "modelRecoverySource": {
-    "sessionId": "ses_1303b5f98ffemCJKbJw7uh3hh8",
-    "providerState": {
-      "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
-    }
   },
   "usage": {
     "cacheCreationInputTokens": 0,

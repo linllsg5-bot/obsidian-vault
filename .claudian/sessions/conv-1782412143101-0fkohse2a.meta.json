@@ -6,13 +6,8 @@
   "createdAt": 1782412143102,
   "lastActivityAt": 1782417042746,
   "sessionId": "ses_0fff50a52ffepawb7eFIjd5Tjk",
+  "selectedModel": "opencode:opencode-go/mimo-v2.5-pro",
   "providerState": {
     "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
-  },
-  "modelRecoverySource": {
-    "sessionId": "ses_0fff50a52ffepawb7eFIjd5Tjk",
-    "providerState": {
-      "databasePath": "C:\\Users\\lnp\\AppData\\Roaming\\opencode\\opencode.db"
-    }
   }
 }

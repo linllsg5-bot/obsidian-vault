@@ -6,7 +6,7 @@
   "createdAt": 1782489518326,
   "lastActivityAt": 1782615659313,
   "sessionId": null,
-  "selectedModel": "claude-code/claude-sonnet-4-6",
+  "selectedModel": "opus",
   "providerState": {
     "previousProviderSessionIds": [
       "4db1d0cd-81af-4ddd-9586-e57357326af1"

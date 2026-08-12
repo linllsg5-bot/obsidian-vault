@@ -5,7 +5,7 @@
   "createdAt": 1783246770151,
   "lastActivityAt": 1783330672454,
   "sessionId": "019f31ca-53b8-71e0-96d5-ca8394518e6b",
-  "selectedModel": "openai-codex/gpt-5.5",
+  "selectedModel": "gpt-5.5",
   "providerState": {
     "threadId": "019f31ca-53b8-71e0-96d5-ca8394518e6b",
     "sessionFilePath": "C:\\Users\\lnp\\.codex\\sessions\\2026\\07\\05\\rollout-2026-07-05T18-19-36-019f31ca-53b8-71e0-96d5-ca8394518e6b.jsonl",
