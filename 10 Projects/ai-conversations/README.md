@@ -95,3 +95,6 @@ updated: 2026-07-05
 | 2026-07-05 | codex | [[10 Projects/ai-conversations/2026-07-05-codex-会话归档补正与sandbox诊断/index\|会话归档补正与 sandbox 诊断 — raw 漏源校正 + Windows sandbox 配置修复]] | 归档/基建 | ✓ |
 | 2026-07-06 | web | [[10 Projects/ai-conversations/2026-07-06-web-编程学习与AI开发/index\|编程八股文与尝试空间生成论的深层对话]] | 思想/认识论 | ✓ |
 | 2026-08-04 | antigravity | [[10 Projects/ai-conversations/2026-08-04-antigravity-cognos组织立项与认识论纠正/index\|Cognos 组织立项与认识论四项纠正]] | 思想/认识论/归档 | ⚠ raw 待补 |
+| 2026-08-08 | claudian | [[10 Projects/ai-conversations/2026-08-08-claudian-Cognos框架雏形思考与讨论/index\|Cognos 框架雏形思考与认知来龙去脉追溯]] | 思想/认识论/归档 | ✓ |
+| 2026-08-10 | antigravity | [[10 Projects/ai-conversations/2026-08-10-antigravity-Cognos雏形设计阶段尝试与思考/index\|Cognos 雏形设计阶段尝试、认识论文件对齐与哥德巴赫猜想探针]] | 思想/工程/探针 | ✓ |
+| 2026-08-12 | multi | [[10 Projects/ai-conversations/2026-08-12-multi-Cognos雏形设计改进与方案对比/index\|Cognos 雏形设计改进、方案对比 (A/B) 与多模型深探]] | 思想/架构/方案 | ✓ |
