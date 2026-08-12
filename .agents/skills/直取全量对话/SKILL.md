@@ -53,7 +53,7 @@ python "C:\Users\lnp\Documents\Obsidian Vault\.agents\skills\直取全量对话\
 ```
 
 ### Step 3：移交《对话标注》层
-产出无损的 `raw.md` 后，直接遵循 `[[.claude/skills/对话标注/SKILL]]` 规范，对该目录生成对应的 `标注.md` 与 `index.md`，完成完整三层档案的闭环。
+产出无损的 `raw.md` 后，直接遵循 `[[.agents/skills/对话标注/SKILL]]` 规范，对该目录生成对应的 `标注.md` 与 `index.md`，完成可追溯的发生/认识/当前入口档案。
 
 ---
 
@@ -71,6 +71,6 @@ python "C:\Users\lnp\Documents\Obsidian Vault\.agents\skills\直取全量对话\
 ---
 
 ## See Also
-- [[.claude/skills/对话标注/SKILL]] — 对话标注三层归档规范
+- [[.agents/skills/对话标注/SKILL]] — 对话标注的发生/认识/当前入口归档规范
 - [[.claude/skills/找会话/SKILL]] — 跨项目与本地文件日志寻找规范
 - [[10 Projects/ai-conversations/README]] — AI 对话归档区总索引

@@ -296,5 +296,5 @@ jsonl 文件是 UTF-8，但内部的 JSON string 可能包含**被误编码的 G
 
 ## See Also
 - [[10 Projects/ai-conversations/README]] — 归档区说明
-- [[.Codex/skills/对话标注/SKILL]] — 对话清洗+标注规范
+- [[.agents/skills/对话标注/SKILL]] — 对话清洗、标注与认识版本规范
 - `~/.Codex/projects/` — 所有原始对话的最终来源

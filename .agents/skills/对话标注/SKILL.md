@@ -140,7 +140,7 @@ schema_context: <本次标注依赖的当前协议/项目视图；没有就写 n
 
 # 标注：<一句话主题>
 
-> 来源：<web/terminal>。清洗痕迹见行尾 `（清:…）`。认知标记词表见 frontmatter 图例 / [[.Codex/skills/对话标注/SKILL]]。
+> 来源：<web/terminal>。清洗痕迹见行尾 `（清:…）`。认知标记词表见 frontmatter 图例 / [[.agents/skills/对话标注/SKILL]]。
 
 <逐回合的清洗+标注正文>
 
