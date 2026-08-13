@@ -2,13 +2,14 @@
 session: 2026-05-24
 participants: 小林, Claude (Claude Code CLI)
 type: session-index
-原版: "[[raw 1]]"
+source_state: source-missing
+current_annotation: "[[标注]]"
 ---
 
 # 索引：OpenClaw 接入试探 → 创业方向探索 → 等待种子
 
 > 这不是摘要。这是一份尾迹：保留了关键校正、未解决张力、给下次 AI 的操作指引。
-> 需要逐字细节去读 [[raw 1]] 或 [[标注]]。
+> 当前目录未保留 raw；逐字来源状态为 `source-missing`。[[标注]] 可用于导航，但不能替代原始发生或证明逐字内容。
 
 ## 一、这次对话产出了什么
 

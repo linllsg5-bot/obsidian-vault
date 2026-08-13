@@ -4,6 +4,8 @@ participants: 小林, claude, codex, antigravity
 type: session-index
 原版: "[[10 Projects/ai-conversations/2026-06-26-claude-codex-系统断连排查与当前主线/raw]]"
 source: agent
+source_state: raw-present
+annotation_state: annotation-pending
 ---
 
 # 索引：系统断连排查与当前主线更新

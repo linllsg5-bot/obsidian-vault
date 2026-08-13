@@ -3,12 +3,16 @@ session: 2026-06-06
 participants: 小林, Claudian
 type: session-index
 project: studying-spark v4 · 认识研究
-原版: [[raw]]
+source_state: source-missing
+source_note: "[[⚠️-raw已丢失]]"
+annotation_state: annotation-unavailable-without-raw
 ---
 
 # 索引：链接引擎确立 + 翻框（扩大为核）+ 数据模型定稿（2026-06-06）
 
 > 接 [[10 Projects/ai-conversations/2026-06-05-claudian-学习的结构-主体中间世界/index]] 06-05 cliffhanger（真问题绑定未确认）。本场完成了从"否定为核"到"扩大为核"的完整翻框，确立了链接引擎定位，定稿了数据模型，并启动了 v4 文档重写。
+
+> 来源边界：本目录 raw 已丢失，见 [[⚠️-raw已丢失]]。以下 index 是当时形成的认识层记录，不得当作逐字原文；在找到外部源以前也不补造标注。
 
 ---
 

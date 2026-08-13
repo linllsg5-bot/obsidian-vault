@@ -3,9 +3,13 @@ session: 2026-07~08（跨多轮，2026-08-04 归集）
 participants: 小林, 多 AI（Claude/Gemini/GPT/Antigravity）
 type: session-index
 source: agent
+source_state: index-only
+annotation_state: annotation-unavailable-without-raw
 ---
 
 # 索引：Cognos 组织立项与认识论四项纠正
+
+> 来源边界：本目录只有归集后的 index；两个遗留 Markdown 文件为空，不能视为 raw。以下内容是 2026-08-04 的 AI 归集视图，涉及确认地位时必须回查它所链接的其他会话来源。
 
 ## 一、这次对话产出了什么
 

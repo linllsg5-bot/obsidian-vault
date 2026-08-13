@@ -4,6 +4,8 @@ participants: 小林, claude, antigravity
 type: session-index
 原版: "[[10 Projects/ai-conversations/2026-06-01-claude-继续推进当前主线任务/raw]]"
 source: agent
+source_state: raw-present
+annotation_state: annotation-pending
 ---
 
 # 索引：继续推进当前主线任务 (7MB 全量无损清洗版)
