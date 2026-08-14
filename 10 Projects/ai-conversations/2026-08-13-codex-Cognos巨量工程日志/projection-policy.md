@@ -30,7 +30,10 @@ status: active
 | **`TOOL_RESULT` (工具执行结果)** | `### [TOOL RESULT]\n...` | 命令 stdout/stderr、测试通过/失败、文件写入结果 |
 | **`ERROR` / 异常中断** | `### [ERROR]\n...` | 运行时崩溃、超时、断连或异常退出记录 |
 
-> **保真声明**：所有保留项的正文内容**100% 原样保留**，未做任何摘要（summarization）、改写、省略或文本浓缩。
+> **可复核性声明 (Reproducibility Statement)**：
+> 1. 本投影由特定规则的解析脚本自动化生成，未对保留事件的正文做任何二次模型总结、缩略或改写。
+> 2. 但由于解析规则对事件类型进行了显式过滤，投影**代表的是特定规则下的视图，不能等同于物理原始源**。
+> 3. 产生本投影的完整 Python 解析脚本已归档至 `10 Projects/ai-conversations/scripts/`，任何后续主体均可随时依据本地物理 JSONL 重新运行脚本进行双向复核。
 
 ## 3. 明确过滤的事件类型 (Filtered)
 
@@ -39,9 +42,17 @@ status: active
 - 纯 UI 渲染相关的元数据标记
 - 未产生任何文本、调用或状态改变的空事件
 
-## 4. 原始 JSONL 的耐久私有保存原则 (Durable Source Layer)
+## 4. 提取脚本归档 (Archived Extraction Scripts)
+
+| 脚本路径 | 用途 | 输入源 |
+| :--- | :--- | :--- |
+| `10 Projects/ai-conversations/scripts/extract_codex_projection.py` | Codex JSONL 投影解析器 | 本地 `~/.codex/sessions/*.jsonl` |
+| `10 Projects/ai-conversations/scripts/extract_gpt_share.py` | ChatGPT 分享页 Turbo-Stream 解析器 | ChatGPT 公开分享页 URL / HTML |
+
+## 5. 原始 JSONL 的耐久私有保存原则 (Durable Source Layer)
 
 - **物理位置**：本地原始会话日志持久存储于 `C:\Users\lnp\.codex\sessions\`。
 - **隐私与安全边界**：原始 `.jsonl` 包含本地环境绝对路径、临时环境变量、Git 配置等敏感数据，**严禁直接提交至公开 GitHub 仓库**。
 - **归档层级关系**：
-  $$\text{Durable Private JSONL (物理真实源)} \xrightarrow{\text{Projection Policy}} \text{Vault Readable Markdown (共享可读投影)} \xrightarrow{\text{Epistemic Tagging}} \text{认识史 / 当前架构}$$
+  $$\text{Durable Private JSONL (物理真实源)} \xrightarrow[\text{归档脚本}]{\text{Projection Policy}} \text{Vault Readable Markdown (共享可读投影)} \xrightarrow{\text{Epistemic Tagging}} \text{认识史 / 当前架构}$$
+
