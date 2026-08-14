@@ -144,4 +144,8 @@ updated: 2026-08-13
 | 2026-08-08 | claudian | [[10 Projects/ai-conversations/2026-08-08-claudian-Cognos框架雏形思考与讨论/index\|Cognos 框架雏形思考与认知来龙去脉追溯]] | 思想/认识论/归档 | ✓ |
 | 2026-08-10 | antigravity | [[10 Projects/ai-conversations/2026-08-10-antigravity-Cognos雏形设计阶段尝试与思考/index\|Cognos 雏形设计阶段尝试、认识论文件对齐与哥德巴赫猜想探针]] | 思想/工程/探针 | ✓ |
 | 2026-08-12 | multi | [[10 Projects/ai-conversations/2026-08-12-multi-Cognos雏形设计改进与方案对比/index\|Cognos 雏形设计改进、方案对比 (A/B) 与多模型深探]] | 思想/架构/方案 | ✓ |
-| 2026-08-13 | gpt-web | [[10 Projects/ai-conversations/2026-08-13-gpt-Cognos贯穿性主体扩张与空无架构/index\|Cognos 贯穿性、主体扩张与空无架构推演及历史细读]] | 思想/架构/元层 | ✓（分享页 38 条可见消息；v2 标注） |
+| 2026-08-13 | codex | [[10 Projects/ai-conversations/2026-08-13-codex-Cognos巨量工程日志/index\|Codex Cognos 巨量工程与架构纠正日志（五场核心推进与对账）]] | 工程/架构 | ✓ |
+| 2026-08-13 | gpt-web | [[10 Projects/ai-conversations/2026-08-13-gpt-Cognos贯穿性主体扩张与空无架构/index\|Cognos 贯穿性、主体扩张与空无架构推演（ex4 前 38 消息早期快照）]] | 思想/架构/元层 | ✓ |
+| 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos跨Agent承载与Position验证/index\|Cognos 跨 Agent 承载推进、会话断连与 Position 结构验证（分叉 A，239 消息）]] | 思想/工程/探针 | ✓ |
+| 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos语言符号支配与场结构推演/index\|Cognos 语言符号支配、非对称场结构与睡眠机制推演（分叉 B，201 消息）]] | 思想/认识论 | ✓ |
+
