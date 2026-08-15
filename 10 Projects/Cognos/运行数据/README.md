@@ -14,12 +14,12 @@ updated: 2026-08-13
 
 - 运行体：`C:\Users\lnp\Documents\Playground\cognos\web\`
 - 当前文件：[[第一发生场.jsonl]]
-- 写入链：浏览器 → 本地 FastAPI → Codex thread → 追加 JSONL
+- 写入链：浏览器 → 本地 FastAPI → 可选 Runtime（Codex thread / Gemini Session）→ 追加 JSONL
 - 每条 AI 回复保留 `runtime / thread_id / turn_id`，用于回到实际运行来源。
 
 ## 文件地位
 
-`第一发生场.jsonl` 当前承担的是**发生层**：保存小林和 Codex 在网页竖切里实际写出的最终内容及运行引用。
+`第一发生场.jsonl` 当前承担的是**发生层**：保存小林与 AI 参与者（Codex / Gemini）在网页竖切里实际写出的最终内容及运行引用。
 
 它不直接证明：
 
