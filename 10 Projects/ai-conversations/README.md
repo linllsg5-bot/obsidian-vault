@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-08-13
+updated: 2026-08-16
 ---
 
 # AI 对话归档区
@@ -149,3 +149,4 @@ updated: 2026-08-13
 | 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos跨Agent承载与Position验证/index\|Cognos 跨 Agent 承载推进、会话断连与 Position 结构验证（分叉 A，239 消息）]] | 思想/工程/探针 | ✓ |
 | 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos语言符号支配与场结构推演/index\|Cognos 语言符号支配、非对称场结构与睡眠机制推演（分叉 B，201 消息）]] | 思想/认识论 | ✓ |
 
+| 2026-08-15/16 | gpt | [[10 Projects/ai-conversations/2026-08-15-gpt-Cognos第一发生场真实使用与第一组织切片/index\|Cognos 第一发生场真实使用、第一组织切片与主线/分支当前导出（raw-main/raw-branch）]] | 思想/工程/归档 | ✓ |
