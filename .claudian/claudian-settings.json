@@ -226,7 +226,7 @@
       "catalogTimestamp": 1786367745668,
       "catalogFingerprint": "2:8ecb80bc0e5694218f05b6385fb7a63bec6e34d923449be3c2da077912a280da",
       "installationMethodsByHost": {
-        "device:5fcb351a-fd5e-4fff-b6f9-776d9695d265": "native-windows"
+        "device-8ff489f3b63c44ec10dcaf6098bde6f1f0daa589fd52abdf0ae54d9f50fe4833": "native-windows"
       },
       "wslDistroOverridesByHost": {}
     },
@@ -375,11 +375,14 @@
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
   "enableDualPane": true,
-  "enableFilePane": true,
   "dualPaneSide": "right",
+  "restoreTabsOnStartup": true,
+  "collabEnabled": false,
+  "collabProjectsFolder": "workspace",
+  "collabGitPath": "",
   "sessionManagerOrganization": "list",
   "sessionManagerSort": "last-updated",
-  "pinnedLinkedNotePaths": [],
+  "pinnedLinkedContentPaths": [],
   "hiddenProviderCommands": {},
   "maxTabs": 5,
   "tabBarPosition": "input"
