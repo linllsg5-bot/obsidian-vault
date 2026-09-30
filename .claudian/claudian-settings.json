@@ -13,10 +13,7 @@
   "systemPrompt": "",
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
-  "customContextLimits": {
-    "opencode:deepseek-v4-pro": 1000000
-  },
-  "customModelAliases": {},
+  "customContextLimits": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
     "scrollDownKey": "s",
@@ -34,20 +31,80 @@
       "loadUserSettings": true,
       "enableChrome": true,
       "customModels": "",
-      "defaultModel": "opus",
       "lastModel": "sonnet",
       "modelEnvironmentType": "sonnet",
       "titleModelEnvironmentType": "",
       "environmentVariables": "",
-      "environmentHash": "runtime-input:v1:e3ac5a1959e293bd9dbe833eb2631d49e7ef25f2c0c750948c630500aa1b1087"
+      "environmentHash": "runtime-input:v1:e3ac5a1959e293bd9dbe833eb2631d49e7ef25f2c0c750948c630500aa1b1087",
+      "modelAliases": {},
+      "visibleModels": [
+        "haiku",
+        "sonnet",
+        "opus[1m]",
+        "fable"
+      ],
+      "selectedModels": [
+        {
+          "value": "opus[1m]",
+          "label": "Opus",
+          "description": "Opus 4.8 with 1M context · Best for everyday, complex tasks · $5/$25 per Mtok",
+          "resolvedModel": "claude-opus-4-8[1m]",
+          "reasoningMetadataResolved": true,
+          "supportedEffortLevels": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        {
+          "value": "sonnet",
+          "label": "Sonnet",
+          "description": "Sonnet 5 · Efficient for routine tasks · $3/$15 per Mtok",
+          "resolvedModel": "claude-sonnet-5",
+          "reasoningMetadataResolved": true,
+          "supportedEffortLevels": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        {
+          "value": "haiku",
+          "label": "Haiku",
+          "description": "Haiku 4.5 · Fastest for quick answers · $1/$5 per Mtok",
+          "resolvedModel": "claude-haiku-4-5-20251001",
+          "reasoningMetadataResolved": true,
+          "supportedEffortLevels": []
+        }
+      ]
     },
     "codex": {
       "enabled": true,
       "safeMode": "workspace-write",
       "cliPath": "",
       "cliPathsByHost": {},
-      "customModels": "",
-      "discoveredModels": [
+      "modelAliases": {},
+      "visibleModels": [
+        "gpt-5.5",
+        "gpt-5.4",
+        "gpt-5.4-mini",
+        "gpt-5.3-codex",
+        "gpt-5.2"
+      ],
+      "enableUltraEffort": false,
+      "reasoningSummary": "detailed",
+      "environmentVariables": "",
+      "environmentHash": "runtime-input:v1:ed54f4f5238abeec7f65a5da1e468c9a639e157a7d1c7753b53f54ba1196e8a0",
+      "installationMethodsByHost": {
+        "device-8ff489f3b63c44ec10dcaf6098bde6f1f0daa589fd52abdf0ae54d9f50fe4833": "native-windows"
+      },
+      "wslDistroOverridesByHost": {},
+      "responseStyle": "pragmatic",
+      "selectedModels": [
         {
           "model": "gpt-5.5",
           "displayName": "GPT-5.5",
@@ -87,7 +144,7 @@
         },
         {
           "model": "gpt-5.4",
-          "displayName": "gpt-5.4",
+          "displayName": "GPT-5.4",
           "description": "Strong model for everyday coding.",
           "supportedReasoningEfforts": [
             {
@@ -124,7 +181,7 @@
         },
         {
           "model": "gpt-5.4-mini",
-          "displayName": "GPT-5.4-Mini",
+          "displayName": "GPT-5.4 Mini",
           "description": "Small, fast, and cost-efficient model for simpler coding tasks.",
           "supportedReasoningEfforts": [
             {
@@ -155,7 +212,7 @@
         },
         {
           "model": "gpt-5.3-codex",
-          "displayName": "gpt-5.3-codex",
+          "displayName": "GPT-5.3 Codex",
           "description": "Coding-optimized model.",
           "supportedReasoningEfforts": [
             {
@@ -186,7 +243,7 @@
         },
         {
           "model": "gpt-5.2",
-          "displayName": "gpt-5.2",
+          "displayName": "GPT-5.2",
           "description": "Optimized for professional work and long-running agents.",
           "supportedReasoningEfforts": [
             {
@@ -215,20 +272,7 @@
           ],
           "isDefault": false
         }
-      ],
-      "modelAliases": {},
-      "visibleModels": null,
-      "enableUltraEffort": false,
-      "reasoningSummary": "detailed",
-      "environmentVariables": "",
-      "environmentHash": "runtime-input:v1:ed54f4f5238abeec7f65a5da1e468c9a639e157a7d1c7753b53f54ba1196e8a0",
-      "catalogTimestamp": 1786367745668,
-      "catalogFingerprint": "2:8ecb80bc0e5694218f05b6385fb7a63bec6e34d923449be3c2da077912a280da",
-      "installationMethodsByHost": {
-        "device-8ff489f3b63c44ec10dcaf6098bde6f1f0daa589fd52abdf0ae54d9f50fe4833": "native-windows"
-      },
-      "wslDistroOverridesByHost": {},
-      "responseStyle": "pragmatic"
+      ]
     },
     "opencode": {
       "cliPath": "",
@@ -316,22 +360,38 @@
         "opencode-go/mimo-v2.5-pro",
         "opencode-go/deepseek-v4-flash",
         "opencode/nemotron-3-ultra-free"
+      ],
+      "selectedModels": [
+        {
+          "label": "OpenCode Go/DeepSeek V4 Flash",
+          "rawId": "opencode-go/deepseek-v4-flash"
+        },
+        {
+          "label": "OpenCode Go/DeepSeek V4 Pro (New)",
+          "rawId": "opencode-go/deepseek-v4-pro"
+        },
+        {
+          "label": "OpenCode Go/MiMo V2.5 Pro",
+          "rawId": "opencode-go/mimo-v2.5-pro"
+        },
+        {
+          "label": "OpenCode Zen/Nemotron 3 Ultra Free",
+          "rawId": "opencode/nemotron-3-ultra-free"
+        }
       ]
     },
     "pi": {
       "cliPath": "",
       "cliPathsByHost": {},
-      "discoveredModels": [],
       "enabled": false,
       "environmentHash": "",
       "environmentVariables": "",
       "modelAliases": {},
       "preferredThinkingByModel": {},
-      "toolMode": "all",
-      "visibleModels": []
+      "visibleModels": [],
+      "selectedModels": []
     },
     "grok": {
-      "catalogsByHost": {},
       "cliPath": "",
       "cliPathsByHost": {},
       "enabled": false,
@@ -339,7 +399,8 @@
       "environmentVariables": "",
       "modelAliases": {},
       "preferredReasoningByModel": {},
-      "visibleModels": null
+      "visibleModels": [],
+      "selectedModelsByHost": {}
     }
   },
   "settingsProvider": "claude",
@@ -367,23 +428,26 @@
     "codex": "yolo"
   },
   "pendingProviderSessionInvalidations": {},
-  "lastCustomModel": "claude-opus-4-8[1m]",
   "maxWarmAgentProcesses": 5,
   "enableAutoScroll": true,
   "showMessageTimestamps": false,
   "deferMathRenderingDuringStreaming": true,
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
+  "enableZenMode": true,
   "enableDualPane": true,
   "dualPaneSide": "right",
   "restoreTabsOnStartup": true,
-  "collabEnabled": false,
-  "collabProjectsFolder": "workspace",
-  "collabGitPath": "",
+  "skillsSynced": false,
   "sessionManagerOrganization": "list",
   "sessionManagerSort": "last-updated",
   "pinnedLinkedContentPaths": [],
-  "hiddenProviderCommands": {},
+  "hiddenCommands": [],
+  "customModelAliases": {},
+  "lastCustomModel": "claude-opus-4-8[1m]",
+  "collabEnabled": false,
+  "collabProjectsFolder": "workspace",
+  "collabGitPath": "",
   "maxTabs": 5,
   "tabBarPosition": "input"
 }
