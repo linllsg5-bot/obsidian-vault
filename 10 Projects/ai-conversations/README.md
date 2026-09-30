@@ -150,3 +150,39 @@ updated: 2026-08-16
 | 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos语言符号支配与场结构推演/index\|Cognos 语言符号支配、非对称场结构与睡眠机制推演（分叉 B，201 消息）]] | 思想/认识论 | ✓ |
 
 | 2026-08-15/16 | gpt | [[10 Projects/ai-conversations/2026-08-15-gpt-Cognos第一发生场真实使用与第一组织切片/index\|Cognos 第一发生场真实使用、第一组织切片与主线/分支当前导出（raw-main/raw-branch）]] | 思想/工程/归档 | ✓ |
+
+## 本机会话自动导入
+
+`scripts/import_local_ai_sessions.py` 使用 Python 3.10+ 标准库，无网络、无第三方依赖。它生成经过凭证脱敏的可见文本投影，不生成总结或认知标注，不替代上面的手工归档流程。
+
+```powershell
+python scripts/import_local_ai_sessions.py --check
+python scripts/import_local_ai_sessions.py --dry-run
+python scripts/import_local_ai_sessions.py
+python scripts/import_local_ai_sessions.py --source codex --since 2026-01-01
+python scripts/import_local_ai_sessions.py --source pi --include-tools --include-system
+```
+
+默认范围为本地当前日期往前 365 天，以会话最后更新时间筛选（包含边界日期），保留入选会话的全部可见消息。没有源时间戳时使用文件 mtime，并标记 `date_basis: file_mtime`。`--since YYYY-MM-DD` 可覆盖起点。
+
+| 来源 | 默认路径 | 覆盖参数 |
+|---|---|---|
+| Pi | `~/.pi/agent/sessions/**/*.jsonl` | `--pi-dir` |
+| Codex | `~/.codex/sessions/**/*.jsonl` | `--codex-dir` |
+| Codex 已归档 | `~/.codex/archived_sessions/**/*.jsonl` | `--codex-archived-dir` |
+| Claude Code | `~/.claude/projects/**/*.jsonl` | `--claude-dir` |
+| Claudian 元数据 | 当前 vault 的 `.claudian/sessions/**/*.meta.json` | `--claudian-dir` |
+| ChatGPT web state | `~/.codex-chatgpt-web/responses-state.json` | `--chatgpt-state` |
+
+`--source` 支持 `pi/codex/claude/claudian/chatgpt/all`，默认 `all`。目录参数也可指向单个符合扩展名的文件；`--chatgpt-state` 指向 `responses-state.json`。`~` 由当前 Python 用户目录推导。默认输出在本项目 `_auto-import/`，`--output-dir` 可指定另一个专用生成目录（直接作为输出根，不再追加 `_auto-import`）。
+
+- 会话位于 `by-date/YYYY/MM/DD/<source>-<identity-hash>.md`；文件名使用稳定身份散列，标题另做安全清洗。
+- `manifest.json` 保存归档文件、身份与源 SHA-256、运行计数、源目录清单和 `skipped_reason`；坏行记录行号，其余可解析正文标为 `partial-visible-text`。原始文件不修改。
+- `按时间.md` 和 `按来源与主题.md` 只引用 manifest 中的标题等字段，不读取会话正文。主题标记为 **heuristic**，只匹配标题或首条用户消息的关键词，不调用模型、不消耗 token。
+- 默认只保留 user/assistant 可见文字。`--include-tools` 加入工具调用/结果，`--include-system` 加入 system/developer；thinking、reasoning 与 Codex analysis 不导出。`message_count` 统计导出的角色块，启用工具后包含工具块。
+- Pi v3 tree 按文件记录顺序保留所有可见分支，不声称重建活动分支。Claudian 始终是 `metadata-only`，不把标题或消息计数伪造成正文。
+- ChatGPT 只递归提取显式 user/assistant 角色的 message/content/text。支持 state 字典或列表；mapping 树必须有 `current_node` 且父链有效。诊断日志、未知或不可可靠还原的结构记录为跳过。
+- 自动替换明显的 key/token/cookie/authorization/password、JWT、私钥及 URL 密码为 `[REDACTED: ...]`；启发式脱敏无法识别所有任意格式秘密，分享前仍应检查。不会扫描 auth/settings/环境文件或数据库，备份和 `.CORRUPTED` 文件排除。
+- 相同来源的会话身份或源文件 hash 去重；ChatGPT 同文件内多个 state 保持独立。相同身份多个快照取最新，旧快照不回滚已归档的新版本。重复运行保留原 `imported_at`。
+- 只更新 manifest 登记且校验值未变的生成文件；已有未登记文件、人工编辑过的文件和入口发生冲突时跳过，不覆盖、不删除。缩小日期或来源范围不会删除以前的归档。不要同时运行多个导入进程。
+- `--dry-run` 打印计划、数量与跳过原因，不创建目录、不写文件。`--check` 仅使用临时目录和合成 fixtures，不扫描真实 home；也可运行 `python -B -m unittest discover -s scripts -p test_import_local_ai_sessions.py`。
