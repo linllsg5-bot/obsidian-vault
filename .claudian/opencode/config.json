@@ -4,25 +4,6 @@
     "build": {
       "prompt": "{file:C:\\Users\\lnp\\Documents\\Obsidian Vault\\.claudian\\opencode\\prompts\\main.md}"
     },
-    "claudian-yolo": {
-      "mode": "primary",
-      "permission": {
-        "*": "allow",
-        "plan_enter": "deny",
-        "question": "allow"
-      },
-      "prompt": "{file:C:\\Users\\lnp\\Documents\\Obsidian Vault\\.claudian\\opencode\\prompts\\main.md}"
-    },
-    "claudian-safe": {
-      "mode": "primary",
-      "permission": {
-        "plan_enter": "deny",
-        "question": "allow",
-        "bash": "ask",
-        "edit": "ask"
-      },
-      "prompt": "{file:C:\\Users\\lnp\\Documents\\Obsidian Vault\\.claudian\\opencode\\prompts\\main.md}"
-    },
     "claudian-inline-edit": {
       "description": "Claudian read-only execution agent.",
       "mode": "primary",
@@ -57,5 +38,5 @@
       "disable": true
     }
   },
-  "default_agent": "claudian-safe"
+  "default_agent": "build"
 }
