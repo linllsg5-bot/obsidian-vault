@@ -412,7 +412,7 @@
   "settingsProvider": "claude",
   "lastSelectedChatModel": {
     "providerId": "claude",
-    "model": "sonnet"
+    "model": "claude-code/opus[1m]"
   },
   "savedProviderModel": {
     "claude": "sonnet",
