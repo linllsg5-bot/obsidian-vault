@@ -2,8 +2,12 @@
 
 ingest_since_last_lint: 0
 
-
----
+## [2026-10-09] raw-import | ChatGPT + Claude 会话导出
+- ChatGPT：372 个会话，来源 ZIP 导出，归档入口 [[10 Projects/ai-conversations/_imports/ChatGPT-index]]。
+- Claude：145 个 Markdown 会话，来源 ZIP 导出，归档入口 [[10 Projects/ai-conversations/_imports/Claude-index]]。
+- 原始导入目录：`10 Projects/ai-conversations/_imports/`。
+- 处理：保留来源平台、原文件名/会话 ID 和导入批次；未覆盖既有会话；未生成主题总结；明显凭据模式扫描为 0 命中。
+- 认知地位：`raw-import`，后续逐批核查；不自动进入当前视图或已确认结论。
 
 <!--
 条目格式：
