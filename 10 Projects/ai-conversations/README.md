@@ -99,6 +99,16 @@ updated: 2026-08-16
 
 ---
 
+## 最近导入（2026-10-09）
+
+这批 GPT/Claude 会话已经进入 Obsidian 的原始材料区；之前只放在 `_imports/`，没有出现在本页的归档路由里，所以不容易看到。这里是正式入口：
+
+- [[10 Projects/ai-conversations/_imports/导入批次-2026-10-09]] — 导入批次与边界
+- [[10 Projects/ai-conversations/_imports/ChatGPT-index]] — ChatGPT：372 个会话
+- [[10 Projects/ai-conversations/_imports/Claude-index]] — Claude：145 个会话
+
+地位：`raw-import`。原文保留，未把 AI 观点写成已确认结论；后续重读时从各自 index 进入 raw。
+
 ## 已归档
 
 | 日期 | 来源 | 主题 | 类型 | 标注 |
