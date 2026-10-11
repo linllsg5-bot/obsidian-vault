@@ -8,6 +8,7 @@ ingest_since_last_lint: 0
 - 原始导入目录：`10 Projects/ai-conversations/_imports/`。
 - 处理：保留来源平台、原文件名/会话 ID 和导入批次；未覆盖既有会话；未生成主题总结；明显凭据模式扫描为 0 命中。
 - 认知地位：`raw-import`，后续逐批核查；不自动进入当前视图或已确认结论。
+- Cognos Nextcloud 已接收同一批原文：ChatGPT 372 条、Claude 145 条；分别保存到独立的 `cognos_note_spaces`，批次标识为 `2026-10-09-chatgpt` / `2026-10-09-claude`，保留来源路径、内容哈希和原文。
 
 <!--
 条目格式：
