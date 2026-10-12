@@ -18,9 +18,9 @@
 
 ---
 
-## 当前激活项目
+- **AI 会话入口**
+  - [[00 Inbox/AI会话入口]] — GPT / Claude 原始会话与 Cognos Notes 入口
 
-> 本页只提供导航。阶段、卡点与下一步统一查看 [[10 Projects/_状态板]]。
 
 - **Cognos — 第一数字承载**
   - 入口：[[10 Projects/Cognos/_入口]]
