@@ -1,7 +1,7 @@
 ---
 type: archive-index
 audience: 小林 + AI
-updated: 2026-08-16
+updated: 2026-10-13
 ---
 
 # AI 对话归档区
@@ -31,21 +31,21 @@ updated: 2026-08-16
 2. 只读取 `标注.md` 中被 index 指向的部分；需要完整重建这场对话时才全读。
 3. 只有遇到措辞、署名、时间或上下文争议，才核对 `raw.md`。
 
-这与 [[AI/加载路径]] 的“默认少读、按需加载”一致。大型会话的标注可能与 raw 一样长，不能把“已标注”误当成“小上下文”。
+这与 [[AI/加载路径]] 的"默认少读、按需加载"一致。大型会话的标注可能与 raw 一样长，不能把"已标注"误当成"小上下文"。
 
 ### 可靠性边界
 
 - `index.md` 是入口，不是会话真相；它可能继承当时 AI 的错误整合。
 - `标注.md` 是可检索投影，不是裁决书；说话人、`〔实〕` 和其他认知标记都可能误标。
-- 只有 raw 能证明原顺序和实际措辞，但“某句话出现过”仍不等于小林确认了它。
+- 只有 raw 能证明原顺序和实际措辞，但"某句话出现过"仍不等于小林确认了它。
 - 判断一项思想/架构的当前地位时，要继续核对：谁说的、是否明确确认、是否后来顶回、作用域是否只是局部。
-- 当前结构无法充分表达一段发生时，允许先保存 raw 和“当前建模失败”。不要为了填表把它塞进 `other/null/unknown`；那些仍是当前 schema 已经规定的槽位。
+- 当前结构无法充分表达一段发生时，允许先保存 raw 和"当前建模失败"。不要为了填表把它塞进 `other/null/unknown`；那些仍是当前 schema 已经规定的槽位。
 
 当任务只是接续一个局部问题时，仍按 `index → 定向标注 → raw`。当用户要求**完整回顾、仔细重读、重做架构判断**时，应把相关会话完整重建，不能用默认少读规则缩减任务。
 
 ### 从会话提升到项目文件
 
-提取出的内容先区分为：已确认、阶段采用、候选、开放、已否决/替代。AI 的完整方案默认是“候选”；“可以继续/其他还好”不能让整份方案升格。Cognos 的详细规则与实例见 [[10 Projects/Cognos/认知地位与来源]]。
+提取出的内容先区分为：已确认、阶段采用、候选、开放、已否决/替代。AI 的完整方案默认是"候选"；"可以继续/其他还好"不能让整份方案升格。Cognos 的详细规则与实例见 [[10 Projects/Cognos/认知地位与来源]]。
 
 ### 后续重读
 
@@ -59,11 +59,11 @@ updated: 2026-08-16
 
 ### 安全例外
 
-“原文不改”不覆盖凭证安全。归档前必须清除 API key、token、订阅地址、cookie、私有配置值等秘密：
+"原文不改"不覆盖凭证安全。归档前必须清除 API key、token、订阅地址、cookie、私有配置值等秘密：
 
-- Git 中的 `raw.md` 用 `[REDACTED: 凭证类型]` 占位，并在 index 记“发生过安全脱敏”。
+- Git 中的 `raw.md` 用 `[REDACTED: 凭证类型]` 占位，并在 index 记"发生过安全脱敏"。
 - 若未脱敏原文确有保存价值，命名为 `raw.private.md`；它已由 `.gitignore` 排除。
-- 不以“已经失效”为理由保留明文密钥；Git 历史中的秘密仍按泄露处理。
+- 不以"已经失效"为理由保留明文密钥；Git 历史中的秘密仍按泄露处理。
 - 安全脱敏只替换秘密值，不总结、不改写其余对话，因此不破坏原文证据地位。
 
 ---
@@ -86,30 +86,9 @@ updated: 2026-08-16
 
 ---
 
-## 工作流
+## 核心归档（已标注 + 已提炼）
 
-### 你要做的
-1. 把任意 AI 对话原文丢进一个新建的 `<日期>-<来源>-<主题>/raw.private.md`，或先脱敏后写入 `raw.md`。
-2. 告诉我「整理这个会话」或「给这个会话做标注」。
-
-### AI 要做的
-1. 先做凭证扫描与脱敏，再调用 [[.agents/skills/对话标注/SKILL]]，读 raw → 产出 `标注.md`。
-2. 产出 `index.md`（尾迹标准见 index 约定）。
-3. 末尾 See Also 用 wiki-link 链回相关协议 / 主线 / 沉淀文件。
-
----
-
-## 最近导入（2026-10-09）
-
-这批 GPT/Claude 会话已经进入 Obsidian 的原始材料区；之前只放在 `_imports/`，没有出现在本页的归档路由里，所以不容易看到。这里是正式入口：
-
-- [[10 Projects/ai-conversations/_imports/导入批次-2026-10-09]] — 导入批次与边界
-- [[10 Projects/ai-conversations/_imports/ChatGPT-index]] — ChatGPT：372 个会话
-- [[10 Projects/ai-conversations/_imports/Claude-index]] — Claude：145 个会话
-
-地位：`raw-import`。原文保留，未把 AI 观点写成已确认结论；后续重读时从各自 index 进入 raw。
-
-## 已归档
+这一层是完整整理过的会话：有 raw、标注、index，可以直接从 index 进入。
 
 | 日期 | 来源 | 主题 | 类型 | 标注 |
 |------|------|------|------|------|
@@ -146,7 +125,7 @@ updated: 2026-08-16
 | 2026-06-22~23 | claudian | [[10 Projects/ai-conversations/2026-06-18-claudian-Phase1-leakage-judge续场/index-续-0622-0623\|续场 — 架构设计多轮探讨：双牵引·节律展开·全局地图（API断）]] | 思想/架构 | ✓ |
 | 2026-06-18 | cli-claudian | [[10 Projects/ai-conversations/2026-06-18-cli-claudian-恢复全程/index\|claudian 崩溃后 CLI 恢复全程（终端完整实录）]] | 工程/恢复 | ✓ |
 | 2026-06-24 | antigravity | [[10 Projects/ai-conversations/2026-06-24-antigravity-让一切的尝试真正尝试/index\|让一切的尝试真正尝试 — 尝试生命周期与四种伪完成·护送而非处理]] | 思想/架构 | ✓ |
-| 2026-06-27 | codex | [[10 Projects/ai-conversations/2026-06-27-codex-vault体检与框架辨析/index\|Codex vault 体检与框架辨析 — 入口收束、学习问题校正与读尾迹朝向]] | 思想/归档 | ✓ |
+| 2026-06-27 | codex | [[10 Projects/ai-conversations/2026-06-27-codex-入口收束与八股文/index\|Codex vault 体检与框架辨析 — 入口收束、学习问题校正与读尾迹朝向]] | 思想/归档 | ✓ |
 | 2026-07-05 | claude+codex | [[10 Projects/ai-conversations/2026-07-05-claude-codex-前空间张力与维度置悬/index\|前空间张力与维度置悬 — 幻觉/可能/自由的前空间开口]] | 思想/认识论 | ✓ |
 | 2026-07-05 | codex | [[10 Projects/ai-conversations/2026-07-05-codex-会话归档补正与sandbox诊断/index\|会话归档补正与 sandbox 诊断 — raw 漏源校正 + Windows sandbox 配置修复]] | 归档/基建 | ✓ |
 | 2026-07-06 | web | [[10 Projects/ai-conversations/2026-07-06-web-编程学习与AI开发/index\|编程八股文与尝试空间生成论的深层对话]] | 思想/认识论 | ✓ |
@@ -158,8 +137,56 @@ updated: 2026-08-16
 | 2026-08-13 | gpt-web | [[10 Projects/ai-conversations/2026-08-13-gpt-Cognos贯穿性主体扩张与空无架构/index\|Cognos 贯穿性、主体扩张与空无架构推演（ex4 前 38 消息早期快照）]] | 思想/架构/元层 | ✓ |
 | 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos跨Agent承载与Position验证/index\|Cognos 跨 Agent 承载推进、会话断连与 Position 结构验证（分叉 A，239 消息）]] | 思想/工程/探针 | ✓ |
 | 2026-08-14 | gpt | [[10 Projects/ai-conversations/2026-08-14-gpt-Cognos语言符号支配与场结构推演/index\|Cognos 语言符号支配、非对称场结构与睡眠机制推演（分叉 B，201 消息）]] | 思想/认识论 | ✓ |
-
 | 2026-08-15/16 | gpt | [[10 Projects/ai-conversations/2026-08-15-gpt-Cognos第一发生场真实使用与第一组织切片/index\|Cognos 第一发生场真实使用、第一组织切片与主线/分支当前导出（raw-main/raw-branch）]] | 思想/工程/归档 | ✓ |
+
+---
+
+## 原始材料区
+
+这一层是保留原文的 raw 导入，没有做标注和 index，需要时从 index 进入原文。
+
+### 批次导入（2026-10-09）
+
+- [[10 Projects/ai-conversations/_imports/导入批次-2026-10-09|导入批次说明]] — 来源、边界、认知地位
+- [[10 Projects/ai-conversations/_imports/ChatGPT-index|ChatGPT 会话 372 条]] — 2024-2026 原始会话
+- [[10 Projects/ai-conversations/_imports/Claude-index|Claude 会话 145 条]] — 2025-2026 原始会话
+
+**认知地位**：`raw-import`。原文保留，未把 AI 观点写成已确认结论；后续重读时从各自 index 进入 raw。
+
+**已迁入 Cognos**：这批材料已同步进入 Nextcloud Cognos Notes，分别保存为独立空间（`2026-10-09-chatgpt` / `2026-10-09-claude`），保留来源路径、内容哈希和批次标识。
+
+### 本地自动导入
+
+- [[10 Projects/ai-conversations/_auto-import/按时间|按时间索引]] — 2026-05 至 2026-09，~150 条本地会话
+- [[10 Projects/ai-conversations/_auto-import/按来源|按来源索引]] — claudian / codex / pi / chatgpt 分组
+
+**特点**：
+- 自动脱敏，保留可读投影
+- 未做标注和认知整理
+- 按日期/来源双重索引
+
+---
+
+## 待整理队列
+
+从原始材料中标记"值得整理"的会话，准备进入核心归档。
+
+**当前空**。可通过关键词扫描、主题筛选、长度排序识别高价值会话，标记后进入整理流程。
+
+---
+
+## 工作流
+
+### 你要做的
+1. 把任意 AI 对话原文丢进一个新建的 `<日期>-<来源>-<主题>/raw.private.md`，或先脱敏后写入 `raw.md`。
+2. 告诉我「整理这个会话」或「给这个会话做标注」。
+
+### AI 要做的
+1. 先做凭证扫描与脱敏，再调用 [[.agents/skills/对话标注/SKILL]]，读 raw → 产出 `标注.md`。
+2. 产出 `index.md`（尾迹标准见 index 约定）。
+3. 末尾 See Also 用 wiki-link 链回相关协议 / 主线 / 沉淀文件。
+
+---
 
 ## 本机会话自动导入
 
@@ -177,22 +204,7 @@ python scripts/import_local_ai_sessions.py --source pi --include-tools --include
 
 | 来源 | 默认路径 | 覆盖参数 |
 |---|---|---|
-| Pi | `~/.pi/agent/sessions/**/*.jsonl` | `--pi-dir` |
-| Codex | `~/.codex/sessions/**/*.jsonl` | `--codex-dir` |
-| Codex 已归档 | `~/.codex/archived_sessions/**/*.jsonl` | `--codex-archived-dir` |
-| Claude Code | `~/.claude/projects/**/*.jsonl` | `--claude-dir` |
-| Claudian 元数据 | 当前 vault 的 `.claudian/sessions/**/*.meta.json` | `--claudian-dir` |
-| ChatGPT web state | `~/.codex-chatgpt-web/responses-state.json` | `--chatgpt-state` |
-
-`--source` 支持 `pi/codex/claude/claudian/chatgpt/all`，默认 `all`。目录参数也可指向单个符合扩展名的文件；`--chatgpt-state` 指向 `responses-state.json`。`~` 由当前 Python 用户目录推导。默认输出在本项目 `_auto-import/`，`--output-dir` 可指定另一个专用生成目录（直接作为输出根，不再追加 `_auto-import`）。
-
-- 会话位于 `by-date/YYYY/MM/DD/<source>-<identity-hash>.md`；文件名使用稳定身份散列，标题另做安全清洗。
-- `manifest.json` 保存归档文件、身份与源 SHA-256、运行计数、源目录清单和 `skipped_reason`；坏行记录行号，其余可解析正文标为 `partial-visible-text`。原始文件不修改。
-- `按时间.md` 和 `按来源与主题.md` 只引用 manifest 中的标题等字段，不读取会话正文。主题标记为 **heuristic**，只匹配标题或首条用户消息的关键词，不调用模型、不消耗 token。
-- 默认只保留 user/assistant 可见文字。`--include-tools` 加入工具调用/结果，`--include-system` 加入 system/developer；thinking、reasoning 与 Codex analysis 不导出。`message_count` 统计导出的角色块，启用工具后包含工具块。
-- Pi v3 tree 按文件记录顺序保留所有可见分支，不声称重建活动分支。Claudian 始终是 `metadata-only`，不把标题或消息计数伪造成正文。
-- ChatGPT 只递归提取显式 user/assistant 角色的 message/content/text。支持 state 字典或列表；mapping 树必须有 `current_node` 且父链有效。诊断日志、未知或不可可靠还原的结构记录为跳过。
-- 自动替换明显的 key/token/cookie/authorization/password、JWT、私钥及 URL 密码为 `[REDACTED: ...]`；启发式脱敏无法识别所有任意格式秘密，分享前仍应检查。不会扫描 auth/settings/环境文件或数据库，备份和 `.CORRUPTED` 文件排除。
-- 相同来源的会话身份或源文件 hash 去重；ChatGPT 同文件内多个 state 保持独立。相同身份多个快照取最新，旧快照不回滚已归档的新版本。重复运行保留原 `imported_at`。
-- 只更新 manifest 登记且校验值未变的生成文件；已有未登记文件、人工编辑过的文件和入口发生冲突时跳过，不覆盖、不删除。缩小日期或来源范围不会删除以前的归档。不要同时运行多个导入进程。
-- `--dry-run` 打印计划、数量与跳过原因，不创建目录、不写文件。`--check` 仅使用临时目录和合成 fixtures，不扫描真实 home；也可运行 `python -B -m unittest discover -s scripts -p test_import_local_ai_sessions.py`。
+| claudian | `~/.hermes/state.db` | `--claudian-db` |
+| codex | `~/.codex/state.db` | `--codex-db` |
+| pi | `~/.pi/state.db` | `--pi-db` |
+| chatgpt | `~/Downloads/conversations.json` | `--chatgpt-export` |
