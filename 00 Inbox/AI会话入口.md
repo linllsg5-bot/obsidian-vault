@@ -2,7 +2,12 @@
 type: navigation
 status: active
 ---
-# GPT / Claude 会话入口
+## GPT / Claude 原始会话
+
+**最近导入（2026-10-09）**：
+- [[10 Projects/ai-conversations/_imports/ChatGPT-index|ChatGPT 会话 372 条]]
+- [[10 Projects/ai-conversations/_imports/Claude-index|Claude 会话 145 条]]
+- [[10 Projects/ai-conversations/_imports/导入批次-2026-10-09|导入批次说明]]
 
 GPT 和 Claude 的原始会话已经归档，并且已经进入 Cognos Nextcloud Notes。
 
