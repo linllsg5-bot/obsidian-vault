@@ -1,14 +1,27 @@
 ---
 source_platform: ChatGPT
-source_archive: a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip
+source_archive: "a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip"
 source_conversation_id: 69159533-c868-8321-88d8-65891d724229
 source_export_file: conversations-002.json
 source_created_at: 1763022134.950435
+source_updated_at: 1763022144.452961
+default_model_slug: "auto"
+source_title: "intelligent与intelligible区别"
 import_status: raw-import
 epistemic_status: candidate
+order_basis: current-node-main-chain
+visible_message_count: 2
+branch_message_count: 0
+regen_version: 2
+regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
 ---
 # intelligent与intelligible区别
+
 > 来源：ChatGPT 导出 `a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip`；本文件是原始会话的可读投影，不是总结。
+
+## user
+
+intellgent和intellegible有什么联系吗怎么变化成这样的
 
 ## assistant
 
@@ -68,6 +81,3 @@ epistemic_status: candidate
 
 如果你愿意，我们可以一起看 **其他同根词**（如 intelligence, intelligency, intelligibility）之间的关系，帮你更系统化地掌握这一系列。要不要？
 
-## user
-
-intellgent和intellegible有什么联系吗怎么变化成这样的

@@ -1,14 +1,33 @@
 ---
 source_platform: ChatGPT
-source_archive: a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip
+source_archive: "a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip"
 source_conversation_id: 69c9e90f-efec-8399-a418-d62c88708906
 source_export_file: conversations-003.json
 source_created_at: 1774840140.583316
+source_updated_at: 1774856478.943504
+default_model_slug: "gpt-5-4-thinking"
+source_title: "Obsidian AI 集成方案"
 import_status: raw-import
 epistemic_status: candidate
+order_basis: current-node-main-chain
+visible_message_count: 27
+branch_message_count: 0
+assets_missing_from_export: ["sediment://file_0000000054b471fd9da7e54dcb1471ec"]
+regen_version: 2
+regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
 ---
 # Obsidian AI 集成方案
+
 > 来源：ChatGPT 导出 `a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip`；本文件是原始会话的可读投影，不是总结。
+
+## user
+
+我想给obsidian接入ai或者说openclaw 或者agent来帮助我更好记录一些东西。你能理解我的意图吗？这该怎么做？
+
+## assistant
+
+我先替你把这件事拆开：不是“给 Obsidian 装个 AI”这么简单，而是要决定——你到底想让它做检索、总结、自动整理，还是替你主动生成/维护笔记结构。  
+我去查一下 Obsidian 现在可用的插件路线、OpenClaw 能不能顺进去、以及更稳的实现方式，然后我给你一套不空泛的接法。
 
 ## assistant
 
@@ -17,187 +36,8 @@ epistemic_status: candidate
 
 ## assistant
 
-好，这下不是“差不多”，而是**真的通了**。
-
-你现在已经确认了三件事：
-
-- `obsidian` 命令在 PowerShell 里可执行，而且指向 `D:\obisidian\Obsidian\Obsidian.com`
-- CLI 版本正常
-- 当前 vault 路径已经明确是 `C:\Users\lnp\Documents\Obsidian Vault`
-
-这就意味着：  
-**Obsidian 这一侧已经可以当成外部自动化的落点了。**  
-而 Obsidian CLI 本来的定位也正是给脚本、自动化、外部工具集成用的。citeturn458661search0turn458661search2
-
-现在你该做的，不是再查设置，而是按这个顺序往下接。
-
-## 第一步：先做一次“落笔测试”
-
-先证明 CLI 不只是会显示帮助，而是真的能写进你的库。
-
-在 PowerShell 里跑：
-
-```powershell
-obsidian create path="00 Inbox/CLI测试.md" content="# CLI 测试
-
-这是一条从命令行写入的笔记。"
-```
-
-然后读出来：
-
-```powershell
-obsidian read path="00 Inbox/CLI测试.md"
-```
-
-如果你还没有 `00 Inbox` 这个文件夹，先建：
-
-```powershell
-New-Item -ItemType Directory -Force "C:\Users\lnp\Documents\Obsidian Vault\00 Inbox"
-```
-
-再试一次。
-
-如果这一步成功，就说明你的“外部世界 → Obsidian vault”这条缝已经裂开了。
-
-## 第二步：再试一次 Properties
-
-因为你后面不是只想写正文，而是想让 AI 帮你做结构化整理。  
-Obsidian CLI 已经支持 `property:set`、`property:read`、`properties` 这些命令；而官方 CLI 页也明确把这些能力列进去了。citeturn458661search0
-
-继续跑：
-
-```powershell
-obsidian property:set path="00 Inbox/CLI测试.md" name=type value=fleeting type=text
-obsidian property:set path="00 Inbox/CLI测试.md" name=status value=inbox type=text
-obsidian property:set path="00 Inbox/CLI测试.md" name=source value=cli-test type=text
-```
-
-然后看一下：
-
-```powershell
-obsidian properties path="00 Inbox/CLI测试.md" format=yaml
-```
-
-如果这也成功，说明后面 AI 不是只能胡乱写一篇 Markdown，  
-而是能往你的笔记骨架里填字段。
-
-## 第三步：再接 OpenClaw
-
-到这里，Obsidian 端已经没问题了。  
-下一块就是让 OpenClaw 负责“整理内容”，再把结果交给 Obsidian。
-
-OpenClaw Gateway 官方文档写得很清楚：它可以提供 OpenAI-compatible HTTP 接口，包括 `/v1/chat/completions`、`/v1/embeddings`、`/v1/responses` 和 `/v1/models`，但这些 HTTP 面**默认是关闭的**，要先在配置里显式启用。它们走的是和 Gateway 同一个端口。citeturn458661search1turn458661search3turn458661search5
-
-也就是说，你下一步要检查的是：
-
-1. OpenClaw Gateway 有没有在跑  
-2. `chatCompletions` 或 `responses` 接口有没有启用  
-3. 你手里有没有 Bearer token
-
-最小测试一般就是：
-
-```bash
-curl http://127.0.0.1:18789/v1/models \
-  -H "Authorization: Bearer 你的TOKEN"
-```
-
-如果能回模型列表，桥就通了。  
-然后脚本只需要做这三件事：
-
-```text
-你输入一句话
-→ 发给 OpenClaw
-→ OpenClaw 返回结构化结果
-→ 用 obsidian create / property:set 写进 vault
-```
-
-## 你现在已经到哪一步了
-
-不是起点。  
-你已经到了：
-
-**“Obsidian 这边的门已经打开，只差把 OpenClaw 的线焊上。”**
-
-先把上面那组 `create / read / property:set` 跑一遍。  
-跑完把结果贴给我，我下一条就直接给你写 **`capture_to_obsidian.py` 初版**，按你现在这个 vault 路径和 CLI 方式来。
-
-## assistant
-
-我去对一下官方现在的入口和验证方式，免得你在旧设置页里绕圈。
-
-## user
-
-有可能，不一定是“没开应用”，而是**CLI 没连上当前这个 Obsidian 进程**。
-
-常见情况有这几种：
-
-1. **Obsidian 开着，但没聚焦到某个 vault**
-   - 你可以试一下点进那个库，让它成为当前前台窗口
-   - 最好直接点开我们那个库：`Obsidian Vault`
-
-2. **CLI 功能没启用**
-   - 去 `Settings → General`
-   - 看看 **Enable CLI** 有没有打开
-
-3. **Windows / WSL 路径下调用到的不是同一个 Obsidian 进程**
-   - 这个也很常见：应用虽然开着，但我从 WSL 这边连不到它的 CLI IPC
-
-所以你现在最简单的操作是：
-
-### 先试这个最小动作
-- 切到 Obsidian 窗口
-- 明确点进 `Obsidian Vault`
-- 随便点开一篇笔记，让它成为当前活动窗口
-- 确认 `Enable CLI` 已开启
-
-然后告诉我一句：**“现在已经点进去了”**
-我就立刻再测一次。
-
-如果这样还是不行，那我就不继续跟 CLI 死磕了，直接切到**按 vault 路径读写 Markdown 文件**的方案，照样把你的外脑系统搭起来，而且往往更稳。
-
-我怎么才能确定cli开了？
-
-## assistant
-
-如果你指的是 **Steph Ango / kepano 在 GitHub 上发的 `obsidian-skills`**，那答案是：
-
-**是同一个方向，但不是同一层东西。**  
-我说的“路线 C”是一种**架构思路**；他发的那个仓库，是这条思路的**具体落地材料之一**。`obsidian-skills` 的 README 直接写着它是给 agent 用的技能集，目标是“Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI”，而且安装说明里明确提到可用于 **Claude Code、Codex CLI、OpenCode**。citeturn119306view0turn119306view1
-
-更直白一点说：
-
-我说的路线 C 是：  
-**agent 在 Obsidian 外面运行，Obsidian 作为 vault / 记忆层 / 可视化界面。**
-
-Steph 那条 GitHub 线是在说：  
-**既然 agent 在外面，那就教它如何正确读写 Obsidian 的格式，并通过 Obsidian CLI 去操作 vault。** `obsidian-skills` 里就有 `obsidian-markdown`、`obsidian-bases`、`json-canvas`、`obsidian-cli` 这些技能。citeturn119306view0turn119306view1
-
-而且这不是社区瞎玩，Obsidian 官方现在已经把这个方向写得很明了了。官方 CLI 页面直接说，Obsidian CLI 让你“从命令行控制 Obsidian”，用途包括脚本、自动化、和外部工具集成；还明确写了可以“Give agentic tools the ability to interact with your vault”。citeturn583932search0turn119306view2
-
-再往前一步，官方还给了一个更狠的信号：**Headless Sync**。官方页面写得非常露骨——它可以“Give agentic tools access to a vault without access to your full computer”，还提到可用于定时自动化，比如把 daily notes 聚合成 weekly summaries、自动打标签等。这个就已经不是“插件里嵌个 AI 面板”了，而是把 Obsidian 当成一个可编排的知识后端。citeturn119306view2
-
-所以，准确地说：
-
-**你看到的 CEO 那条 GitHub 路线，和我说的路线 C，本质上是一家人。**  
-区别只在于——  
-我讲的是战略图景；  
-他发的是战术组件。
-
-你如果要接 OpenClaw，这反而是个好消息。因为它说明你不必逆着 Obsidian 的演化方向去做。更自然的形态就是：
-
-**OpenClaw / agent 在外面跑**  
-→ 通过 **Obsidian CLI / 文件系统 / Headless Sync** 接触 vault  
-→ Obsidian 本体负责编辑、展示、链接、检索  
-→ AI 负责摘要、归档、改写、关系发现、定时整理
-
-这条线比“把一个大 agent 塞进 Obsidian 插件里”更干净，也更可控。
-
-你现在最该问的，其实已经不是“是不是一回事”，而是：
-
-**你要不要沿着这条官方正在长出来的路，给自己做一个 OpenClaw ↔ Obsidian 的外部桥。**
-
-要的话，我下一条就直接给你画这个桥：
-**Windows/WSL + OpenClaw + Obsidian CLI + vault 目录规范 + 第一批自动化命令流。**
+线已经快接上了。结论先说：  
+最适合你的，不是把 Obsidian 变成“另一个聊天窗口”，而是让它变成 OpenClaw 的记忆器官——输入可以散，落笔要稳，最好还能半自动把东西归档成你以后能检索的结构。
 
 ## assistant
 
@@ -353,93 +193,11 @@ Copilot 的本地文档里已经写明，Ollama 这条线可以做本地 embeddi
 下一条我可以直接给你一版**按你现在的 Windows / WSL / OpenClaw 环境来写的可执行方案**：  
 包括插件选型、文件夹结构、Properties 模板、OpenClaw 接法，以及第一批自动化流程。
 
-## assistant
-
-我不绕了，直接把“接入”拆成一条能走的施工线：  
-先定目录和职责，再把 OpenClaw 接成后端，最后用一个最小脚本把内容写进 vault。
-
 ## user
 
-我想给obsidian接入ai或者说openclaw 或者agent来帮助我更好记录一些东西。你能理解我的意图吗？这该怎么做？
+路线 C：把 agent 放在 Obsidian 外面，不放在里面
 
-## user
-
-找不到general啊
-
-## assistant
-
-最直接的判断法有三个。
-
-**一，看设置里有没有这项。**  
-打开 **Settings → General**，找到 **Command line interface**。把它打开后，按官方说明还会出现注册提示，要继续完成 **register Obsidian CLI**。如果你根本看不到这一项，先怀疑不是你没找到，而是 **安装器版本不对**：官方说明 CLI 需要 **Obsidian 1.12 installer**，而且 CLI 是在 **Desktop 1.12** 这条线上引入的。citeturn427287view0turn427287view1
-
-**二，在终端里试最小命令。**  
-官方给的入门验证命令就是：
-
-```bash
-obsidian help
-```
-
-如果 CLI 真开好了，这条命令应该返回帮助信息；CLI 也支持直接输入 `obsidian` 进入交互界面。官方还写明了：Obsidian app 需要在运行中；如果没运行，第一次命令会先启动 Obsidian。citeturn427287view0
-
-**三，再试一个“真动作”。**  
-比如：
-
-```bash
-obsidian search query="test"
-```
-
-或者：
-
-```bash
-obsidian daily
-```
-
-这些都是官方列出来的实际命令。要是它们能正常返回结果或切到对应笔记，基本就说明 CLI 已经连上当前 Obsidian 进程了。citeturn427287view0
-
-你可以按这个顺序检查：
-
-1. 先看 **Settings → General** 里有没有 **Command line interface**。citeturn427287view0  
-2. 打开它，并完成 **register**。citeturn427287view0  
-3. 保持 Obsidian 开着。citeturn427287view0  
-4. 在终端跑 `obsidian help`。citeturn427287view0  
-
-要是你愿意，我下一条直接带你做一遍排查：你把 `obsidian help` 的输出贴给我，我来判断现在卡在哪一层。
-
-## user
-
-所以能做到什么？
-
-## assistant
-
-我把“能做到什么”压成能力清单和边界清单，不讲虚的。  
-先对官方文档和现成工具的能力上限，再把它翻译成你日常会怎么用。
-
-## assistant
-
-线已经快接上了。结论先说：  
-最适合你的，不是把 Obsidian 变成“另一个聊天窗口”，而是让它变成 OpenClaw 的记忆器官——输入可以散，落笔要稳，最好还能半自动把东西归档成你以后能检索的结构。
-
-## user
-
-Get-Command obsidian | Format-List Name,CommandType,Source,Definition
-
-
-Name        : Obsidian.com
-CommandType : Application
-Source      : D:\obisidian\Obsidian\Obsidian.com
-Definition  : D:\obisidian\Obsidian\Obsidian.com
-
-
-
-PS C:\Users\lnp> where.exe obsidian
-D:\obisidian\Obsidian\Obsidian.com
-D:\obisidian\Obsidian\Obsidian.exe
-PS C:\Users\lnp> obsidian version
-1.12.7 (installer 1.12.7)
-PS C:\Users\lnp> obsidian vault info=path
-C:\Users\lnp\Documents\Obsidian Vault
-PS C:\Users\lnp>
+这跟obsidian ceo在github上发的是一件事情吗？
 
 ## assistant
 
@@ -448,448 +206,59 @@ PS C:\Users\lnp>
 
 ## assistant
 
-桥的轮廓已经出来了。  
-有个关键点我还在补：你是 Windows 桌面跑 Obsidian、WSL 里跑 OpenClaw，这会碰到一个“CLI 和桌面 app 是否在同一侧”的问题；这点不弄清，后面会虚。
+如果你指的是 **Steph Ango / kepano 在 GitHub 上发的 `obsidian-skills`**，那答案是：
 
-## user
+**是同一个方向，但不是同一层东西。**  
+我说的“路线 C”是一种**架构思路**；他发的那个仓库，是这条思路的**具体落地材料之一**。`obsidian-skills` 的 README 直接写着它是给 agent 用的技能集，目标是“Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI”，而且安装说明里明确提到可用于 **Claude Code、Codex CLI、OpenCode**。citeturn119306view0turn119306view1
 
-那我该怎么接入所以，
+更直白一点说：
 
-## assistant
+我说的路线 C 是：  
+**agent 在 Obsidian 外面运行，Obsidian 作为 vault / 记忆层 / 可视化界面。**
 
-对，这张图已经说明一件关键的事：
+Steph 那条 GitHub 线是在说：  
+**既然 agent 在外面，那就教它如何正确读写 Obsidian 的格式，并通过 Obsidian CLI 去操作 vault。** `obsidian-skills` 里就有 `obsidian-markdown`、`obsidian-bases`、`json-canvas`、`obsidian-cli` 这些技能。citeturn119306view0turn119306view1
 
-**CLI 开关已经开了。**  
-你右下这项 **“命令行界面”** 是开启状态，而且你的版本是 **Obsidian 1.12.7 / 安装程序 1.12.7**，满足官方对 CLI 的版本要求。官方文档写明，CLI 需要 1.12 安装器；Windows 侧还要求 **1.12.4+ installer**，你这个版本已经够了。citeturn225231view1turn225231view0
+而且这不是社区瞎玩，Obsidian 官方现在已经把这个方向写得很明了了。官方 CLI 页面直接说，Obsidian CLI 让你“从命令行控制 Obsidian”，用途包括脚本、自动化、和外部工具集成；还明确写了可以“Give agentic tools the ability to interact with your vault”。citeturn583932search0turn119306view2
 
-但这只说明：
+再往前一步，官方还给了一个更狠的信号：**Headless Sync**。官方页面写得非常露骨——它可以“Give agentic tools access to a vault without access to your full computer”，还提到可用于定时自动化，比如把 daily notes 聚合成 weekly summaries、自动打标签等。这个就已经不是“插件里嵌个 AI 面板”了，而是把 Obsidian 当成一个可编排的知识后端。citeturn119306view2
 
-**功能被启用了，不等于终端里已经能用了。**
+所以，准确地说：
 
-还差最后半步：**注册到系统 PATH，并在终端里验证。**  
-官方写得很明确，开启 **Command line interface** 之后，还要按提示完成注册；注册后要**重开终端**，然后用 `obsidian help` 测试。Windows 上实际是通过一个 `Obsidian.com` 终端重定向器来工作的。citeturn225231view0turn225231view1
+**你看到的 CEO 那条 GitHub 路线，和我说的路线 C，本质上是一家人。**  
+区别只在于——  
+我讲的是战略图景；  
+他发的是战术组件。
 
-你现在这样做最稳：
+你如果要接 OpenClaw，这反而是个好消息。因为它说明你不必逆着 Obsidian 的演化方向去做。更自然的形态就是：
 
-在 **Windows PowerShell** 里，不是在 Obsidian 里，运行：
+**OpenClaw / agent 在外面跑**  
+→ 通过 **Obsidian CLI / 文件系统 / Headless Sync** 接触 vault  
+→ Obsidian 本体负责编辑、展示、链接、检索  
+→ AI 负责摘要、归档、改写、关系发现、定时整理
 
-```powershell
-obsidian help
-```
+这条线比“把一个大 agent 塞进 Obsidian 插件里”更干净，也更可控。
 
-再跑：
+你现在最该问的，其实已经不是“是不是一回事”，而是：
 
-```powershell
-where obsidian
-```
+**你要不要沿着这条官方正在长出来的路，给自己做一个 OpenClaw ↔ Obsidian 的外部桥。**
 
-你看结果：
-
-- 如果 `obsidian help` 打出帮助文本，说明 **CLI 已经真的可用**。官方就是这么验证的。citeturn225231view0turn225231view1
-- 如果 `where obsidian` 找不到，说明多半是**还没完成注册**，或者注册后**终端还没重开**。官方 troubleshooting 也明确提到，注册后需要重启终端让 PATH 生效。citeturn225231view1
-- 如果 Windows PowerShell 能用，但 **WSL** 里不能用，那问题就不是 Obsidian CLI 没开，而是**Windows CLI 没有顺到 WSL 这个环境里**。这时候先别纠缠 CLI，直接走“WSL 脚本写 Markdown 到 vault”的方案更稳。
-
-还有一个小点：  
-你之前在设置里的“命令面板”里搜 `obsidian help`，那个方向本身就是错的。`obsidian help` 是**终端命令**，不是 Obsidian 命令面板里的命令。官方文档把它列在终端用法里。citeturn225231view0turn225231view1
-
-你先把这两条命令的输出贴给我：
-
-```powershell
-obsidian help
-where obsidian
-```
-
-我可以一眼判断你现在卡在“没注册”、 “PATH 没刷新”，还是“WSL/Windows 跨环境”这层。
-
-## assistant
-
-成了。
-
-你贴出来的 `obsidian help` 已经完整返回了 CLI 的命令列表，这说明 **Obsidian CLI 已经真的可用了**，不是“只把开关打开了”。官方也说明，CLI 可用时就能直接在终端执行 `obsidian <command>`；而你这里已经拿到了完整帮助输出。fileciteturn0file0 citeturn586161view0turn586161view1
-
-`where obsidian` 之所以是空的，**不代表 CLI 没装好**。在 PowerShell 里，`where` 是 `Where-Object` 的别名，不是 `cmd.exe` 那个查 PATH 的 `where.exe`；Microsoft 文档里也直接把 `where` 当作 `Where-Object` 的别名示例来用。要查命令路径，应该用 `where.exe obsidian`，或者更稳一点，用 `Get-Command obsidian`；`Get-Command` 会列出当前可执行的命令，包括 PATH 里的应用程序。citeturn576151view0turn576151view1turn576151view2turn576151view3
-
-你现在直接在 **PowerShell** 里跑这几条：
-
-```powershell
-Get-Command obsidian | Format-List Name,CommandType,Source,Definition
-where.exe obsidian
-obsidian version
-obsidian vault info=path
-```
-
-如果 `obsidian vault info=path` 能吐出当前库路径，那就不是“半通”，而是**已经能拿来接你的外部脚本了**。`obsidian version` 和 `vault info` 也都在你刚贴出的 CLI 帮助里。fileciteturn0file0
-
-所以现在的判断很简单：
-
-**不是 CLI 没开。CLI 已经活了。**  
-下一步不该继续纠缠设置页，而是直接开始接入流程：先让脚本调用 OpenClaw，再把结果写进 vault。
-
-把这四条命令的输出贴给我，我就直接接着给你写 `capture_to_obsidian.py`。
-
-## assistant
-
-你这句我当成：
-
-**“那我到底该怎么接入？”**
-
-我给你一条最短、最稳、能落地的线。
-
-## 先定形状
-
-别先碰复杂插件。  
-先做这个最小闭环：
-
-```text
-你输入一句话
-→ OpenClaw 整理
-→ 脚本生成 Markdown + Properties
-→ 写进 Obsidian vault
-→ Obsidian 桌面端打开、搜索、继续改
-```
-
-原因很简单：Obsidian CLI 是控制**正在运行的桌面版 Obsidian**，而 Obsidian Headless 是**不依赖桌面 app**的独立客户端。你现在是 Windows 跑 Obsidian、WSL 跑 OpenClaw，先用“外部脚本写文件 + 桌面端查看”最顺，不容易卡死在跨环境控制上。citeturn435471view0turn150147view0
-
-## 第一步：把 Obsidian 这一侧准备好
-
-先把 Obsidian 更新到带 CLI 的安装器版本，然后在 **Settings → General** 里开启 **Command line interface**。官方说明里写了：CLI 需要 Obsidian 1.12 安装器，CLI 也支持 `create`、`read`、`search`、`daily`、`daily:append`、`tags counts` 这些命令。citeturn435471view0
-
-建议你的 vault 放在 Windows 路径，例如：
-
-```text
-C:\Users\lnp\Documents\Obsidian\SecondBrain
-```
-
-这样 WSL 里可以直接走：
-
-```bash
-/mnt/c/Users/lnp/Documents/Obsidian/SecondBrain
-```
-
-这不是官方硬性要求，是为了让 Windows 的 Obsidian 桌面端和 WSL 里的 OpenClaw/脚本同时碰到同一份 vault；跟 CLI“以当前 vault 或指定 vault 工作”的设计是吻合的。citeturn435471view0
-
-## 第二步：把 OpenClaw 作为后端开出来
-
-OpenClaw Gateway 的 OpenAI-compatible HTTP 面默认**是关闭的**，要手动打开。官方文档写明了，启用后会提供：
-
-- `POST /v1/chat/completions`
-- `GET /v1/models`
-- `POST /v1/embeddings`
-- `POST /v1/responses`
-
-而且认证就是标准 Bearer Token。citeturn436068view0turn436068view1
-
-你至少开这个：
-
-```json
-{
-  "gateway": {
-    "http": {
-      "endpoints": {
-        "chatCompletions": { "enabled": true }
-      }
-    }
-  }
-}
-```
-
-官方文档明确给了这个开关名：`gateway.http.endpoints.chatCompletions.enabled = true`。citeturn436068view3
-
-还有个很重要的边界：  
-OpenClaw 官方明确说，这个 HTTP 入口应当被视为 **full operator-access surface**，不是细粒度的普通用户接口；文档直接建议只放在 loopback / 私网 / tailnet，不要裸露到公网。citeturn436068view2
-
-## 第三步：先手测一下 OpenClaw 是否真通了
-
-先不用写程序，直接在 WSL 里测：
-
-```bash
-curl http://127.0.0.1:18789/v1/models \
-  -H "Authorization: Bearer 你的TOKEN"
-```
-
-然后再测一次对话接口：
-
-```bash
-curl http://127.0.0.1:18789/v1/chat/completions \
-  -H "Authorization: Bearer 你的TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "openclaw",
-    "messages": [
-      {"role": "user", "content": "把这句话整理成 Obsidian 笔记摘要：我在想创业和 agent 工具是不是很容易被替代"}
-    ],
-    "user": "obsidian-capture"
-  }'
-```
-
-文档写明，带 `user` 字段时，Gateway 会基于它生成稳定 session key；不带时，每次请求默认是新的会话。这个对“同一类笔记沿用一个记忆轨迹”很有用。citeturn436068view0
-
-## 第四步：定义 AI 输出格式，不要让它乱写
-
-Obsidian 的 **Properties** 就是结构化字段，支持 text、links、dates、checkboxes、numbers、tags 等；而且模板也能带 properties。换句话说，你最该让 AI 先写的，不是“漂亮正文”，而是骨架。citeturn150147view1
-
-先定一个最小模板：
-
-```yaml
----
-type: fleeting
-status: inbox
-summary:
-tags:
-related:
-next_action:
-confidence:
-created:
-source: openclaw-capture
----
-```
-
-你给 OpenClaw 的提示词，别写成散文，直接写成协议：
-
-```text
-你是 Obsidian 记录助手。
-把用户输入整理成 JSON，字段必须严格为：
-title, summary, tags, related, next_action, body, confidence
-
-规则：
-1. 保留原意，不要擅自发挥
-2. summary 不超过 80 字
-3. tags 不超过 5 个
-4. related 只写概念词，不伪造文件名
-5. body 用简洁中文
-6. confidence 只能是 low / medium / high
-```
-
-这一步很关键。  
-你真正要控制的不是“模型聪不聪明”，而是**输出是否规整**。规整了，vault 才不会被写成烂泥。这个做法和 Obsidian 官方把 Properties 作为结构化层的思路是一致的。citeturn150147view1
-
-## 第五步：写一个最小的捕获脚本
-
-脚本做三件事：
-
-1. 接收一句输入  
-2. 调 OpenClaw  
-3. 生成 `.md` 写进 `00 Inbox/`
-
-例如目录先这样：
-
-```text
-00 Inbox/
-01 Daily/
-02 Concepts/
-03 Projects/
-99 AI Drafts/
-```
-
-Python 逻辑大概就是：
-
-```python
-import json, requests, datetime, pathlib, re
-
-VAULT = pathlib.Path("/mnt/c/Users/lnp/Documents/Obsidian/SecondBrain")
-TOKEN = "你的TOKEN"
-URL = "http://127.0.0.1:18789/v1/chat/completions"
-
-user_text = "我在想创业和agent工具是不是很容易被替代"
-
-prompt = f"""
-你是 Obsidian 记录助手。
-把下面内容整理成 JSON，字段必须严格为：
-title, summary, tags, related, next_action, body, confidence
-
-内容：
-{user_text}
-"""
-
-resp = requests.post(
-    URL,
-    headers={
-        "Authorization": f"Bearer {TOKEN}",
-        "Content-Type": "application/json",
-    },
-    json={
-        "model": "openclaw",
-        "user": "obsidian-capture",
-        "messages": [{"role": "user", "content": prompt}],
-    },
-    timeout=60,
-)
-data = resp.json()
-text = data["choices"][0]["message"]["content"]
-obj = json.loads(text)
-
-title = re.sub(r'[\\\\/:*?"<>|]', "-", obj["title"]).strip()[:80]
-ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-fname = datetime.datetime.now().strftime("%Y-%m-%d-") + title + ".md"
-
-md = f"""---
-type: fleeting
-status: inbox
-summary: {obj["summary"]}
-tags:
-{chr(10).join(f"  - {x}" for x in obj["tags"])}
-related:
-{chr(10).join(f"  - {x}" for x in obj["related"])}
-next_action: {obj["next_action"]}
-confidence: {obj["confidence"]}
-created: {ts}
-source: openclaw-capture
----
-
-# {obj["title"]}
-
-原始输入：
-{user_text}
-
-整理后：
-{obj["body"]}
-"""
-
-out = VAULT / "00 Inbox" / fname
-out.write_text(md, encoding="utf-8")
-print(out)
-```
-
-这段不是官方原样代码，但它正好利用了官方已经给你的两块基础设施：  
-一块是 OpenClaw 的兼容 HTTP 接口，另一块是 Obsidian 对 Markdown + Properties 的原生支持。citeturn436068view0turn150147view1
-
-## 第六步：让 Obsidian CLI 只干“辅助动作”
-
-CLI 很适合做这些：
-
-```bash
-obsidian search query="agent 替代"
-obsidian daily
-obsidian daily:append content="- [ ] 整理今天的创业想法"
-obsidian create name="创业问题树" template=Project
-obsidian read path="00 Inbox/2026-03-30-某条笔记.md"
-```
-
-这些能力官方都列出来了。也就是说，你可以让“外部脚本负责写”，让“CLI 负责打开、查找、追加、读取”。别反过来。citeturn435471view0
-
-## 第七步：以后再升级成真正的 agent 工作流
-
-等这个最小闭环稳了，再做两种升级：
-
-**升级 A：定时整理**  
-夜里自动扫 `00 Inbox` 和 `01 Daily`，压出 weekly summary。这个更适合以后用 **Obsidian Headless**，因为它就是为“无桌面 app 的自动化”准备的，官方还把 weekly summaries、auto-tag 直接写成示例用途。citeturn150147view0
-
-**升级 B：让 coding agent 懂 Obsidian 原生格式**  
-到那时再用 `obsidian-skills`。它的 README 写得很明确：这是给 skills-compatible agents 用的，支持 Claude Code、Codex CLI、OpenCode；其中就有 `obsidian-markdown`、`obsidian-bases`、`json-canvas`、`obsidian-cli` 这些技能。citeturn436068view7turn436068view6
-
----
-
-## 你现在就该按这个顺序动手
-
-1. **更新 Obsidian 并开 CLI**  
-2. **把 vault 固定到 Windows 路径**  
-3. **在 OpenClaw 里启用 chat completions 接口**  
-4. **先用 curl 测通**  
-5. **写最小 capture 脚本，把一句话落成一篇 Inbox 笔记**  
-6. **再让 CLI 去 search / daily / append**
-
-别一开始就做“全自动智能知识中枢”。  
-先让它稳定地把一滴东西，落成一页纸。
-
-下一条我直接给你一份**按你环境改好的可运行初版**：  
-`capture_to_obsidian.py` + 一个最小 vault 模板。
-
-## assistant
-
-对，你这张图里确实**没有看到 `General / 通用`**。
-
-而且你现在开的这页是 **“命令面板”设置里的“置顶命令”**，这里搜 `obsidian help` 是没用的——`obsidian help` 是**终端命令**，不是 Obsidian 里的一条命令。  
-所以你不是“没找到命令”，而是**找错地方了**。
-
-更关键的是：
-
-**如果左侧设置栏里根本没有 `General / 通用`，那我怀疑你现在的 Obsidian 版本或安装器版本不对。**  
-因为官方的 CLI 是 **Obsidian 1.12 Desktop** 才引入的，安装步骤写的是：到 **Settings → General → Command line interface** 去开启；而在 Windows 上，官方还特别说明要用 **1.12.4+ 的 installer**，因为 Windows 需要额外的终端重定向器来让 CLI 正常工作。citeturn171511search0turn328236search2turn171511search1
-
-你现在先别继续在这个页面里翻了，直接这样做：
-
-1. 点左侧最上面的 **“关于”**。  
-2. 把里面的 **App version** 和 **Installer version** 截图或抄给我。  
-3. 我帮你判断是不是版本问题。
-
-因为官方也写了，CLI 需要的是 **1.12 系列安装器**，而且有些功能要靠**下载安装器更新**，不是单纯应用内热更新就够。citeturn328236search2turn328236search9turn171511search1
-
-如果你看完版本发现：
-
-- **App version < 1.12**：那就还没这功能。citeturn171511search0  
-- **Windows 上 installer 太旧**：CLI 也可能没有，或者装了但连不上。官方在 1.12.4 和 1.12.7 的更新里都专门修过 Windows CLI 和 installer 相关问题。citeturn537295search0turn171511search1
-
-所以现在最短的一步不是继续找 `General`，而是：
-
-**先点“关于”，把版本发我。**  
-这一眼就能看出来问题是在“功能没上线”，还是“安装器太旧”。
-
-## assistant
-
-能做到，而且能做得**很具体**。
-
-不是“一个 AI 面板陪你聊天”那种浅层东西。  
-真接起来之后，它可以把 Obsidian 变成一个会**接住碎片、压缩思路、回捞旧念头、定时沉淀**的系统。
-
-### 它实际能做的
-
-**1. 一键把你的碎片落成笔记**  
-你随手丢一句话进去，比如“我怀疑自己做 agent 工具会不会很快被替代”，外部脚本可以先调 OpenClaw 整理，再写进 Obsidian vault。Obsidian 官方的 Properties 就是给这种结构化信息准备的，能存文本、链接、日期、复选框、数字、标签等，所以 AI 很适合先填 `summary / tags / next_action / confidence` 这类字段。citeturn299976view3turn299976view1
-
-**2. 自动给你的想法做“轻整理”**  
-不是替你胡乱扩写，而是把原话保留住，再补一层摘要、标签、关联主题、下一步动作。这一层最适合让 OpenClaw 走 `POST /v1/responses` 或 `POST /v1/chat/completions`，因为 Gateway 本来就提供这些 OpenAI-compatible 接口。citeturn299976view1turn299976view2
-
-**3. 在你的 vault 里“回忆”东西**  
-它可以程序化搜索、读取、统计你的笔记，而不是只会聊天。Obsidian CLI 官方列出的例子就包括 `search`、`read`、`create`、`tags counts`、`tasks daily`，也就是：搜旧笔记、读当前笔记、生成新笔记、看标签频率、从 daily note 里抽任务。citeturn299976view0turn530660search1
-
-**4. 做 daily / weekly 的沉淀**  
-这是最值钱的一层。CLI 可以打开今日 daily note、往 daily 追加内容；而 Obsidian Headless 官方更直接把“聚合 daily notes 成 weekly summaries”“auto-tag”写成典型用途。也就是说，它不只是能记，还能定时帮你把散乱的一天压成一段可回看的沉淀。citeturn299976view0turn530660search0turn530660search1
-
-**5. 给项目页、概念页、资料页自动归档**  
-如果你给笔记加了 Properties，Obsidian 本身就支持基于这些字段去搜索和组织；CLI 还支持 Bases 相关命令，例如列出 `.base` 文件、查询 view、创建 item。于是你可以让 agent 不只是写一页笔记，而是顺手把它归入某个项目或某个知识视图。citeturn299976view3turn530660search2
-
-**6. 让 coding agent 真正“懂 Obsidian 语法”**  
-这不是空话。`obsidian-skills` 这个仓库本身就是给 skills-compatible agents 用的，README 明确写了能教 agent 处理 Obsidian Markdown、Bases、JSON Canvas 和 CLI，而且支持 Claude Code、Codex CLI、OpenCode 这类代理工具。也就是说，后面你不是只能“让模型生成一坨 Markdown”，而是能让它按 Obsidian 原生方式工作。citeturn299976view4
-
-**7. 做成“外部 agent + 内部笔记”的分层系统**  
-Obsidian CLI 官方定位就是给脚本、自动化、外部工具集成用的；Headless 则是不用桌面 app 的独立客户端，适合服务器和定时任务。换句话说，你完全可以把 OpenClaw 放在外面当大脑，让 Obsidian 只做 vault、编辑器和可视化界面。citeturn299976view0turn530660search0turn530660search1
-
-**8. 甚至可以辅助开发和调试 Obsidian 本体工作流**  
-如果你以后自己写插件或自动化，CLI 还提供开发命令，比如打开开发者工具、重载插件、截图、执行 JS。它不是只能“记笔记”，它能变成一整个可编排的工作台。citeturn299976view0
-
-### 但它做不到的，或者说，不该让它做的
-
-**第一，它不是你的替代大脑。**  
-它能压缩、索引、归类、提醒、串联；但它不能天然替你判断什么值得保留。你如果不给规则，它就会把 vault 写成一片过度加工的泡沫。这是工程边界，不是模型边界。
-
-**第二，CLI 不是后台神。**  
-Obsidian CLI 需要桌面版 Obsidian 正在运行；如果你想不依赖桌面 app 去做远程或定时自动化，官方给的是 Headless，那是另一条线。citeturn299976view0turn530660search0
-
-**第三，OpenClaw 这层权限很高。**  
-Gateway 默认是 loopback 绑定、默认要求认证；`/v1/responses` 文档还明确提醒，要把这个接口当成对该 gateway 实例的“full operator access”。所以它适合做你自己的内网大脑，不适合裸奔暴露到公网。citeturn299976view1turn299976view2
-
-### 翻成你日常能感受到的话
-
-你以后可以这样用它：
-
-早上冒出一个念头，丢进去。  
-晚上，它把今天的碎片压成一页 daily summary。  
-过几天你写到“创业、agent、替代焦虑”，它会把你三周前写的相关笔记浮出来。  
-再往后，它甚至能把这些散页慢慢织成项目页、概念页、问题树。
-
-所以它能做到的，不是“帮你写几段漂亮话”。  
-而是——
-
-**让你的记录开始具有回声。**
-
-下一步最实在的，就是我直接给你列一张：
-
-**“你这套系统第一阶段能做的 10 个具体动作清单”**  
-比如“快速收件箱”“daily 回收”“项目归档”“旧笔记召回”“对话转笔记”。
+要的话，我下一条就直接给你画这个桥：
+**Windows/WSL + OpenClaw + Obsidian CLI + vault 目录规范 + 第一批自动化命令流。**
 
 ## user
 
 可以
+
+## assistant
+
+我去把这座桥的几块承重结构都核一下：Obsidian CLI、Headless Sync、`obsidian-skills`，再对 OpenClaw 的接口形状。  
+然后我直接按你现在的环境，给你一版能开始动手的接法。
+
+## assistant
+
+桥的轮廓已经出来了。  
+有个关键点我还在补：你是 Windows 桌面跑 Obsidian、WSL 里跑 OpenClaw，这会碰到一个“CLI 和桌面 app 是否在同一侧”的问题；这点不弄清，后面会虚。
 
 ## assistant
 
@@ -1210,16 +579,658 @@ source: openclaw-capture
 
 ## user
 
-路线 C：把 agent 放在 Obsidian 外面，不放在里面
-
-这跟obsidian ceo在github上发的是一件事情吗？
+所以能做到什么？
 
 ## assistant
 
-我先替你把这件事拆开：不是“给 Obsidian 装个 AI”这么简单，而是要决定——你到底想让它做检索、总结、自动整理，还是替你主动生成/维护笔记结构。  
-我去查一下 Obsidian 现在可用的插件路线、OpenClaw 能不能顺进去、以及更稳的实现方式，然后我给你一套不空泛的接法。
+我把“能做到什么”压成能力清单和边界清单，不讲虚的。  
+先对官方文档和现成工具的能力上限，再把它翻译成你日常会怎么用。
 
 ## assistant
 
-我去把这座桥的几块承重结构都核一下：Obsidian CLI、Headless Sync、`obsidian-skills`，再对 OpenClaw 的接口形状。  
-然后我直接按你现在的环境，给你一版能开始动手的接法。
+能做到，而且能做得**很具体**。
+
+不是“一个 AI 面板陪你聊天”那种浅层东西。  
+真接起来之后，它可以把 Obsidian 变成一个会**接住碎片、压缩思路、回捞旧念头、定时沉淀**的系统。
+
+### 它实际能做的
+
+**1. 一键把你的碎片落成笔记**  
+你随手丢一句话进去，比如“我怀疑自己做 agent 工具会不会很快被替代”，外部脚本可以先调 OpenClaw 整理，再写进 Obsidian vault。Obsidian 官方的 Properties 就是给这种结构化信息准备的，能存文本、链接、日期、复选框、数字、标签等，所以 AI 很适合先填 `summary / tags / next_action / confidence` 这类字段。citeturn299976view3turn299976view1
+
+**2. 自动给你的想法做“轻整理”**  
+不是替你胡乱扩写，而是把原话保留住，再补一层摘要、标签、关联主题、下一步动作。这一层最适合让 OpenClaw 走 `POST /v1/responses` 或 `POST /v1/chat/completions`，因为 Gateway 本来就提供这些 OpenAI-compatible 接口。citeturn299976view1turn299976view2
+
+**3. 在你的 vault 里“回忆”东西**  
+它可以程序化搜索、读取、统计你的笔记，而不是只会聊天。Obsidian CLI 官方列出的例子就包括 `search`、`read`、`create`、`tags counts`、`tasks daily`，也就是：搜旧笔记、读当前笔记、生成新笔记、看标签频率、从 daily note 里抽任务。citeturn299976view0turn530660search1
+
+**4. 做 daily / weekly 的沉淀**  
+这是最值钱的一层。CLI 可以打开今日 daily note、往 daily 追加内容；而 Obsidian Headless 官方更直接把“聚合 daily notes 成 weekly summaries”“auto-tag”写成典型用途。也就是说，它不只是能记，还能定时帮你把散乱的一天压成一段可回看的沉淀。citeturn299976view0turn530660search0turn530660search1
+
+**5. 给项目页、概念页、资料页自动归档**  
+如果你给笔记加了 Properties，Obsidian 本身就支持基于这些字段去搜索和组织；CLI 还支持 Bases 相关命令，例如列出 `.base` 文件、查询 view、创建 item。于是你可以让 agent 不只是写一页笔记，而是顺手把它归入某个项目或某个知识视图。citeturn299976view3turn530660search2
+
+**6. 让 coding agent 真正“懂 Obsidian 语法”**  
+这不是空话。`obsidian-skills` 这个仓库本身就是给 skills-compatible agents 用的，README 明确写了能教 agent 处理 Obsidian Markdown、Bases、JSON Canvas 和 CLI，而且支持 Claude Code、Codex CLI、OpenCode 这类代理工具。也就是说，后面你不是只能“让模型生成一坨 Markdown”，而是能让它按 Obsidian 原生方式工作。citeturn299976view4
+
+**7. 做成“外部 agent + 内部笔记”的分层系统**  
+Obsidian CLI 官方定位就是给脚本、自动化、外部工具集成用的；Headless 则是不用桌面 app 的独立客户端，适合服务器和定时任务。换句话说，你完全可以把 OpenClaw 放在外面当大脑，让 Obsidian 只做 vault、编辑器和可视化界面。citeturn299976view0turn530660search0turn530660search1
+
+**8. 甚至可以辅助开发和调试 Obsidian 本体工作流**  
+如果你以后自己写插件或自动化，CLI 还提供开发命令，比如打开开发者工具、重载插件、截图、执行 JS。它不是只能“记笔记”，它能变成一整个可编排的工作台。citeturn299976view0
+
+### 但它做不到的，或者说，不该让它做的
+
+**第一，它不是你的替代大脑。**  
+它能压缩、索引、归类、提醒、串联；但它不能天然替你判断什么值得保留。你如果不给规则，它就会把 vault 写成一片过度加工的泡沫。这是工程边界，不是模型边界。
+
+**第二，CLI 不是后台神。**  
+Obsidian CLI 需要桌面版 Obsidian 正在运行；如果你想不依赖桌面 app 去做远程或定时自动化，官方给的是 Headless，那是另一条线。citeturn299976view0turn530660search0
+
+**第三，OpenClaw 这层权限很高。**  
+Gateway 默认是 loopback 绑定、默认要求认证；`/v1/responses` 文档还明确提醒，要把这个接口当成对该 gateway 实例的“full operator access”。所以它适合做你自己的内网大脑，不适合裸奔暴露到公网。citeturn299976view1turn299976view2
+
+### 翻成你日常能感受到的话
+
+你以后可以这样用它：
+
+早上冒出一个念头，丢进去。  
+晚上，它把今天的碎片压成一页 daily summary。  
+过几天你写到“创业、agent、替代焦虑”，它会把你三周前写的相关笔记浮出来。  
+再往后，它甚至能把这些散页慢慢织成项目页、概念页、问题树。
+
+所以它能做到的，不是“帮你写几段漂亮话”。  
+而是——
+
+**让你的记录开始具有回声。**
+
+下一步最实在的，就是我直接给你列一张：
+
+**“你这套系统第一阶段能做的 10 个具体动作清单”**  
+比如“快速收件箱”“daily 回收”“项目归档”“旧笔记召回”“对话转笔记”。
+
+## user
+
+那我该怎么接入所以，
+
+## assistant
+
+我不绕了，直接把“接入”拆成一条能走的施工线：  
+先定目录和职责，再把 OpenClaw 接成后端，最后用一个最小脚本把内容写进 vault。
+
+## assistant
+
+你这句我当成：
+
+**“那我到底该怎么接入？”**
+
+我给你一条最短、最稳、能落地的线。
+
+## 先定形状
+
+别先碰复杂插件。  
+先做这个最小闭环：
+
+```text
+你输入一句话
+→ OpenClaw 整理
+→ 脚本生成 Markdown + Properties
+→ 写进 Obsidian vault
+→ Obsidian 桌面端打开、搜索、继续改
+```
+
+原因很简单：Obsidian CLI 是控制**正在运行的桌面版 Obsidian**，而 Obsidian Headless 是**不依赖桌面 app**的独立客户端。你现在是 Windows 跑 Obsidian、WSL 跑 OpenClaw，先用“外部脚本写文件 + 桌面端查看”最顺，不容易卡死在跨环境控制上。citeturn435471view0turn150147view0
+
+## 第一步：把 Obsidian 这一侧准备好
+
+先把 Obsidian 更新到带 CLI 的安装器版本，然后在 **Settings → General** 里开启 **Command line interface**。官方说明里写了：CLI 需要 Obsidian 1.12 安装器，CLI 也支持 `create`、`read`、`search`、`daily`、`daily:append`、`tags counts` 这些命令。citeturn435471view0
+
+建议你的 vault 放在 Windows 路径，例如：
+
+```text
+C:\Users\lnp\Documents\Obsidian\SecondBrain
+```
+
+这样 WSL 里可以直接走：
+
+```bash
+/mnt/c/Users/lnp/Documents/Obsidian/SecondBrain
+```
+
+这不是官方硬性要求，是为了让 Windows 的 Obsidian 桌面端和 WSL 里的 OpenClaw/脚本同时碰到同一份 vault；跟 CLI“以当前 vault 或指定 vault 工作”的设计是吻合的。citeturn435471view0
+
+## 第二步：把 OpenClaw 作为后端开出来
+
+OpenClaw Gateway 的 OpenAI-compatible HTTP 面默认**是关闭的**，要手动打开。官方文档写明了，启用后会提供：
+
+- `POST /v1/chat/completions`
+- `GET /v1/models`
+- `POST /v1/embeddings`
+- `POST /v1/responses`
+
+而且认证就是标准 Bearer Token。citeturn436068view0turn436068view1
+
+你至少开这个：
+
+```json
+{
+  "gateway": {
+    "http": {
+      "endpoints": {
+        "chatCompletions": { "enabled": true }
+      }
+    }
+  }
+}
+```
+
+官方文档明确给了这个开关名：`gateway.http.endpoints.chatCompletions.enabled = true`。citeturn436068view3
+
+还有个很重要的边界：  
+OpenClaw 官方明确说，这个 HTTP 入口应当被视为 **full operator-access surface**，不是细粒度的普通用户接口；文档直接建议只放在 loopback / 私网 / tailnet，不要裸露到公网。citeturn436068view2
+
+## 第三步：先手测一下 OpenClaw 是否真通了
+
+先不用写程序，直接在 WSL 里测：
+
+```bash
+curl http://127.0.0.1:18789/v1/models \
+  -H "Authorization: Bearer 你的TOKEN"
+```
+
+然后再测一次对话接口：
+
+```bash
+curl http://127.0.0.1:18789/v1/chat/completions \
+  -H "Authorization: Bearer 你的TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "openclaw",
+    "messages": [
+      {"role": "user", "content": "把这句话整理成 Obsidian 笔记摘要：我在想创业和 agent 工具是不是很容易被替代"}
+    ],
+    "user": "obsidian-capture"
+  }'
+```
+
+文档写明，带 `user` 字段时，Gateway 会基于它生成稳定 session key；不带时，每次请求默认是新的会话。这个对“同一类笔记沿用一个记忆轨迹”很有用。citeturn436068view0
+
+## 第四步：定义 AI 输出格式，不要让它乱写
+
+Obsidian 的 **Properties** 就是结构化字段，支持 text、links、dates、checkboxes、numbers、tags 等；而且模板也能带 properties。换句话说，你最该让 AI 先写的，不是“漂亮正文”，而是骨架。citeturn150147view1
+
+先定一个最小模板：
+
+```yaml
+---
+type: fleeting
+status: inbox
+summary:
+tags:
+related:
+next_action:
+confidence:
+created:
+source: openclaw-capture
+---
+```
+
+你给 OpenClaw 的提示词，别写成散文，直接写成协议：
+
+```text
+你是 Obsidian 记录助手。
+把用户输入整理成 JSON，字段必须严格为：
+title, summary, tags, related, next_action, body, confidence
+
+规则：
+1. 保留原意，不要擅自发挥
+2. summary 不超过 80 字
+3. tags 不超过 5 个
+4. related 只写概念词，不伪造文件名
+5. body 用简洁中文
+6. confidence 只能是 low / medium / high
+```
+
+这一步很关键。  
+你真正要控制的不是“模型聪不聪明”，而是**输出是否规整**。规整了，vault 才不会被写成烂泥。这个做法和 Obsidian 官方把 Properties 作为结构化层的思路是一致的。citeturn150147view1
+
+## 第五步：写一个最小的捕获脚本
+
+脚本做三件事：
+
+1. 接收一句输入  
+2. 调 OpenClaw  
+3. 生成 `.md` 写进 `00 Inbox/`
+
+例如目录先这样：
+
+```text
+00 Inbox/
+01 Daily/
+02 Concepts/
+03 Projects/
+99 AI Drafts/
+```
+
+Python 逻辑大概就是：
+
+```python
+import json, requests, datetime, pathlib, re
+
+VAULT = pathlib.Path("/mnt/c/Users/lnp/Documents/Obsidian/SecondBrain")
+TOKEN = "你的TOKEN"
+URL = "http://127.0.0.1:18789/v1/chat/completions"
+
+user_text = "我在想创业和agent工具是不是很容易被替代"
+
+prompt = f"""
+你是 Obsidian 记录助手。
+把下面内容整理成 JSON，字段必须严格为：
+title, summary, tags, related, next_action, body, confidence
+
+内容：
+{user_text}
+"""
+
+resp = requests.post(
+    URL,
+    headers={
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "model": "openclaw",
+        "user": "obsidian-capture",
+        "messages": [{"role": "user", "content": prompt}],
+    },
+    timeout=60,
+)
+data = resp.json()
+text = data["choices"][0]["message"]["content"]
+obj = json.loads(text)
+
+title = re.sub(r'[\\\\/:*?"<>|]', "-", obj["title"]).strip()[:80]
+ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+fname = datetime.datetime.now().strftime("%Y-%m-%d-") + title + ".md"
+
+md = f"""---
+type: fleeting
+status: inbox
+summary: {obj["summary"]}
+tags:
+{chr(10).join(f"  - {x}" for x in obj["tags"])}
+related:
+{chr(10).join(f"  - {x}" for x in obj["related"])}
+next_action: {obj["next_action"]}
+confidence: {obj["confidence"]}
+created: {ts}
+source: openclaw-capture
+---
+
+# {obj["title"]}
+
+原始输入：
+{user_text}
+
+整理后：
+{obj["body"]}
+"""
+
+out = VAULT / "00 Inbox" / fname
+out.write_text(md, encoding="utf-8")
+print(out)
+```
+
+这段不是官方原样代码，但它正好利用了官方已经给你的两块基础设施：  
+一块是 OpenClaw 的兼容 HTTP 接口，另一块是 Obsidian 对 Markdown + Properties 的原生支持。citeturn436068view0turn150147view1
+
+## 第六步：让 Obsidian CLI 只干“辅助动作”
+
+CLI 很适合做这些：
+
+```bash
+obsidian search query="agent 替代"
+obsidian daily
+obsidian daily:append content="- [ ] 整理今天的创业想法"
+obsidian create name="创业问题树" template=Project
+obsidian read path="00 Inbox/2026-03-30-某条笔记.md"
+```
+
+这些能力官方都列出来了。也就是说，你可以让“外部脚本负责写”，让“CLI 负责打开、查找、追加、读取”。别反过来。citeturn435471view0
+
+## 第七步：以后再升级成真正的 agent 工作流
+
+等这个最小闭环稳了，再做两种升级：
+
+**升级 A：定时整理**  
+夜里自动扫 `00 Inbox` 和 `01 Daily`，压出 weekly summary。这个更适合以后用 **Obsidian Headless**，因为它就是为“无桌面 app 的自动化”准备的，官方还把 weekly summaries、auto-tag 直接写成示例用途。citeturn150147view0
+
+**升级 B：让 coding agent 懂 Obsidian 原生格式**  
+到那时再用 `obsidian-skills`。它的 README 写得很明确：这是给 skills-compatible agents 用的，支持 Claude Code、Codex CLI、OpenCode；其中就有 `obsidian-markdown`、`obsidian-bases`、`json-canvas`、`obsidian-cli` 这些技能。citeturn436068view7turn436068view6
+
+---
+
+## 你现在就该按这个顺序动手
+
+1. **更新 Obsidian 并开 CLI**  
+2. **把 vault 固定到 Windows 路径**  
+3. **在 OpenClaw 里启用 chat completions 接口**  
+4. **先用 curl 测通**  
+5. **写最小 capture 脚本，把一句话落成一篇 Inbox 笔记**  
+6. **再让 CLI 去 search / daily / append**
+
+别一开始就做“全自动智能知识中枢”。  
+先让它稳定地把一滴东西，落成一页纸。
+
+下一条我直接给你一份**按你环境改好的可运行初版**：  
+`capture_to_obsidian.py` + 一个最小 vault 模板。
+
+## user
+
+有可能，不一定是“没开应用”，而是**CLI 没连上当前这个 Obsidian 进程**。
+
+常见情况有这几种：
+
+1. **Obsidian 开着，但没聚焦到某个 vault**
+   - 你可以试一下点进那个库，让它成为当前前台窗口
+   - 最好直接点开我们那个库：`Obsidian Vault`
+
+2. **CLI 功能没启用**
+   - 去 `Settings → General`
+   - 看看 **Enable CLI** 有没有打开
+
+3. **Windows / WSL 路径下调用到的不是同一个 Obsidian 进程**
+   - 这个也很常见：应用虽然开着，但我从 WSL 这边连不到它的 CLI IPC
+
+所以你现在最简单的操作是：
+
+### 先试这个最小动作
+- 切到 Obsidian 窗口
+- 明确点进 `Obsidian Vault`
+- 随便点开一篇笔记，让它成为当前活动窗口
+- 确认 `Enable CLI` 已开启
+
+然后告诉我一句：**“现在已经点进去了”**
+我就立刻再测一次。
+
+如果这样还是不行，那我就不继续跟 CLI 死磕了，直接切到**按 vault 路径读写 Markdown 文件**的方案，照样把你的外脑系统搭起来，而且往往更稳。
+
+我怎么才能确定cli开了？
+
+## assistant
+
+我去对一下官方现在的入口和验证方式，免得你在旧设置页里绕圈。
+
+## assistant
+
+最直接的判断法有三个。
+
+**一，看设置里有没有这项。**  
+打开 **Settings → General**，找到 **Command line interface**。把它打开后，按官方说明还会出现注册提示，要继续完成 **register Obsidian CLI**。如果你根本看不到这一项，先怀疑不是你没找到，而是 **安装器版本不对**：官方说明 CLI 需要 **Obsidian 1.12 installer**，而且 CLI 是在 **Desktop 1.12** 这条线上引入的。citeturn427287view0turn427287view1
+
+**二，在终端里试最小命令。**  
+官方给的入门验证命令就是：
+
+```bash
+obsidian help
+```
+
+如果 CLI 真开好了，这条命令应该返回帮助信息；CLI 也支持直接输入 `obsidian` 进入交互界面。官方还写明了：Obsidian app 需要在运行中；如果没运行，第一次命令会先启动 Obsidian。citeturn427287view0
+
+**三，再试一个“真动作”。**  
+比如：
+
+```bash
+obsidian search query="test"
+```
+
+或者：
+
+```bash
+obsidian daily
+```
+
+这些都是官方列出来的实际命令。要是它们能正常返回结果或切到对应笔记，基本就说明 CLI 已经连上当前 Obsidian 进程了。citeturn427287view0
+
+你可以按这个顺序检查：
+
+1. 先看 **Settings → General** 里有没有 **Command line interface**。citeturn427287view0  
+2. 打开它，并完成 **register**。citeturn427287view0  
+3. 保持 Obsidian 开着。citeturn427287view0  
+4. 在终端跑 `obsidian help`。citeturn427287view0  
+
+要是你愿意，我下一条直接带你做一遍排查：你把 `obsidian help` 的输出贴给我，我来判断现在卡在哪一层。
+
+## user
+
+找不到general啊
+
+## assistant
+
+对，你这张图里确实**没有看到 `General / 通用`**。
+
+而且你现在开的这页是 **“命令面板”设置里的“置顶命令”**，这里搜 `obsidian help` 是没用的——`obsidian help` 是**终端命令**，不是 Obsidian 里的一条命令。  
+所以你不是“没找到命令”，而是**找错地方了**。
+
+更关键的是：
+
+**如果左侧设置栏里根本没有 `General / 通用`，那我怀疑你现在的 Obsidian 版本或安装器版本不对。**  
+因为官方的 CLI 是 **Obsidian 1.12 Desktop** 才引入的，安装步骤写的是：到 **Settings → General → Command line interface** 去开启；而在 Windows 上，官方还特别说明要用 **1.12.4+ 的 installer**，因为 Windows 需要额外的终端重定向器来让 CLI 正常工作。citeturn171511search0turn328236search2turn171511search1
+
+你现在先别继续在这个页面里翻了，直接这样做：
+
+1. 点左侧最上面的 **“关于”**。  
+2. 把里面的 **App version** 和 **Installer version** 截图或抄给我。  
+3. 我帮你判断是不是版本问题。
+
+因为官方也写了，CLI 需要的是 **1.12 系列安装器**，而且有些功能要靠**下载安装器更新**，不是单纯应用内热更新就够。citeturn328236search2turn328236search9turn171511search1
+
+如果你看完版本发现：
+
+- **App version < 1.12**：那就还没这功能。citeturn171511search0  
+- **Windows 上 installer 太旧**：CLI 也可能没有，或者装了但连不上。官方在 1.12.4 和 1.12.7 的更新里都专门修过 Windows CLI 和 installer 相关问题。citeturn537295search0turn171511search1
+
+所以现在最短的一步不是继续找 `General`，而是：
+
+**先点“关于”，把版本发我。**  
+这一眼就能看出来问题是在“功能没上线”，还是“安装器太旧”。
+
+## assistant
+
+对，这张图已经说明一件关键的事：
+
+**CLI 开关已经开了。**  
+你右下这项 **“命令行界面”** 是开启状态，而且你的版本是 **Obsidian 1.12.7 / 安装程序 1.12.7**，满足官方对 CLI 的版本要求。官方文档写明，CLI 需要 1.12 安装器；Windows 侧还要求 **1.12.4+ installer**，你这个版本已经够了。citeturn225231view1turn225231view0
+
+但这只说明：
+
+**功能被启用了，不等于终端里已经能用了。**
+
+还差最后半步：**注册到系统 PATH，并在终端里验证。**  
+官方写得很明确，开启 **Command line interface** 之后，还要按提示完成注册；注册后要**重开终端**，然后用 `obsidian help` 测试。Windows 上实际是通过一个 `Obsidian.com` 终端重定向器来工作的。citeturn225231view0turn225231view1
+
+你现在这样做最稳：
+
+在 **Windows PowerShell** 里，不是在 Obsidian 里，运行：
+
+```powershell
+obsidian help
+```
+
+再跑：
+
+```powershell
+where obsidian
+```
+
+你看结果：
+
+- 如果 `obsidian help` 打出帮助文本，说明 **CLI 已经真的可用**。官方就是这么验证的。citeturn225231view0turn225231view1
+- 如果 `where obsidian` 找不到，说明多半是**还没完成注册**，或者注册后**终端还没重开**。官方 troubleshooting 也明确提到，注册后需要重启终端让 PATH 生效。citeturn225231view1
+- 如果 Windows PowerShell 能用，但 **WSL** 里不能用，那问题就不是 Obsidian CLI 没开，而是**Windows CLI 没有顺到 WSL 这个环境里**。这时候先别纠缠 CLI，直接走“WSL 脚本写 Markdown 到 vault”的方案更稳。
+
+还有一个小点：  
+你之前在设置里的“命令面板”里搜 `obsidian help`，那个方向本身就是错的。`obsidian help` 是**终端命令**，不是 Obsidian 命令面板里的命令。官方文档把它列在终端用法里。citeturn225231view0turn225231view1
+
+你先把这两条命令的输出贴给我：
+
+```powershell
+obsidian help
+where obsidian
+```
+
+我可以一眼判断你现在卡在“没注册”、 “PATH 没刷新”，还是“WSL/Windows 跨环境”这层。
+
+## assistant
+
+成了。
+
+你贴出来的 `obsidian help` 已经完整返回了 CLI 的命令列表，这说明 **Obsidian CLI 已经真的可用了**，不是“只把开关打开了”。官方也说明，CLI 可用时就能直接在终端执行 `obsidian <command>`；而你这里已经拿到了完整帮助输出。fileciteturn0file0 citeturn586161view0turn586161view1
+
+`where obsidian` 之所以是空的，**不代表 CLI 没装好**。在 PowerShell 里，`where` 是 `Where-Object` 的别名，不是 `cmd.exe` 那个查 PATH 的 `where.exe`；Microsoft 文档里也直接把 `where` 当作 `Where-Object` 的别名示例来用。要查命令路径，应该用 `where.exe obsidian`，或者更稳一点，用 `Get-Command obsidian`；`Get-Command` 会列出当前可执行的命令，包括 PATH 里的应用程序。citeturn576151view0turn576151view1turn576151view2turn576151view3
+
+你现在直接在 **PowerShell** 里跑这几条：
+
+```powershell
+Get-Command obsidian | Format-List Name,CommandType,Source,Definition
+where.exe obsidian
+obsidian version
+obsidian vault info=path
+```
+
+如果 `obsidian vault info=path` 能吐出当前库路径，那就不是“半通”，而是**已经能拿来接你的外部脚本了**。`obsidian version` 和 `vault info` 也都在你刚贴出的 CLI 帮助里。fileciteturn0file0
+
+所以现在的判断很简单：
+
+**不是 CLI 没开。CLI 已经活了。**  
+下一步不该继续纠缠设置页，而是直接开始接入流程：先让脚本调用 OpenClaw，再把结果写进 vault。
+
+把这四条命令的输出贴给我，我就直接接着给你写 `capture_to_obsidian.py`。
+
+## user
+
+Get-Command obsidian | Format-List Name,CommandType,Source,Definition
+
+
+Name        : Obsidian.com
+CommandType : Application
+Source      : D:\obisidian\Obsidian\Obsidian.com
+Definition  : D:\obisidian\Obsidian\Obsidian.com
+
+
+
+PS C:\Users\lnp> where.exe obsidian
+D:\obisidian\Obsidian\Obsidian.com
+D:\obisidian\Obsidian\Obsidian.exe
+PS C:\Users\lnp> obsidian version
+1.12.7 (installer 1.12.7)
+PS C:\Users\lnp> obsidian vault info=path
+C:\Users\lnp\Documents\Obsidian Vault
+PS C:\Users\lnp>
+
+## assistant
+
+好，这下不是“差不多”，而是**真的通了**。
+
+你现在已经确认了三件事：
+
+- `obsidian` 命令在 PowerShell 里可执行，而且指向 `D:\obisidian\Obsidian\Obsidian.com`
+- CLI 版本正常
+- 当前 vault 路径已经明确是 `C:\Users\lnp\Documents\Obsidian Vault`
+
+这就意味着：  
+**Obsidian 这一侧已经可以当成外部自动化的落点了。**  
+而 Obsidian CLI 本来的定位也正是给脚本、自动化、外部工具集成用的。citeturn458661search0turn458661search2
+
+现在你该做的，不是再查设置，而是按这个顺序往下接。
+
+## 第一步：先做一次“落笔测试”
+
+先证明 CLI 不只是会显示帮助，而是真的能写进你的库。
+
+在 PowerShell 里跑：
+
+```powershell
+obsidian create path="00 Inbox/CLI测试.md" content="# CLI 测试
+
+这是一条从命令行写入的笔记。"
+```
+
+然后读出来：
+
+```powershell
+obsidian read path="00 Inbox/CLI测试.md"
+```
+
+如果你还没有 `00 Inbox` 这个文件夹，先建：
+
+```powershell
+New-Item -ItemType Directory -Force "C:\Users\lnp\Documents\Obsidian Vault\00 Inbox"
+```
+
+再试一次。
+
+如果这一步成功，就说明你的“外部世界 → Obsidian vault”这条缝已经裂开了。
+
+## 第二步：再试一次 Properties
+
+因为你后面不是只想写正文，而是想让 AI 帮你做结构化整理。  
+Obsidian CLI 已经支持 `property:set`、`property:read`、`properties` 这些命令；而官方 CLI 页也明确把这些能力列进去了。citeturn458661search0
+
+继续跑：
+
+```powershell
+obsidian property:set path="00 Inbox/CLI测试.md" name=type value=fleeting type=text
+obsidian property:set path="00 Inbox/CLI测试.md" name=status value=inbox type=text
+obsidian property:set path="00 Inbox/CLI测试.md" name=source value=cli-test type=text
+```
+
+然后看一下：
+
+```powershell
+obsidian properties path="00 Inbox/CLI测试.md" format=yaml
+```
+
+如果这也成功，说明后面 AI 不是只能胡乱写一篇 Markdown，  
+而是能往你的笔记骨架里填字段。
+
+## 第三步：再接 OpenClaw
+
+到这里，Obsidian 端已经没问题了。  
+下一块就是让 OpenClaw 负责“整理内容”，再把结果交给 Obsidian。
+
+OpenClaw Gateway 官方文档写得很清楚：它可以提供 OpenAI-compatible HTTP 接口，包括 `/v1/chat/completions`、`/v1/embeddings`、`/v1/responses` 和 `/v1/models`，但这些 HTTP 面**默认是关闭的**，要先在配置里显式启用。它们走的是和 Gateway 同一个端口。citeturn458661search1turn458661search3turn458661search5
+
+也就是说，你下一步要检查的是：
+
+1. OpenClaw Gateway 有没有在跑  
+2. `chatCompletions` 或 `responses` 接口有没有启用  
+3. 你手里有没有 Bearer token
+
+最小测试一般就是：
+
+```bash
+curl http://127.0.0.1:18789/v1/models \
+  -H "Authorization: Bearer 你的TOKEN"
+```
+
+如果能回模型列表，桥就通了。  
+然后脚本只需要做这三件事：
+
+```text
+你输入一句话
+→ 发给 OpenClaw
+→ OpenClaw 返回结构化结果
+→ 用 obsidian create / property:set 写进 vault
+```
+
+## 你现在已经到哪一步了
+
+不是起点。  
+你已经到了：
+
+**“Obsidian 这边的门已经打开，只差把 OpenClaw 的线焊上。”**
+
+先把上面那组 `create / read / property:set` 跑一遍。  
+跑完把结果贴给我，我下一条就直接给你写 **`capture_to_obsidian.py` 初版**，按你现在这个 vault 路径和 CLI 方式来。
+

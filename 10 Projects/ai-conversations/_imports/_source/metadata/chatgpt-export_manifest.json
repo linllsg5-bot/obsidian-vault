@@ -1,0 +1,444 @@
+{
+  "export_files": [
+    {
+      "path": "ads.json",
+      "size_bytes": 87
+    },
+    {
+      "path": "chat.html",
+      "size_bytes": 34989839
+    },
+    {
+      "path": "conversation_asset_file_names.json",
+      "size_bytes": 2073
+    },
+    {
+      "path": "conversations-000.json",
+      "size_bytes": 6510093
+    },
+    {
+      "path": "conversations-001.json",
+      "size_bytes": 9167870
+    },
+    {
+      "path": "conversations-002.json",
+      "size_bytes": 6909486
+    },
+    {
+      "path": "conversations-003.json",
+      "size_bytes": 19179138
+    },
+    {
+      "path": "file-2c7CWKZEqPKQrZf8buwqMN.dat",
+      "size_bytes": 111325
+    },
+    {
+      "path": "file-49jmWsuKvspDaF3MLpTuqc.dat",
+      "size_bytes": 151117
+    },
+    {
+      "path": "file-9BohE1piZXYRQdz28wKokA.dat",
+      "size_bytes": 79089
+    },
+    {
+      "path": "file-Aiiuf3LiezQoRUxUytd1fH.dat",
+      "size_bytes": 76304
+    },
+    {
+      "path": "file-Eg6tdrwhWi5CUcHNMMdZrY.dat",
+      "size_bytes": 66886
+    },
+    {
+      "path": "file-FAbsVnAXN32mLKSw3DNMkh.dat",
+      "size_bytes": 46399
+    },
+    {
+      "path": "file-GoMx3NiAs7wiY3WBja6iLa.dat",
+      "size_bytes": 138792
+    },
+    {
+      "path": "file-JqX1z1yx1CmWaiXkKsCuwK.dat",
+      "size_bytes": 21014
+    },
+    {
+      "path": "file-P1rHqgP7xsafgdaoegYnPe.dat",
+      "size_bytes": 96498
+    },
+    {
+      "path": "file-Pf5WX2ennQx5YPq3bqN3yT.dat",
+      "size_bytes": 225507
+    },
+    {
+      "path": "file-QZ8aYwWi4gd13Ams8DuWhc.dat",
+      "size_bytes": 70136
+    },
+    {
+      "path": "file-RdL2GmQUi2MGtHhzpDiQ2w.dat",
+      "size_bytes": 66886
+    },
+    {
+      "path": "file-RwXNva5FAo1MG8xjp4cWUe.dat",
+      "size_bytes": 150767
+    },
+    {
+      "path": "file-UU5Etd9jphSEZmzwMUYPMj.dat",
+      "size_bytes": 118973
+    },
+    {
+      "path": "file-WvUYHQw4R59BFuBqDQi5uC.dat",
+      "size_bytes": 109653
+    },
+    {
+      "path": "file-Xe3uPwNei7s4yhrW1WsPsU.dat",
+      "size_bytes": 116010
+    },
+    {
+      "path": "file-Xqfj1RfpxKtqh1dMKRakTa.dat",
+      "size_bytes": 96498
+    },
+    {
+      "path": "file_000000001fbc71fdafc75e54c456867b.dat",
+      "size_bytes": 276309
+    },
+    {
+      "path": "file_000000002594820982f936411a151061.dat",
+      "size_bytes": 26361
+    },
+    {
+      "path": "file_000000003d3071f8b1833fc06d096b87.dat",
+      "size_bytes": 38122
+    },
+    {
+      "path": "file_000000004744722f9cf624d8a24b93ed.dat",
+      "size_bytes": 62376
+    },
+    {
+      "path": "file_000000009ac0722f84362d9e5771606d.dat",
+      "size_bytes": 159218
+    },
+    {
+      "path": "file_00000000a45471fd8fd687a9e03ff41a.dat",
+      "size_bytes": 62349
+    },
+    {
+      "path": "file_00000000a8b88207971d7c1a49b9e78e.dat",
+      "size_bytes": 203052
+    },
+    {
+      "path": "file_00000000ab78722f87504312ed90f746.dat",
+      "size_bytes": 183357
+    },
+    {
+      "path": "file_00000000ae0472089b899819a38a7ab6.dat",
+      "size_bytes": 62376
+    },
+    {
+      "path": "file_00000000b8148209a9ca15e3e33afddb.dat",
+      "size_bytes": 90780
+    },
+    {
+      "path": "file_00000000c03472089921dc7de7de3481.dat",
+      "size_bytes": 377820
+    },
+    {
+      "path": "file_00000000d8607208a5cd5fec6785a9c5.dat",
+      "size_bytes": 75726
+    },
+    {
+      "path": "file_00000000dd8471fdab91ded67034b37f.dat",
+      "size_bytes": 39797
+    },
+    {
+      "path": "file_00000000ee308211983fb701ca758b34.dat",
+      "size_bytes": 216822
+    },
+    {
+      "path": "file_00000000f3d07208bcbd9aa084f6abad.dat",
+      "size_bytes": 332887
+    },
+    {
+      "path": "library_files.json",
+      "size_bytes": 9195
+    },
+    {
+      "path": "sectioned_conversations.json",
+      "size_bytes": 2
+    },
+    {
+      "path": "shared_conversations.json",
+      "size_bytes": 202
+    },
+    {
+      "path": "sites/export_manifest.json",
+      "size_bytes": 171
+    },
+    {
+      "path": "user.json",
+      "size_bytes": 128
+    },
+    {
+      "path": "user_settings.json",
+      "size_bytes": 5038
+    }
+  ],
+  "logical_files": {
+    "ads.json": {
+      "files": [
+        "ads.json"
+      ],
+      "sharded": false
+    },
+    "chat.html": {
+      "files": [
+        "chat.html"
+      ],
+      "sharded": false
+    },
+    "conversation_asset_file_names.json": {
+      "files": [
+        "conversation_asset_file_names.json"
+      ],
+      "sharded": false
+    },
+    "conversations.json": {
+      "files": [
+        "conversations-000.json",
+        "conversations-001.json",
+        "conversations-002.json",
+        "conversations-003.json"
+      ],
+      "shard_count": 4,
+      "sharded": true
+    },
+    "file-2c7CWKZEqPKQrZf8buwqMN.dat": {
+      "files": [
+        "file-2c7CWKZEqPKQrZf8buwqMN.dat"
+      ],
+      "sharded": false
+    },
+    "file-49jmWsuKvspDaF3MLpTuqc.dat": {
+      "files": [
+        "file-49jmWsuKvspDaF3MLpTuqc.dat"
+      ],
+      "sharded": false
+    },
+    "file-9BohE1piZXYRQdz28wKokA.dat": {
+      "files": [
+        "file-9BohE1piZXYRQdz28wKokA.dat"
+      ],
+      "sharded": false
+    },
+    "file-Aiiuf3LiezQoRUxUytd1fH.dat": {
+      "files": [
+        "file-Aiiuf3LiezQoRUxUytd1fH.dat"
+      ],
+      "sharded": false
+    },
+    "file-Eg6tdrwhWi5CUcHNMMdZrY.dat": {
+      "files": [
+        "file-Eg6tdrwhWi5CUcHNMMdZrY.dat"
+      ],
+      "sharded": false
+    },
+    "file-FAbsVnAXN32mLKSw3DNMkh.dat": {
+      "files": [
+        "file-FAbsVnAXN32mLKSw3DNMkh.dat"
+      ],
+      "sharded": false
+    },
+    "file-GoMx3NiAs7wiY3WBja6iLa.dat": {
+      "files": [
+        "file-GoMx3NiAs7wiY3WBja6iLa.dat"
+      ],
+      "sharded": false
+    },
+    "file-JqX1z1yx1CmWaiXkKsCuwK.dat": {
+      "files": [
+        "file-JqX1z1yx1CmWaiXkKsCuwK.dat"
+      ],
+      "sharded": false
+    },
+    "file-P1rHqgP7xsafgdaoegYnPe.dat": {
+      "files": [
+        "file-P1rHqgP7xsafgdaoegYnPe.dat"
+      ],
+      "sharded": false
+    },
+    "file-Pf5WX2ennQx5YPq3bqN3yT.dat": {
+      "files": [
+        "file-Pf5WX2ennQx5YPq3bqN3yT.dat"
+      ],
+      "sharded": false
+    },
+    "file-QZ8aYwWi4gd13Ams8DuWhc.dat": {
+      "files": [
+        "file-QZ8aYwWi4gd13Ams8DuWhc.dat"
+      ],
+      "sharded": false
+    },
+    "file-RdL2GmQUi2MGtHhzpDiQ2w.dat": {
+      "files": [
+        "file-RdL2GmQUi2MGtHhzpDiQ2w.dat"
+      ],
+      "sharded": false
+    },
+    "file-RwXNva5FAo1MG8xjp4cWUe.dat": {
+      "files": [
+        "file-RwXNva5FAo1MG8xjp4cWUe.dat"
+      ],
+      "sharded": false
+    },
+    "file-UU5Etd9jphSEZmzwMUYPMj.dat": {
+      "files": [
+        "file-UU5Etd9jphSEZmzwMUYPMj.dat"
+      ],
+      "sharded": false
+    },
+    "file-WvUYHQw4R59BFuBqDQi5uC.dat": {
+      "files": [
+        "file-WvUYHQw4R59BFuBqDQi5uC.dat"
+      ],
+      "sharded": false
+    },
+    "file-Xe3uPwNei7s4yhrW1WsPsU.dat": {
+      "files": [
+        "file-Xe3uPwNei7s4yhrW1WsPsU.dat"
+      ],
+      "sharded": false
+    },
+    "file-Xqfj1RfpxKtqh1dMKRakTa.dat": {
+      "files": [
+        "file-Xqfj1RfpxKtqh1dMKRakTa.dat"
+      ],
+      "sharded": false
+    },
+    "file_000000001fbc71fdafc75e54c456867b.dat": {
+      "files": [
+        "file_000000001fbc71fdafc75e54c456867b.dat"
+      ],
+      "sharded": false
+    },
+    "file_000000002594820982f936411a151061.dat": {
+      "files": [
+        "file_000000002594820982f936411a151061.dat"
+      ],
+      "sharded": false
+    },
+    "file_000000003d3071f8b1833fc06d096b87.dat": {
+      "files": [
+        "file_000000003d3071f8b1833fc06d096b87.dat"
+      ],
+      "sharded": false
+    },
+    "file_000000004744722f9cf624d8a24b93ed.dat": {
+      "files": [
+        "file_000000004744722f9cf624d8a24b93ed.dat"
+      ],
+      "sharded": false
+    },
+    "file_000000009ac0722f84362d9e5771606d.dat": {
+      "files": [
+        "file_000000009ac0722f84362d9e5771606d.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000a45471fd8fd687a9e03ff41a.dat": {
+      "files": [
+        "file_00000000a45471fd8fd687a9e03ff41a.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000a8b88207971d7c1a49b9e78e.dat": {
+      "files": [
+        "file_00000000a8b88207971d7c1a49b9e78e.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000ab78722f87504312ed90f746.dat": {
+      "files": [
+        "file_00000000ab78722f87504312ed90f746.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000ae0472089b899819a38a7ab6.dat": {
+      "files": [
+        "file_00000000ae0472089b899819a38a7ab6.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000b8148209a9ca15e3e33afddb.dat": {
+      "files": [
+        "file_00000000b8148209a9ca15e3e33afddb.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000c03472089921dc7de7de3481.dat": {
+      "files": [
+        "file_00000000c03472089921dc7de7de3481.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000d8607208a5cd5fec6785a9c5.dat": {
+      "files": [
+        "file_00000000d8607208a5cd5fec6785a9c5.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000dd8471fdab91ded67034b37f.dat": {
+      "files": [
+        "file_00000000dd8471fdab91ded67034b37f.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000ee308211983fb701ca758b34.dat": {
+      "files": [
+        "file_00000000ee308211983fb701ca758b34.dat"
+      ],
+      "sharded": false
+    },
+    "file_00000000f3d07208bcbd9aa084f6abad.dat": {
+      "files": [
+        "file_00000000f3d07208bcbd9aa084f6abad.dat"
+      ],
+      "sharded": false
+    },
+    "library_files.json": {
+      "files": [
+        "library_files.json"
+      ],
+      "sharded": false
+    },
+    "sectioned_conversations.json": {
+      "files": [
+        "sectioned_conversations.json"
+      ],
+      "sharded": false
+    },
+    "shared_conversations.json": {
+      "files": [
+        "shared_conversations.json"
+      ],
+      "sharded": false
+    },
+    "sites/export_manifest.json": {
+      "files": [
+        "sites/export_manifest.json"
+      ],
+      "sharded": false
+    },
+    "user.json": {
+      "files": [
+        "user.json"
+      ],
+      "sharded": false
+    },
+    "user_settings.json": {
+      "files": [
+        "user_settings.json"
+      ],
+      "sharded": false
+    }
+  },
+  "manifest_file": "export_manifest.json",
+  "version": 1
+}

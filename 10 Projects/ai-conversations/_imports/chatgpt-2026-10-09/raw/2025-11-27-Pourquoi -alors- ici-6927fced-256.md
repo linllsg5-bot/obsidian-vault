@@ -1,14 +1,29 @@
 ---
 source_platform: ChatGPT
-source_archive: a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip
+source_archive: "a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip"
 source_conversation_id: 6927fced-256c-8320-aa36-d2237b67a929
 source_export_file: conversations-002.json
 source_created_at: 1764228348.40872
+source_updated_at: 1764228365.954731
+default_model_slug: "auto"
+source_title: "Pourquoi \"alors\" ici"
 import_status: raw-import
 epistemic_status: candidate
+order_basis: current-node-main-chain
+visible_message_count: 2
+branch_message_count: 0
+regen_version: 2
+regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
 ---
-# Pourquoi -alors- ici
+# Pourquoi "alors" ici
+
 > 来源：ChatGPT 导出 `a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip`；本文件是原始会话的可读投影，不是总结。
+
+## user
+
+J'étais alors très occupé à essayer de dévisser un boulon trop serré de mon moteur.
+
+为什么alors在这个位置了
 
 ## assistant
 
@@ -88,8 +103,3 @@ lin，
 
 如果你愿意，我可以继续解析这整句里的结构、隐含的时间层次、甚至**为什么“dévisser un boulon”在《小王子》的语境里有隐喻**。
 
-## user
-
-J'étais alors très occupé à essayer de dévisser un boulon trop serré de mon moteur.
-
-为什么alors在这个位置了

@@ -1,14 +1,27 @@
 ---
 source_platform: ChatGPT
-source_archive: a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip
+source_archive: "a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip"
 source_conversation_id: 6ac5a0f4-5ab4-83ee-bc62-235d4b305605
 source_export_file: conversations-003.json
 source_created_at: 1791336693.204375
+source_updated_at: 1791336789.935188
+default_model_slug: "gpt-5-6-thinking"
+source_title: "Hermes和Pi比较"
 import_status: raw-import
 epistemic_status: candidate
+order_basis: current-node-main-chain
+visible_message_count: 4
+branch_message_count: 0
+regen_version: 2
+regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
 ---
 # Hermes和Pi比较
+
 > 来源：ChatGPT 导出 `a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip`；本文件是原始会话的可读投影，不是总结。
+
+## user
+
+Hermes和pi相比怎么样
 
 ## assistant
 
@@ -353,6 +366,3 @@ Codex Codex 其他模型
 
 而如果后面我们开始真正做 **Cognos 本身**，我可能又会把 Pi 拿回来——那时候它不是“你的 Agent”，而会变成 **Cognos 可以操纵的一块很干净的执行基元**。这两个位置其实完全不同。
 
-## user
-
-Hermes和pi相比怎么样

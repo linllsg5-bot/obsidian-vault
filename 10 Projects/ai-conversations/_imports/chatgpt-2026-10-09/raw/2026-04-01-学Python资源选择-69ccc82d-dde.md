@@ -1,14 +1,27 @@
 ---
 source_platform: ChatGPT
-source_archive: a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip
+source_archive: "a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip"
 source_conversation_id: 69ccc82d-dde4-839d-94b0-5ef91aa85046
 source_export_file: conversations-003.json
 source_created_at: 1775028272.826124
+source_updated_at: 1775295709.774768
+default_model_slug: "gpt-5-4-thinking"
+source_title: "学Python资源选择"
 import_status: raw-import
 epistemic_status: candidate
+order_basis: current-node-main-chain
+visible_message_count: 5
+branch_message_count: 0
+regen_version: 2
+regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
 ---
 # 学Python资源选择
+
 > 来源：ChatGPT 导出 `a653a614a5dc39b44a4fc20a01bcf3297cb01cad521120f1b2db3323cdadd864-2026-10-09-01-01-54-530ee6578da54e2d9a99ca9e9c6e3017 (1).zip`；本文件是原始会话的可读投影，不是总结。
+
+## user
+
+该怎么学python买书还是找个网站？还是找pdf还是看视频还是“？
 
 ## user
 
@@ -832,6 +845,3 @@ Python 不是编程本身。
 不是资源清单。  
 是一步一步：先想什么，再学什么，再写什么。
 
-## user
-
-该怎么学python买书还是找个网站？还是找pdf还是看视频还是“？
