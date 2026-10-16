@@ -10,11 +10,12 @@ source_title: "Obsidian AI 集成方案"
 import_status: raw-import
 epistemic_status: candidate
 order_basis: current-node-main-chain
-visible_message_count: 27
+main_chain_message_count: 29
 branch_message_count: 0
-assets_missing_from_export: ["sediment://file_0000000054b471fd9da7e54dcb1471ec"]
-regen_version: 2
-regen_note: "首版按 mapping 迭代顺序输出，导致消息乱序并混入分支消息；本版沿 current_node 主线按时间序重建，分支消息单列于文末。"
+assets_missing_from_export: ["file_0000000054b471fd9da7e54dcb1471ec", "file_00000000772c71fd8136c746226c18c8"]
+attachments_missing_from_export: ["file_0000000054b471fd9da7e54dcb1471ec", "file_00000000772c71fd8136c746226c18c8", "file_000000009c9872088fda3bf33e9ed971"]
+regen_version: 3
+regen_note: "沿 current_node 主线按时间序重建；含图片或附件但无文字的消息一并保留（v2 曾漏掉这类消息）；分支消息单列于文末。"
 ---
 # Obsidian AI 集成方案
 
@@ -1035,6 +1036,9 @@ obsidian daily
 **先点“关于”，把版本发我。**  
 这一眼就能看出来问题是在“功能没上线”，还是“安装器太旧”。
 
+## user
+
+
 ## assistant
 
 对，这张图已经说明一件关键的事：
@@ -1080,6 +1084,9 @@ where obsidian
 ```
 
 我可以一眼判断你现在卡在“没注册”、 “PATH 没刷新”，还是“WSL/Windows 跨环境”这层。
+
+## user
+
 
 ## assistant
 

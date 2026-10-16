@@ -155,6 +155,10 @@ updated: 2026-10-13
 
 **已迁入 Cognos**：这批材料已同步进入 Nextcloud Cognos Notes，分别保存为独立空间（`2026-10-09-chatgpt` / `2026-10-09-claude`），保留来源路径、内容哈希和批次标识。
 
+**附件**：[[10 Projects/ai-conversations/_imports/chatgpt-2026-10-09/assets/README|ChatGPT 附件索引]] — 32 个附件（3,949,206 B），已嵌入对应会话消息位置。
+
+**修正历史**：首版 GPT 导入存在消息乱序、分支混入主线、附件全部缺失三处缺陷，已于 2026-10-13 重建为 `regen_version 3`。详见 [[10 Projects/ai-conversations/_imports/导入批次-2026-10-09|导入批次说明]]。
+
 ### 本地自动导入
 
 - [[10 Projects/ai-conversations/_auto-import/按时间|按时间索引]] — 2026-05 至 2026-09，~150 条本地会话
